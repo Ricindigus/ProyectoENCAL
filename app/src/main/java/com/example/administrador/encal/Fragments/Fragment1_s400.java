@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 
 import com.example.administrador.encal.R;
 
@@ -13,6 +14,7 @@ import com.example.administrador.encal.R;
  * A simple {@link Fragment} subclass.
  */
 public class Fragment1_s400 extends Fragment {
+    private CheckBox p401_ck1;
 
 
     public Fragment1_s400() {

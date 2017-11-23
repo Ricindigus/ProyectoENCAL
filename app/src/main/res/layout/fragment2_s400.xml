@@ -12,7 +12,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <include layout="@layout/sec400_p408"></include>
+
             <include layout="@layout/sec400_p409"></include>
             <include layout="@layout/sec400_p410"></include>
             <include layout="@layout/observaciones"></include>

@@ -22,7 +22,6 @@ public class EncuestaActivity extends AppCompatActivity {
     private Fragment1_s300 fragment1_s300;
     private Fragment1_s400 fragment1_s400;
     private Fragment2_s100 fragment2_s100;
-    private Fragment2_s300 fragment2_s300;
     private Fragment2_s400 fragment2_s400;
     private Fragment3_s100 fragment3_s100;
 
@@ -43,7 +42,6 @@ public class EncuestaActivity extends AppCompatActivity {
         fragment1_s300 = new Fragment1_s300();
         fragment1_s400 = new Fragment1_s400();
         fragment2_s100 = new Fragment2_s100();
-        fragment2_s300 = new Fragment2_s300();
         fragment2_s400 = new Fragment2_s400();
         fragment3_s100 = new Fragment3_s100();
 
@@ -67,7 +65,7 @@ public class EncuestaActivity extends AppCompatActivity {
         switch (item.getItemId() ){
             case R.id.adelante:
 
-                if(cont<8){
+                if(cont<7){
                     cont++;
                     NumeroFragment(cont);
                 }
@@ -114,17 +112,13 @@ public class EncuestaActivity extends AppCompatActivity {
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout_fragment1,fragment1_s300);
                 fragmentTransaction.commit(); break;
+
             case 6:
-                Fragment2_s300 fragment2_s300 = new Fragment2_s300();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.layout_fragment1,fragment2_s300);
-                fragmentTransaction.commit(); break;
-            case 7:
                 Fragment1_s400 fragment1_s400 = new Fragment1_s400();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout_fragment1,fragment1_s400);
                 fragmentTransaction.commit(); break;
-            case 8:
+            case 7:
                 Fragment2_s400 fragment2_s400 = new Fragment2_s400();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout_fragment1,fragment2_s400);

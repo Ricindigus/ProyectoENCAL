@@ -2539,7 +2539,7 @@
                             android:background="#607d8b"
                             >
                         </View>
-                        <LinearLayout
+                        <RadioGroup
                             android:id="@+id/sec300_p302_rgV6"
                             android:layout_weight="4"
                             android:layout_width="match_parent"
@@ -2572,7 +2572,7 @@
                                 android:padding="5dp"
                                 android:gravity="center"/>
 
-                        </LinearLayout>
+                        </RadioGroup>
 
                     </LinearLayout>
                     <View

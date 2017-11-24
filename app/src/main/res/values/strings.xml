@@ -5,6 +5,118 @@
     <string name="texto_password">CONTRASEÑA</string>
     <string name="texto_ingresar">INGRESAR</string>
 
+    <!--CARATULA-->
+    <string name="caratula_loc">LOCALIZACIÓN DE LA EMPRESA</string>
+    <string name="caratula_loc_ubicacion_geo">A.UBICACIÓN GEOGRÁFICA</string>
+    <string name="caratula_loc_ubicacion_geo_departamento">1.Departamento</string>
+    <string name="caratula_loc_ubicacion_geo_provincia">2.Provincia</string>
+    <string name="caratula_loc_ubicacion_geo_distrito">3.Distrito</string>
+    <string name="caratula_loc_identificacion">IDENTIFICADOR UNICO DE LA EMPRESA</string>
+    <string name="caratula_loc_cambiodistrito">Cambio de Distrito</string>
+
+    <string name="caratula_loc_coordenadas">B.COORDENADAS DEL PUNTO GPS</string>
+    <string name="caratula_loc_coordenadas_gps_latitud">4.GPS LATITUD</string>
+    <string name="caratula_loc_coordenadas_gps_altitud">4.GPS ALTITUD</string>
+    <string name="caratula_loc_coordenadas_gps_longitud">4.GPS LONGITUD</string>
+
+    <string name="caratula_loc_ubicacion_muestral">C.UBICACIÓN MUESTRAL</string>
+    <string name="caratula_loc_ubicacion_muestral_sector">5.Sector de Trabajo</string>
+    <string name="caratula_loc_ubicacion_muestral_area">6.Área de Trabajo</string>
+    <string name="caratula_loc_ubicacion_muestral_zona">7.Zona</string>
+    <string name="caratula_loc_ubicacion_muestral_manzana">8.Manzana</string>
+    <string name="caratula_loc_ubicacion_muestral_frente">9.Frente</string>
+
+    <string name="caratula_loc_direccion">10.Dirección </string>
+    <string name="caratula_loc_tipo">Tipo Vía </string>
+    <string name="caratula_loc_nombrevia">Nombre de la Vía </string>
+    <string name="caratula_loc_direccion_nombre">Tipo Vía:</string>
+    <string name="caratula_loc_direccion_nombre_avenida">Avenida</string>
+    <string name="caratula_loc_direccion_nombre_jiron">Jirón</string>
+    <string name="caratula_loc_direccion_nombre_calle">Calle</string>
+    <string name="caratula_loc_direccion_nombre_pasaje">Pasaje</string>
+    <string name="caratula_loc_direccion_nombre_carretera">Carretera</string>
+    <string name="caratula_loc_direccion_nombre_prolongacion">Prolongación</string>
+
+    <string name="caratula_loc_direccion_npuerta">Nº puerta</string>
+    <string name="caratula_loc_direccion_block">Block</string>
+    <string name="caratula_loc_direccion_interior">Interior</string>
+    <string name="caratula_loc_direccion_piso">Piso</string>
+    <string name="caratula_loc_direccion_manzana">Manzana</string>
+    <string name="caratula_loc_direccion_lote">Lote</string>
+    <string name="caratula_loc_direccion_km">Km.</string>
+    <string name="caratula_loc_direccion_referencia">11.Referencia de la dirección</string>
+
+
+    <string name="caratula_datos">DATOS DE LA ENTREVISTA</string>
+    <string name="caratula_datos_operador">OPERADOR DE EMPRESAS</string>
+    <string name="caratula_datos_jefe">JEFE DE EQUIPO</string>
+    <string name="caratula_datos_supervisor">SUPERVISOR NACIONAL</string>
+    <string name="caratula_datos_dni">DNI</string>
+    <string name="caratula_datos_nombres">NOMBRES Y APELLIDOS</string>
+
+    <string name="caratula_identificacion">IDENTIFICACIÓN DE LA EMPRESA Y CONDUCTOR DE LA EMPRESA</string>
+    <string name="caratula_identificacion_ruc">1.Nº de RUC</string>
+    <string name="caratula_identificacion_razon_social">2.Razón social o apellidos y nombres del propietario</string>
+    <string name="caratula_identificacion_nombre_comercial">3.Nombre comercial de la empresa</string>
+    <string name="caratula_identificacion_anio_fundacion">4.Año inicio de funcionamiento</string>
+    <string name="caratula_identificacion_pagina_web">5.Página web</string>
+    <string name="caratula_identificacion_correo">6.Correo electrónico</string>
+    <string name="caratula_identificacion_nopagina_web">No tiene página web</string>
+    <string name="caratula_identificacion_nocorreo">No tiene correo electrónico</string>
+    <string name="caratula_identificacion_telefono_fijo">7.Teléfono fijo</string>
+    <string name="caratula_identificacion_telefono_movil">8.Teléfono móvil</string>
+    <string name="caratula_identificacion_telefono_nofijo">No tiene teléfono fijo</string>
+    <string name="caratula_identificacion_telefono_nomovil">No tiene teléfono móvil</string>
+
+    <string name="caratula_identificacion_conductor_informante">DEL CONDUCTOR E INFORMANTE</string>
+    <string name="caratula_identificacion_conductor_informante_apellidos">9.Apellidos y nombres del conductor o responsable de la gestión de la empresa (o gerente general)</string>
+    <string name="caratula_identificacion_conductor_informante_sexo">10.Sexo</string>
+    <string name="caratula_identificacion_conductor_informante_edad">11.Edad</string>
+    <string name="nivel_estudios">12.Último nivel de estudios alcanzado</string>
+    <string name="caratula_identificacion_conductor_informante_cargo">13.Cargo</string>
+    <string name="caratula_identificacion_conductor_informante_N">14.Apellidos y Nombres del informante</string>
+    <string name="caratula_identificacion_conocimiento">CONOCIMIENTO DEL ENTE RECTOR DEL SISTEMA NACIONAL PARA LA CALIDAD</string>
+    <string name="caratula_identificacion_conocimiento_instituto">15.¿Conoce o ha oído hablar del Instituto Nacional de Calidad (INACAL)?</string>
+
+    <string-array name="nivel_estudios">
+        <item>Seleccione Nivel</item>
+        <item>1.Sin nivel</item>
+        <item>2.Primaria</item>
+        <item>3.Secundaria</item>
+        <item>4.Superior no univ. incompleta</item>
+        <item>5.Superior no univ. completa</item>
+        <item>6.Superior univ. incompleta</item>
+        <item>7.Superior univ. completa</item>
+        <item>8.Post grado</item>
+        <item>9.No sabe</item>
+    </string-array>
+
+
+    <string-array name="array_tipo_via">
+        <item>Seleccione tipo</item>
+        <item>1.Avenida</item>
+        <item>2.Jirón</item>
+        <item>3.Calle</item>
+        <item>4.Pasaje</item>
+        <item>5.Carretera</item>
+        <item>6.Prolongación</item>
+        <item>7.Otro</item>
+    </string-array>
+
+    <string-array name="sexo">
+        <item>Seleccionar</item>
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+
+    <string-array name="cargos">
+        <item>Seleccione cargo</item>
+        <item>Conductor</item>
+        <item>Administrador</item>
+        <item>Gerente</item>
+        <item>Otro</item>
+    </string-array>
+
     <string-array name="item_spinner">
         <item>item1</item>
         <item>item2</item>

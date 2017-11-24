@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.administrador.encal.Fragments.CaratulaFragment;
 import com.example.administrador.encal.Fragments.Fragment1_s100;
 import com.example.administrador.encal.Fragments.Fragment1_s200;
 import com.example.administrador.encal.Fragments.Fragment1_s300;
@@ -15,8 +16,11 @@ import com.example.administrador.encal.Fragments.Fragment1_s400;
 import com.example.administrador.encal.Fragments.Fragment2_s100;
 import com.example.administrador.encal.Fragments.Fragment2_s400;
 import com.example.administrador.encal.Fragments.Fragment3_s100;
+import com.example.administrador.encal.Fragments.InicioFragment;
 
 public class EncuestaActivity extends AppCompatActivity {
+    private CaratulaFragment caratulaFragment;
+    private InicioFragment inicioFragment;
     private Fragment1_s100 fragment1_s100;
     private Fragment1_s200 fragment1_s200;
     private Fragment1_s300 fragment1_s300;
@@ -36,7 +40,8 @@ public class EncuestaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_encuesta);
         Toolbar toolbar = (Toolbar)findViewById(R.id.encuesta_toolbar);
         setSupportActionBar(toolbar);
-
+        caratulaFragment = new CaratulaFragment();
+        inicioFragment = new InicioFragment();
         fragment1_s100 = new Fragment1_s100();
         fragment1_s200 = new Fragment1_s200();
         fragment1_s300 = new Fragment1_s300();
@@ -48,7 +53,7 @@ public class EncuestaActivity extends AppCompatActivity {
         fragmentManager = getSupportFragmentManager();
 
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.layout_fragment1,fragment1_s100);
+        fragmentTransaction.replace(R.id.layout_fragment1,caratulaFragment);
         fragmentTransaction.commit();
 
     }
@@ -65,7 +70,7 @@ public class EncuestaActivity extends AppCompatActivity {
         switch (item.getItemId() ){
             case R.id.adelante:
 
-                if(cont<7){
+                if(cont<9){
                     cont++;
                     NumeroFragment(cont);
                 }
@@ -88,37 +93,47 @@ public class EncuestaActivity extends AppCompatActivity {
     public void NumeroFragment(int poscicion){
         switch (poscicion){
             case 1:
+                CaratulaFragment caratulaFragment = new CaratulaFragment();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.layout_fragment1,caratulaFragment);
+                fragmentTransaction.commit(); break;
+            case 2:
+                InicioFragment inicioFragment = new InicioFragment();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.layout_fragment1,inicioFragment);
+                fragmentTransaction.commit(); break;
+            case 3:
                 Fragment1_s100 fragment1_s100 = new Fragment1_s100();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout_fragment1,fragment1_s100);
                 fragmentTransaction.commit(); break;
-            case 2:
+            case 4:
                 Fragment2_s100 fragment2_s100 = new Fragment2_s100();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout_fragment1,fragment2_s100);
                 fragmentTransaction.commit(); break;
-            case 3:
+            case 5:
                 Fragment3_s100 fragment3_s100 = new Fragment3_s100();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout_fragment1,fragment3_s100);
                 fragmentTransaction.commit(); break;
-            case 4:
+            case 6:
                 Fragment1_s200 fragment1_s200 = new Fragment1_s200();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout_fragment1,fragment1_s200);
                 fragmentTransaction.commit(); break;
-            case 5:
+            case 7:
                 Fragment1_s300 fragment1_s300 = new Fragment1_s300();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout_fragment1,fragment1_s300);
                 fragmentTransaction.commit(); break;
 
-            case 6:
+            case 8:
                 Fragment1_s400 fragment1_s400 = new Fragment1_s400();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout_fragment1,fragment1_s400);
                 fragmentTransaction.commit(); break;
-            case 7:
+            case 9:
                 Fragment2_s400 fragment2_s400 = new Fragment2_s400();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout_fragment1,fragment2_s400);

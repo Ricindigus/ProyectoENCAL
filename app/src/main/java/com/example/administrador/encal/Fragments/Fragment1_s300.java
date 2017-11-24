@@ -13,8 +13,11 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
+import com.example.administrador.encal.EncuestaActivity;
 import com.example.administrador.encal.R;
 
 /**
@@ -95,6 +98,17 @@ public class Fragment1_s300 extends Fragment {
     private EditText p302_vCant2;
     private EditText p302_vCant3;
     private EditText p302_oCant1;
+    private RadioButton p302_rbM9;
+    private RadioButton p302_rbM10;
+    private RadioButton p302_rbM11;
+    private RadioButton p302_rbM12;
+    private RadioButton p302_rbM13;
+    private RadioButton p302_rbM14;
+    private RadioButton p302_rbM15;
+    private RadioButton p302_rbM16;
+
+
+
 
     private CheckBox p303_ck1;
     private CheckBox p303_ck2;
@@ -220,11 +234,11 @@ public class Fragment1_s300 extends Fragment {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 switch (i) {
-                    case R.id.sec200_p202_rb1:   p302_lyt.setVisibility(View.VISIBLE);
+                    case R.id.sec300_p302_rbSi:   p302_lyt.setVisibility(View.VISIBLE);
                                                  p303_card.setVisibility(View.VISIBLE);
                                                  p304_card.setVisibility(View.VISIBLE);
                                                  p305_card.setVisibility(View.VISIBLE);break;
-                    case R.id.sec200_p202_rb2:   p302_lyt.setVisibility(View.GONE);
+                    case R.id.sec300_p302_rbNo:   p302_lyt.setVisibility(View.GONE);
                                                  p303_card.setVisibility(View.GONE);
                                                  p304_card.setVisibility(View.GONE);
                                                  p305_card.setVisibility(View.GONE); break;
@@ -233,13 +247,70 @@ public class Fragment1_s300 extends Fragment {
             }
         });
 
-        //----pregunta 303
+        p302_rgM1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                switch (i) {
+                    case R.id.sec300_p302_rbM1:  p302_rbM9.setEnabled(true);p302_rbM10.setEnabled(true);break;
+                    case R.id.sec300_p302_rbM2:  p302_rbM9.setEnabled(false);p302_rbM10.setEnabled(false);break;
+                }
 
-        if(p303_ck1.isChecked() || p303_ck2.isChecked() || p303_ck3.isChecked() || p303_ck4.isChecked()){
-            p304_card.setVisibility(View.GONE);
-        }else{
-                p304_card.setVisibility(View.VISIBLE);
+            }
+        });
+        p302_rgM2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                switch (i) {
+                    case R.id.sec300_p302_rbM3:  p302_rbM11.setEnabled(true);p302_rbM12.setEnabled(true);break;
+                    case R.id.sec300_p302_rbM4:  p302_rbM11.setEnabled(false);p302_rbM12.setEnabled(false);break;
+                }
+
+            }
+        });
+
+        p302_rgM3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                switch (i) {
+                    case R.id.sec300_p302_rbM5:  p302_rbM13.setEnabled(true);p302_rbM14.setEnabled(true);break;
+                    case R.id.sec300_p302_rbM6:  p302_rbM13.setEnabled(false);p302_rbM14.setEnabled(false);break;
+                }
+
+            }
+        });
+        p302_rgM4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                switch (i) {
+                    case R.id.sec300_p302_rbM7:  p302_rbM15.setEnabled(true);p302_rbM15.setEnabled(true);break;
+                    case R.id.sec300_p302_rbM8:  p302_rbM15.setEnabled(false);p302_rbM15.setEnabled(false);break;
+                }
+
+            }
+        });
+
+        //----pregunta 303
+        final CheckBox[] checkBox = {p303_ck1,p303_ck2,p303_ck3,p303_ck4};
+
+        for(int i=0;i<checkBox.length;i++){
+            checkBox[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    if(b){
+                        p304_card.setVisibility(View.GONE);
+                    }else{
+                        if (checkBox[0].isChecked()||checkBox[1].isChecked()||checkBox[2].isChecked()||checkBox[3].isChecked()){
+                            p304_card.setVisibility(View.GONE);
+                        }else {
+                            p304_card.setVisibility(View.VISIBLE);
+                        }
+
+                    }
+                }
+            });
         }
+
+
 
 
     }

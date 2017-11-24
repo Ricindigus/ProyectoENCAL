@@ -123,12 +123,27 @@ public class Fragment1_s400 extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //----pregunta 401
+        final CheckBox[] checkBox = {p401_ck1,p401_ck2,p401_ck3};
 
-        if(p401_ck1.isChecked() || p401_ck2.isChecked() || p401_ck3.isChecked()){
-            p402_card.setVisibility(View.GONE);
-        }else{
-            p402_card.setVisibility(View.VISIBLE);
+        for(int i=0;i<checkBox.length;i++){
+            checkBox[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    if(b){
+                        p402_card.setVisibility(View.GONE);
+                    }else{
+                        if (checkBox[0].isChecked()||checkBox[1].isChecked()||checkBox[2].isChecked()){
+                            p402_card.setVisibility(View.GONE);
+                        }else {
+                            p402_card.setVisibility(View.VISIBLE);
+                        }
+
+                    }
+                }
+            });
         }
+
+
 
         //----pregunta 403
         p403_ck4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {

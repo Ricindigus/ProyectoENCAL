@@ -27,13 +27,13 @@
                 android:orientation="horizontal"
                 android:layout_marginBottom="16dp">
                 <RadioButton
-                    android:id="@+id/sec100_p302_rbSi"
+                    android:id="@+id/sec300_p302_rbSi"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Si"/>
                 <RadioButton
-                    android:id="@+id/sec100_p302_rbNo"
+                    android:id="@+id/sec300_p302_rbNo"
                     android:layout_weight="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -500,6 +500,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -516,6 +517,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -541,6 +543,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -557,6 +560,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -581,6 +585,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -597,6 +602,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -621,6 +627,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -637,6 +644,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -659,6 +667,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                         <View
                             android:layout_width="match_parent"
@@ -673,6 +682,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                         <View
                             android:layout_width="match_parent"
@@ -687,6 +697,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                         <View
                             android:layout_width="match_parent"
@@ -701,6 +712,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -978,6 +990,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -994,6 +1007,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -1019,6 +1033,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -1035,6 +1050,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -1059,6 +1075,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -1075,6 +1092,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -1099,6 +1117,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -1115,6 +1134,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -1137,6 +1157,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                         <View
                             android:layout_width="match_parent"
@@ -1151,6 +1172,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                         <View
                             android:layout_width="match_parent"
@@ -1165,6 +1187,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                         <View
                             android:layout_width="match_parent"
@@ -1179,6 +1202,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -1512,6 +1536,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -1528,6 +1553,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -1554,6 +1580,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -1570,6 +1597,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -1595,6 +1623,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -1611,6 +1640,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -1635,6 +1665,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -1651,6 +1682,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -1675,6 +1707,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -1691,6 +1724,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -1713,6 +1747,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                         <View
                             android:layout_width="match_parent"
@@ -1727,6 +1762,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                         <View
                             android:layout_width="match_parent"
@@ -1741,6 +1777,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                         <View
                             android:layout_width="match_parent"
@@ -1755,6 +1792,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                         <View
                             android:layout_width="match_parent"
@@ -1769,6 +1807,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -2047,6 +2086,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -2063,6 +2103,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -2088,6 +2129,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -2104,6 +2146,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -2128,6 +2171,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -2144,6 +2188,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -2168,6 +2213,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -2184,6 +2230,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -2206,6 +2253,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                         <View
                             android:layout_width="match_parent"
@@ -2220,6 +2268,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                         <View
                             android:layout_width="match_parent"
@@ -2234,6 +2283,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                         <View
                             android:layout_width="match_parent"
@@ -2248,6 +2298,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -2474,6 +2525,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -2490,6 +2542,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -2514,6 +2567,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -2530,6 +2584,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -2554,6 +2609,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -2570,6 +2626,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -2593,6 +2650,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                         <View
                             android:layout_width="match_parent"
@@ -2607,6 +2665,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                         <View
                             android:layout_width="match_parent"
@@ -2621,6 +2680,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                     </LinearLayout>
                 </LinearLayout>
@@ -2739,6 +2799,7 @@
                                 android:text=""
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
                             <View
                                 android:layout_width="2dp"
@@ -2755,6 +2816,7 @@
                                 android:textAlignment="center"
                                 android:textStyle="bold"
                                 android:padding="5dp"
+                                android:enabled="false"
                                 android:gravity="center"/>
 
                         </RadioGroup>
@@ -2778,6 +2840,7 @@
                             android:layout_height="0dp"
                             android:textAlignment="center"
                             android:padding="5dp"
+                            android:enabled="false"
                             android:gravity="center"/>
                     </LinearLayout>
                 </LinearLayout>

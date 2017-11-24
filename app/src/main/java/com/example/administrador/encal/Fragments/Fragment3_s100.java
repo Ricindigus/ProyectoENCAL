@@ -93,8 +93,8 @@ public class Fragment3_s100 extends Fragment {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
                 switch (i) {
-                    case R.id.sec100_p111_rb1:   p112_card.setVisibility(View.VISIBLE); p113_card.setVisibility(View.VISIBLE);p114_card.setVisibility(View.VISIBLE);break;
-                    case R.id.sec100_p111_rb2:   p112_card.setVisibility(View.GONE); p113_card.setVisibility(View.GONE);p114_card.setVisibility(View.GONE); break;
+                    case R.id.sec100_p111_rb1:   p112_card.setVisibility(View.VISIBLE); p113_card.setVisibility(View.VISIBLE);p114_card.setVisibility(View.GONE);break;
+                    case R.id.sec100_p111_rb2:   p112_card.setVisibility(View.GONE); p113_card.setVisibility(View.GONE);p114_card.setVisibility(View.VISIBLE); break;
                 }
             }
         });
@@ -105,10 +105,10 @@ public class Fragment3_s100 extends Fragment {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
                 switch (i) {
-                    case R.id.sec100_p112_rb1:   break;
-                    case R.id.sec100_p112_rb2:   break;
-                    case R.id.sec100_p112_rb3:   break;
-                    case R.id.sec100_p112_rb4:   break;
+                    case R.id.sec100_p112_rb1:   p112_edt.setVisibility(View.GONE);break;
+                    case R.id.sec100_p112_rb2:   p112_edt.setVisibility(View.GONE);break;
+                    case R.id.sec100_p112_rb3:   p112_edt.setVisibility(View.GONE);break;
+                    case R.id.sec100_p112_rb4:   p112_edt.setVisibility(View.GONE);break;
                     case R.id.sec100_p112_rb5:   p112_edt.setVisibility(View.VISIBLE);break;
                 }
             }

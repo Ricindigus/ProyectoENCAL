@@ -170,52 +170,153 @@ public class SQLConstrantes {
     public static final String SECCION100_ = "P_102_1";
 
 
+    public static final String SECCION100_OBS = "OBS";
 
 
+    //SECCION 200----------------------------------------------
+    public static final String SECCION200_ID = "ID";
+    public static final String SECCION200_P_201_1 = "P_201_1";
+    public static final String SECCION200_P_201_2 = "P_201_2";
+    public static final String SECCION200_P_201_3 = "P_201_3";
+    public static final String SECCION200_P_201_4 = "P_201_4";
+    public static final String SECCION200_P_202 = "P_202";
+    public static final String SECCION200_P_203 = "P_203";
+    public static final String SECCION200_P_203_O = "P_203_O";
+    public static final String SECCION200_P_204 = "P_204";
+    public static final String SECCION200_P_205_1 = "P_205_1";
+    public static final String SECCION200_P_205_2 = "P_205_2";
+    public static final String SECCION200_P_205_3 = "P_205_3";
+    public static final String SECCION200_P_205_4 = "P_205_4";
+    public static final String SECCION200_P_205_5 = "P_205_5";
+    public static final String SECCION200_P_205_6 = "P_205_6";
+    public static final String SECCION200_P_205_6_O = "P_205_6_O";
+
+    public static final String SECCION200_OBS = "OBS";
 
 
-    public static final String SECCION100_OBS_MOD_I = "OBS_MOD_I";
+    //SECCION 300----------------------------------------------
+    public static final String SECCION300_ID = "ID";
+    public static final String SECCION300_P_301 = "P_301";
+    public static final String SECCION300_P_302 = "P_302";
+    public static final String SECCION300_P_302A_M_1 = "P_302A_M_1";
+    public static final String SECCION300_P_302A_M_2 = "P_302A_M_2";
+    public static final String SECCION300_P_302A_M_3 = "P_302A_M_3";
+    public static final String SECCION300_P_302A_M_4 = "P_302A_M_4";
+    public static final String SECCION300_P_302A_M_4_O = "P_302A_M_4_O";
+    public static final String SECCION300_P_302A_L_1 = "P_302A_L_1";
+    public static final String SECCION300_P_302A_L_2 = "P_302A_L_2";
+    public static final String SECCION300_P_302A_L_3 = "P_302A_L_3";
+    public static final String SECCION300_P_302A_L_4 = "P_302A_L_4";
+    public static final String SECCION300_P_302A_L_4_O = "P_302A_L_4_O";
+    public static final String SECCION300_P_302A_P_1 = "P_302A_P_1";
+    public static final String SECCION300_P_302A_P_2 = "P_302A_P_2";
+    public static final String SECCION300_P_302A_P_3 = "P_302A_P_3";
+    public static final String SECCION300_P_302A_P_4 = "P_302A_P_4";
+    public static final String SECCION300_P_302A_P_5 = "P_302A_P_5";
+    public static final String SECCION300_P_302A_P_5_O = "P_302A_P_5_O";
+    public static final String SECCION300_P_302A_T_1 = "P_302A_T_1";
+    public static final String SECCION300_P_302A_T_2 = "P_302A_T_2";
+    public static final String SECCION300_P_302A_T_3 = "P_302A_T_3";
+    public static final String SECCION300_P_302A_T_4 = "P_302A_T_4";
+    public static final String SECCION300_P_302A_T_4_O = "P_302A_T_4_O";
+    public static final String SECCION300_P_302A_V_1 = "P_302A_V_1";
+    public static final String SECCION300_P_302A_V_2 = "P_302A_V_2";
+    public static final String SECCION300_P_302A_V_3 = "P_302A_V_3";
+    public static final String SECCION300_P_302A_V_3_O = "P_302A_V_3_O";
+    public static final String SECCION300_P_302A_O_1 = "P_302A_O_1";
+    public static final String SECCION300_P_302A_O_1_O = "P_302A_O_1_O";
+    public static final String SECCION300_P_302B_M_1 = "P_302B_M_1";
+    public static final String SECCION300_P_302B_M_2 = "P_302B_M_2";
+    public static final String SECCION300_P_302B_M_3 = "P_302B_M_3";
+    public static final String SECCION300_P_302B_M_4 = "P_302B_M_4";
+    public static final String SECCION300_P_302B_L_1 = "P_302B_L_1";
+    public static final String SECCION300_P_302B_L_2 = "P_302B_L_2";
+    public static final String SECCION300_P_302B_L_3 = "P_302B_L_3";
+    public static final String SECCION300_P_302B_L_4 = "P_302B_L_4";
+    public static final String SECCION300_P_302B_P_1 = "P_302B_P_1";
+    public static final String SECCION300_P_302B_P_2 = "P_302B_P_2";
+    public static final String SECCION300_P_302B_P_3 = "P_302B_P_3";
+    public static final String SECCION300_P_302B_P_4 = "P_302B_P_4";
+    public static final String SECCION300_P_302B_P_5 = "P_302B_P_5";
+    public static final String SECCION300_P_302B_T_1 = "P_302B_T_1";
+    public static final String SECCION300_P_302B_T_2 = "P_302B_T_2";
+    public static final String SECCION300_P_302B_T_3 = "P_302B_T_3";
+    public static final String SECCION300_P_302B_T_4 = "P_302B_T_4";
+    public static final String SECCION300_P_302B_V_1 = "P_302B_V_1";
+    public static final String SECCION300_P_302B_V_2 = "P_302B_V_2";
+    public static final String SECCION300_P_302B_V_3 = "P_302B_V_3";
+    public static final String SECCION300_P_302B_O_1 = "P_302B_O_1";
+    public static final String SECCION300_P_302C_M_1 = "P_302C_M_1";
+    public static final String SECCION300_P_302C_M_2 = "P_302C_M_2";
+    public static final String SECCION300_P_302C_M_3 = "P_302C_M_3";
+    public static final String SECCION300_P_302C_M_4 = "P_302C_M_4";
+    public static final String SECCION300_P_302C_L_1 = "P_302C_L_1";
+    public static final String SECCION300_P_302C_L_2 = "P_302C_L_2";
+    public static final String SECCION300_P_302C_L_3 = "P_302C_L_3";
+    public static final String SECCION300_P_302C_L_4 = "P_302C_L_4";
+    public static final String SECCION300_P_302C_P_1 = "P_302C_P_1";
+    public static final String SECCION300_P_302C_P_2 = "P_302C_P_2";
+    public static final String SECCION300_P_302C_P_3 = "P_302C_P_3";
+    public static final String SECCION300_P_302C_P_4 = "P_302C_P_4";
+    public static final String SECCION300_P_302C_P_5 = "P_302C_P_5";
+    public static final String SECCION300_P_302C_T_1 = "P_302C_T_1";
+    public static final String SECCION300_P_302C_T_2 = "P_302C_T_2";
+    public static final String SECCION300_P_302C_T_3 = "P_302C_T_3";
+    public static final String SECCION300_P_302C_T_4 = "P_302C_T_4";
+    public static final String SECCION300_P_302C_V_1 = "P_302C_V_1";
+    public static final String SECCION300_P_302C_V_2 = "P_302C_V_2";
+    public static final String SECCION300_P_302C_V_3 = "P_302C_V_3";
+    public static final String SECCION300_P_302C_O_1 = "P_302C_O_1";
+    public static final String SECCION300_P_303_1 = "P_303_1";
+    public static final String SECCION300_P_303_2 = "P_303_2";
+    public static final String SECCION300_P_303_3 = "P_303_3";
+    public static final String SECCION300_P_303_4 = "P_303_4";
+    public static final String SECCION300_P_303_5 = "P_303_5";
+    public static final String SECCION300_P_304 = "P_304";
+    public static final String SECCION300_P_305 = "P_305";
+
+    public static final String SECCION300_OBS = "OBS";
 
     //SECCION 400----------------------------------------------
     public static final String SECCION400_ID = "ID";
-    public static final String SECCION400 = "ID";
-    /*public static final String SECCION400_P_401_1 = "P_401_1";
-    public static final String SECCION400_P_401_2
-    public static final String SECCION400_P_401_3
-    public static final String SECCION400_P_401_4
-    public static final String SECCION400_P_401_5
-    public static final String SECCION400_P_402
-    public static final String SECCION400_P_403_1
-    public static final String SECCION400_P_403_2
-    public static final String SECCION400_P_403_3
-    public static final String SECCION400_P_403_4
-    public static final String SECCION400_P_404
-    public static final String SECCION400_P_405
-    public static final String SECCION400_P_406
-    public static final String SECCION400_P_407_1
-    public static final String SECCION400_P_407_2
-    public static final String SECCION400_P_407_3
-    public static final String SECCION400_P_407_4
-    public static final String SECCION400_P_407_5
-    public static final String SECCION400_P_407_6
-    public static final String SECCION400_P_407_7
-    public static final String SECCION400_P_407_7_O
-    public static final String SECCION400_P_408_1
-    public static final String SECCION400_P_408_2
-    public static final String SECCION400_P_408_3
-    public static final String SECCION400_P_408_4
-    public static final String SECCION400_P_408_5
-    public static final String SECCION400_P_408_6
-    public static final String SECCION400_P_408_6_O
-    public static final String SECCION400_P_409_1
-    public static final String SECCION400_P_409_2
-    public static final String SECCION400_P_409_3
-    public static final String SECCION400_P_409_4
-    public static final String SECCION400_P_409_5
-    public static final String SECCION400_P_409_5_O
-    public static final String SECCION400_P_410
-    public static final String SECCION400_P_410_O*/
+    public static final String SECCION400_P_401_1 = "P_401_1";
+    public static final String SECCION400_P_401_2 = "P_401_2";
+    public static final String SECCION400_P_401_3 = "P_401_3";
+    public static final String SECCION400_P_401_4 = "P_401_4";
+    public static final String SECCION400_P_401_5 = "P_401_5";
+    public static final String SECCION400_P_402 = "P_402";
+    public static final String SECCION400_P_403_1 = "P_403_1";
+    public static final String SECCION400_P_403_2 = "P_403_2";
+    public static final String SECCION400_P_403_3 = "P_403_3";
+    public static final String SECCION400_P_403_4 = "P_403_4";
+    public static final String SECCION400_P_404 = "P_404";
+    public static final String SECCION400_P_405 = "P_405";
+    public static final String SECCION400_P_406 = "P_406";
+    public static final String SECCION400_P_407_1 = "P_407_1";
+    public static final String SECCION400_P_407_2 = "P_407_2";
+    public static final String SECCION400_P_407_3 = "P_407_3";
+    public static final String SECCION400_P_407_4 = "P_407_4";
+    public static final String SECCION400_P_407_5 = "P_407_5";
+    public static final String SECCION400_P_407_6 = "P_407_6";
+    public static final String SECCION400_P_407_7 = "P_407_7";
+    public static final String SECCION400_P_407_7_O = "P_407_7_O";
+    public static final String SECCION400_P_408_1 = "P_408_1";
+    public static final String SECCION400_P_408_2 = "P_408_2";
+    public static final String SECCION400_P_408_3 = "P_408_3";
+    public static final String SECCION400_P_408_4 = "P_408_4";
+    public static final String SECCION400_P_408_5 = "P_408_5";
+    public static final String SECCION400_P_408_6 = "P_408_6";
+    public static final String SECCION400_P_408_6_O = "P_408_6_O";
+    public static final String SECCION400_P_409_1 = "P_409_1";
+    public static final String SECCION400_P_409_2 = "P_409_2";
+    public static final String SECCION400_P_409_3 = "P_409_3";
+    public static final String SECCION400_P_409_4 = "P_409_4";
+    public static final String SECCION400_P_409_5 = "P_409_5";
+    public static final String SECCION400_P_409_5_O = "P_409_5_O";
+    public static final String SECCION400_P_410 = "P_410";
+    public static final String SECCION400_P_410_O = "P_410_O";
 
+    public static final String SECCION400_OBS = "OBS";
 
 
 }

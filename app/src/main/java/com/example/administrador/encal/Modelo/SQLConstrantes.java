@@ -318,6 +318,7 @@ public class SQLConstrantes {
 
     public static final String SECCION400_OBS = "OBS";
 
+
     //QUERY
     //CREATE
     public static final String SQL_CREATE_TABLA_USUARIOS =
@@ -463,63 +464,132 @@ public class SQLConstrantes {
 
 
     //TABLA MODULO1
-    /*public static final String SQL_CREATE_TABLA_MODULO1 =
-            "CREATE TABLE " + tableModulo1 + "(" +
-                    MODULO1_ID  + " TEXT PRIMARY KEY," +
-                    MODULO1_P0_0  + " TEXT," +
-                    MODULO1_P0_1  + " TEXT," +
-                    MODULO1_P0_2  + " TEXT," +
-                    MODULO1_P0_3  + " TEXT," +
-                    MODULO1_P1_1  + " TEXT," +
-                    MODULO1_P1_2  + " TEXT," +
-                    MODULO1_P1_2_DETALLE + " TEXT," +
-                    MODULO1_P2_1_1  + " TEXT," +
-                    MODULO1_P2_1_2  + " TEXT," +
-                    MODULO1_P2_1_2_DETALLE + " TEXT," +
-                    MODULO1_P2_1_NO  + " TEXT," +
-                    MODULO1_P2_2_1  + " TEXT," +
-                    MODULO1_P2_2_2  + " TEXT," +
-                    MODULO1_P2_2_2_DETALLE + " TEXT," +
-                    MODULO1_P2_2_NO  + " TEXT," +
-                    MODULO1_P3  + " TEXT," +
-                    MODULO1_P3_0  + " TEXT," +
-                    MODULO1_P4_1_1  + " TEXT," +
-                    MODULO1_P4_2_1  + " TEXT," +
-                    MODULO1_P5  + " TEXT," +
-                    MODULO1_P6_0  + " TEXT," +
-                    MODULO1_P6_1  + " TEXT," +
-                    MODULO1_P7_1_1  + " TEXT," +
-                    MODULO1_P7_2_1  + " TEXT," +
-                    MODULO1_P7_1_2  + " TEXT," +
-                    MODULO1_P7_2_2  + " TEXT," +
-                    MODULO1_P8  + " TEXT," +
-                    MODULO1_P9  + " TEXT," +
-                    MODULO1_P10  + " TEXT," +
-                    MODULO1_P11  + " TEXT," +
-                    MODULO1_P11_1  + " TEXT," +
-                    MODULO1_P11_2  + " TEXT," +
-                    MODULO1_P12_NO  + " TEXT," +
-                    MODULO1_P12_TIPVIA  + " TEXT," +
-                    MODULO1_P12_NOMVIA   + " TEXT," +
-                    MODULO1_P12_NROPTA  + " TEXT," +
-                    MODULO1_P12_BLOCK  + " TEXT," +
-                    MODULO1_P12_INT  + " TEXT," +
-                    MODULO1_P12_PISO  + " TEXT," +
-                    MODULO1_P12_MZA  + " TEXT," +
-                    MODULO1_P12_LOTE  + " TEXT," +
-                    MODULO1_P12_KM  + " TEXT," +
-                    MODULO1_P12_DIST  + " TEXT," +
-                    MODULO1_P12_CCDI  + " TEXT," +
-                    MODULO1_P12_PROV  + " TEXT," +
-                    MODULO1_P12_CCPP  + " TEXT," +
-                    MODULO1_P12_DEP  + " TEXT," +
-                    MODULO1_P12_CCDD  + " TEXT," +
-                    MODULO1_OBS_MOD_I  + " TEXT," +
-                    MODULO1_USUCREACION + " TEXT," +
-                    MODULO1_FECCREACION + " TEXT," +
-                    MODULO1_USUREGISTRO + " TEXT," +
-                    MODULO1_FECREGISTRO + " TEXT" + ");"
-            ;*/
+    public static final String SQL_CREATE_TABLA_MODULO3 =
+            "CREATE TABLE " + tableModulo3 + "(" +
+                    SECCION300_ID  + " TEXT PRIMARY KEY," +
+                    SECCION300_P_301  + " TEXT," +
+                    SECCION300_P_302  + " TEXT," +
+                    SECCION300_P_302A_M_1  + " TEXT," +
+                    SECCION300_P_302A_M_2  + " TEXT," +
+                    SECCION300_P_302A_M_3  + " TEXT," +
+                    SECCION300_P_302A_M_4  + " TEXT," +
+                    SECCION300_P_302A_M_4_O  + " TEXT," +
+                    SECCION300_P_302A_L_1  + " TEXT," +
+                    SECCION300_P_302A_L_2  + " TEXT," +
+                    SECCION300_P_302A_L_3  + " TEXT," +
+                    SECCION300_P_302A_L_4  + " TEXT," +
+                    SECCION300_P_302A_L_4_O  + " TEXT," +
+                    SECCION300_P_302A_P_1  + " TEXT," +
+                    SECCION300_P_302A_P_2  + " TEXT," +
+                    SECCION300_P_302A_P_3  + " TEXT," +
+                    SECCION300_P_302A_P_4  + " TEXT," +
+                    SECCION300_P_302A_P_5  + " TEXT," +
+                    SECCION300_P_302A_P_5_O  + " TEXT," +
+                    SECCION300_P_302A_T_1  + " TEXT," +
+                    SECCION300_P_302A_T_2  + " TEXT," +
+                    SECCION300_P_302A_T_3  + " TEXT," +
+                    SECCION300_P_302A_T_4  + " TEXT," +
+                    SECCION300_P_302A_T_4_O  + " TEXT," +
+                    SECCION300_P_302A_V_1  + " TEXT," +
+                    SECCION300_P_302A_V_2  + " TEXT," +
+                    SECCION300_P_302A_V_3  + " TEXT," +
+                    SECCION300_P_302A_V_3_O  + " TEXT," +
+                    SECCION300_P_302A_O_1  + " TEXT," +
+                    SECCION300_P_302A_O_1_O  + " TEXT," +
+                    SECCION300_P_302B_M_1  + " TEXT," +
+                    SECCION300_P_302B_M_2  + " TEXT," +
+                    SECCION300_P_302B_M_3  + " TEXT," +
+                    SECCION300_P_302B_M_4  + " TEXT," +
+                    SECCION300_P_302B_L_1  + " TEXT," +
+                    SECCION300_P_302B_L_2  + " TEXT," +
+                    SECCION300_P_302B_L_3  + " TEXT," +
+                    SECCION300_P_302B_L_4  + " TEXT," +
+                    SECCION300_P_302B_P_1  + " TEXT," +
+                    SECCION300_P_302B_P_2  + " TEXT," +
+                    SECCION300_P_302B_P_3  + " TEXT," +
+                    SECCION300_P_302B_P_4  + " TEXT," +
+                    SECCION300_P_302B_P_5  + " TEXT," +
+                    SECCION300_P_302B_T_1  + " TEXT," +
+                    SECCION300_P_302B_T_2  + " TEXT," +
+                    SECCION300_P_302B_T_3  + " TEXT," +
+                    SECCION300_P_302B_T_4  + " TEXT," +
+                    SECCION300_P_302B_V_1  + " TEXT," +
+                    SECCION300_P_302B_V_2  + " TEXT," +
+                    SECCION300_P_302B_V_3  + " TEXT," +
+                    SECCION300_P_302B_O_1  + " TEXT," +
+                    SECCION300_P_302C_M_1  + " TEXT," +
+                    SECCION300_P_302C_M_2  + " TEXT," +
+                    SECCION300_P_302C_M_3  + " TEXT," +
+                    SECCION300_P_302C_M_4  + " TEXT," +
+                    SECCION300_P_302C_L_1  + " TEXT," +
+                    SECCION300_P_302C_L_2  + " TEXT," +
+                    SECCION300_P_302C_L_3  + " TEXT," +
+                    SECCION300_P_302C_L_4  + " TEXT," +
+                    SECCION300_P_302C_P_1  + " TEXT," +
+                    SECCION300_P_302C_P_2  + " TEXT," +
+                    SECCION300_P_302C_P_3  + " TEXT," +
+                    SECCION300_P_302C_P_4  + " TEXT," +
+                    SECCION300_P_302C_P_5  + " TEXT," +
+                    SECCION300_P_302C_T_1  + " TEXT," +
+                    SECCION300_P_302C_T_2  + " TEXT," +
+                    SECCION300_P_302C_T_3  + " TEXT," +
+                    SECCION300_P_302C_T_4  + " TEXT," +
+                    SECCION300_P_302C_V_1  + " TEXT," +
+                    SECCION300_P_302C_V_2  + " TEXT," +
+                    SECCION300_P_302C_V_3  + " TEXT," +
+                    SECCION300_P_302C_O_1  + " TEXT," +
+                    SECCION300_P_303_1  + " TEXT," +
+                    SECCION300_P_303_2  + " TEXT," +
+                    SECCION300_P_303_3  + " TEXT," +
+                    SECCION300_P_303_4  + " TEXT," +
+                    SECCION300_P_303_5  + " TEXT," +
+                    SECCION300_P_304  + " TEXT," +
+                    SECCION300_P_305  + " TEXT," +
+                    SECCION300_OBS  + " TEXT" + ");"
+            ;
 
+
+    //SECCION 400
+     public static final String SQL_CREATE_TABLA_MODULO4 =
+            "CREATE TABLE " + tableModulo4 + "(" +
+                    SECCION400_ID  + " TEXT PRIMARY KEY," +
+                    SECCION400_P_401_1  + " TEXT," +
+                    SECCION400_P_401_2  + " TEXT," +
+                    SECCION400_P_401_3  + " TEXT," +
+                    SECCION400_P_401_4  + " TEXT," +
+                    SECCION400_P_401_5  + " TEXT," +
+                    SECCION400_P_402  + " TEXT," +
+                    SECCION400_P_403_1  + " TEXT," +
+                    SECCION400_P_403_2  + " TEXT," +
+                    SECCION400_P_403_3  + " TEXT," +
+                    SECCION400_P_403_4  + " TEXT," +
+                    SECCION400_P_404  + " TEXT," +
+                    SECCION400_P_405  + " TEXT," +
+                    SECCION400_P_406  + " TEXT," +
+                    SECCION400_P_407_1  + " TEXT," +
+                    SECCION400_P_407_2  + " TEXT," +
+                    SECCION400_P_407_3  + " TEXT," +
+                    SECCION400_P_407_4  + " TEXT," +
+                    SECCION400_P_407_5  + " TEXT," +
+                    SECCION400_P_407_6  + " TEXT," +
+                    SECCION400_P_407_7  + " TEXT," +
+                    SECCION400_P_407_7_O  + " TEXT," +
+                    SECCION400_P_408_1  + " TEXT," +
+                    SECCION400_P_408_2  + " TEXT," +
+                    SECCION400_P_408_3  + " TEXT," +
+                    SECCION400_P_408_4  + " TEXT," +
+                    SECCION400_P_408_5  + " TEXT," +
+                    SECCION400_P_408_6  + " TEXT," +
+                    SECCION400_P_408_6_O  + " TEXT," +
+                    SECCION400_P_409_1  + " TEXT," +
+                    SECCION400_P_409_2  + " TEXT," +
+                    SECCION400_P_409_3  + " TEXT," +
+                    SECCION400_P_409_4  + " TEXT," +
+                    SECCION400_P_409_5  + " TEXT," +
+                    SECCION400_P_409_5_O  + " TEXT," +
+                    SECCION400_P_410  + " TEXT," +
+                    SECCION400_P_410_O  + " TEXT," +
+                    SECCION400_OBS  + " TEXT" + ");"
+            ;
 
 }

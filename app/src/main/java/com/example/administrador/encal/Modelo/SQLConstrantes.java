@@ -167,9 +167,50 @@ public class SQLConstrantes {
     public static final String SECCION100_P_102D = "P_102D";
     public static final String SECCION100_P_102_4 = "P_102_4";
     public static final String SECCION100_P_103 = "P_103";
-    public static final String SECCION100_ = "P_102_1";
-
-
+    public static final String SECCION100_P_103_O = "P_103_O";
+    public static final String SECCION100_P_104 = "P_104";
+    public static final String SECCION100_P_105 = "P_105";
+    public static final String SECCION100_P_106_1 = "P_106_1";
+    public static final String SECCION100_P_106_2 = "P_106_2";
+    public static final String SECCION100_P_106_3 = "P_106_3";
+    public static final String SECCION100_P_106_4 = "P_106_4";
+    public static final String SECCION100_P_106_5 = "P_106_5";
+    public static final String SECCION100_P_107_1 = "P_107_1";
+    public static final String SECCION100_P_107_2 = "P_107_2";
+    public static final String SECCION100_P_107_3 = "P_107_3";
+    public static final String SECCION100_P_108 = "P_108";
+    public static final String SECCION100_P_109_1 = "P_109_1";
+    public static final String SECCION100_P_109_2 = "P_109_2";
+    public static final String SECCION100_P_109_3 = "P_109_3";
+    public static final String SECCION100_P_109_4 = "P_109_4";
+    public static final String SECCION100_P_109_5 = "P_109_5";
+    public static final String SECCION100_P_109_6 = "P_109_6";
+    public static final String SECCION100_P_109_6_O = "P_109_6_O";
+    public static final String SECCION100_P_110_1 = "P_110_1";
+    public static final String SECCION100_P_110_2 = "P_110_2";
+    public static final String SECCION100_P_110_3 = "P_110_3";
+    public static final String SECCION100_P_110_4 = "P_110_4";
+    public static final String SECCION100_P_110_5 = "P_110_5";
+    public static final String SECCION100_P_110_6 = "P_110_6";
+    public static final String SECCION100_P_110_7 = "P_110_7";
+    public static final String SECCION100_P_110_7_O = "P_110_7_O";
+    public static final String SECCION100_P_111 = "P_111";
+    public static final String SECCION100_P_112 = "P_112";
+    public static final String SECCION100_P_112_O = "P_112_O";
+    public static final String SECCION100_P_113_1 = "P_113_1";
+    public static final String SECCION100_P_113_2 = "P_113_2";
+    public static final String SECCION100_P_113_3 = "P_113_3";
+    public static final String SECCION100_P_113_4 = "P_113_4";
+    public static final String SECCION100_P_113_5 = "P_113_5";
+    public static final String SECCION100_P_113_5_O = "P_113_5_O";
+    public static final String SECCION100_P_114_1 = "P_114_1";
+    public static final String SECCION100_P_114_2 = "P_114_2";
+    public static final String SECCION100_P_114_3 = "P_114_3";
+    public static final String SECCION100_P_114_4 = "P_114_4";
+    public static final String SECCION100_P_114_5 = "P_114_5";
+    public static final String SECCION100_P_114_6 = "P_114_6";
+    public static final String SECCION100_P_114_7 = "P_114_7";
+    public static final String SECCION100_P_114_7_O = "P_114_7_O";
     public static final String SECCION100_OBS = "OBS";
 
 
@@ -190,7 +231,6 @@ public class SQLConstrantes {
     public static final String SECCION200_P_205_5 = "P_205_5";
     public static final String SECCION200_P_205_6 = "P_205_6";
     public static final String SECCION200_P_205_6_O = "P_205_6_O";
-
     public static final String SECCION200_OBS = "OBS";
 
 
@@ -317,7 +357,6 @@ public class SQLConstrantes {
     public static final String SECCION400_P_410_O = "P_410_O";
 
     public static final String SECCION400_OBS = "OBS";
-
 
     //QUERY
     //CREATE
@@ -463,133 +502,202 @@ public class SQLConstrantes {
             ;
 
 
-    //TABLA MODULO1
-    public static final String SQL_CREATE_TABLA_MODULO3 =
-            "CREATE TABLE " + tableModulo3 + "(" +
-                    SECCION300_ID  + " TEXT PRIMARY KEY," +
-                    SECCION300_P_301  + " TEXT," +
-                    SECCION300_P_302  + " TEXT," +
-                    SECCION300_P_302A_M_1  + " TEXT," +
-                    SECCION300_P_302A_M_2  + " TEXT," +
-                    SECCION300_P_302A_M_3  + " TEXT," +
-                    SECCION300_P_302A_M_4  + " TEXT," +
-                    SECCION300_P_302A_M_4_O  + " TEXT," +
-                    SECCION300_P_302A_L_1  + " TEXT," +
-                    SECCION300_P_302A_L_2  + " TEXT," +
-                    SECCION300_P_302A_L_3  + " TEXT," +
-                    SECCION300_P_302A_L_4  + " TEXT," +
-                    SECCION300_P_302A_L_4_O  + " TEXT," +
-                    SECCION300_P_302A_P_1  + " TEXT," +
-                    SECCION300_P_302A_P_2  + " TEXT," +
-                    SECCION300_P_302A_P_3  + " TEXT," +
-                    SECCION300_P_302A_P_4  + " TEXT," +
-                    SECCION300_P_302A_P_5  + " TEXT," +
-                    SECCION300_P_302A_P_5_O  + " TEXT," +
-                    SECCION300_P_302A_T_1  + " TEXT," +
-                    SECCION300_P_302A_T_2  + " TEXT," +
-                    SECCION300_P_302A_T_3  + " TEXT," +
-                    SECCION300_P_302A_T_4  + " TEXT," +
-                    SECCION300_P_302A_T_4_O  + " TEXT," +
-                    SECCION300_P_302A_V_1  + " TEXT," +
-                    SECCION300_P_302A_V_2  + " TEXT," +
-                    SECCION300_P_302A_V_3  + " TEXT," +
-                    SECCION300_P_302A_V_3_O  + " TEXT," +
-                    SECCION300_P_302A_O_1  + " TEXT," +
-                    SECCION300_P_302A_O_1_O  + " TEXT," +
-                    SECCION300_P_302B_M_1  + " TEXT," +
-                    SECCION300_P_302B_M_2  + " TEXT," +
-                    SECCION300_P_302B_M_3  + " TEXT," +
-                    SECCION300_P_302B_M_4  + " TEXT," +
-                    SECCION300_P_302B_L_1  + " TEXT," +
-                    SECCION300_P_302B_L_2  + " TEXT," +
-                    SECCION300_P_302B_L_3  + " TEXT," +
-                    SECCION300_P_302B_L_4  + " TEXT," +
-                    SECCION300_P_302B_P_1  + " TEXT," +
-                    SECCION300_P_302B_P_2  + " TEXT," +
-                    SECCION300_P_302B_P_3  + " TEXT," +
-                    SECCION300_P_302B_P_4  + " TEXT," +
-                    SECCION300_P_302B_P_5  + " TEXT," +
-                    SECCION300_P_302B_T_1  + " TEXT," +
-                    SECCION300_P_302B_T_2  + " TEXT," +
-                    SECCION300_P_302B_T_3  + " TEXT," +
-                    SECCION300_P_302B_T_4  + " TEXT," +
-                    SECCION300_P_302B_V_1  + " TEXT," +
-                    SECCION300_P_302B_V_2  + " TEXT," +
-                    SECCION300_P_302B_V_3  + " TEXT," +
-                    SECCION300_P_302B_O_1  + " TEXT," +
-                    SECCION300_P_302C_M_1  + " TEXT," +
-                    SECCION300_P_302C_M_2  + " TEXT," +
-                    SECCION300_P_302C_M_3  + " TEXT," +
-                    SECCION300_P_302C_M_4  + " TEXT," +
-                    SECCION300_P_302C_L_1  + " TEXT," +
-                    SECCION300_P_302C_L_2  + " TEXT," +
-                    SECCION300_P_302C_L_3  + " TEXT," +
-                    SECCION300_P_302C_L_4  + " TEXT," +
-                    SECCION300_P_302C_P_1  + " TEXT," +
-                    SECCION300_P_302C_P_2  + " TEXT," +
-                    SECCION300_P_302C_P_3  + " TEXT," +
-                    SECCION300_P_302C_P_4  + " TEXT," +
-                    SECCION300_P_302C_P_5  + " TEXT," +
-                    SECCION300_P_302C_T_1  + " TEXT," +
-                    SECCION300_P_302C_T_2  + " TEXT," +
-                    SECCION300_P_302C_T_3  + " TEXT," +
-                    SECCION300_P_302C_T_4  + " TEXT," +
-                    SECCION300_P_302C_V_1  + " TEXT," +
-                    SECCION300_P_302C_V_2  + " TEXT," +
-                    SECCION300_P_302C_V_3  + " TEXT," +
-                    SECCION300_P_302C_O_1  + " TEXT," +
-                    SECCION300_P_303_1  + " TEXT," +
-                    SECCION300_P_303_2  + " TEXT," +
-                    SECCION300_P_303_3  + " TEXT," +
-                    SECCION300_P_303_4  + " TEXT," +
-                    SECCION300_P_303_5  + " TEXT," +
-                    SECCION300_P_304  + " TEXT," +
-                    SECCION300_P_305  + " TEXT," +
-                    SECCION300_OBS  + " TEXT" + ");"
+    //TABLA SECCION100
+    public static final String SQL_CREATE_TABLA_SECCION100 =
+            "CREATE TABLE " + tableModulo1 + "(" +
+                    SECCION100_ID  + " TEXT PRIMARY KEY," +
+                    SECCION100_P_101  + " TEXT," +
+                    SECCION100_P_101_1  + " TEXT," +
+                    SECCION100_P_101_1_O  + " TEXT," +
+                    SECCION100_P_102A  + " TEXT," +
+                    SECCION100_P_102_1  + " TEXT," +
+                    SECCION100_P_102B  + " TEXT," +
+                    SECCION100_P_102_2 + " TEXT," +
+                    SECCION100_P_102C  + " TEXT," +
+                    SECCION100_P_102_3  + " TEXT," +
+                    SECCION100_P_102D + " TEXT," +
+                    SECCION100_P_102_4  + " TEXT," +
+                    SECCION100_P_103  + " TEXT," +
+                    SECCION100_P_103_O  + " TEXT," +
+                    SECCION100_P_104 + " TEXT," +
+                    SECCION100_P_105  + " TEXT," +
+                    SECCION100_P_106_1  + " TEXT," +
+                    SECCION100_P_106_2  + " TEXT," +
+                    SECCION100_P_106_3  + " TEXT," +
+                    SECCION100_P_106_4  + " TEXT," +
+                    SECCION100_P_106_5  + " TEXT," +
+                    SECCION100_P_107_1  + " TEXT," +
+                    SECCION100_P_107_2  + " TEXT," +
+                    SECCION100_P_107_3  + " TEXT," +
+                    SECCION100_P_108  + " TEXT," +
+                    SECCION100_P_109_1  + " TEXT," +
+                    SECCION100_P_109_2  + " TEXT," +
+                    SECCION100_P_109_3  + " TEXT," +
+                    SECCION100_P_109_4  + " TEXT," +
+                    SECCION100_P_109_5  + " TEXT," +
+                    SECCION100_P_109_6  + " TEXT," +
+                    SECCION100_P_109_6_O  + " TEXT," +
+                    SECCION100_P_110_1  + " TEXT," +
+                    SECCION100_P_110_2  + " TEXT," +
+                    SECCION100_P_110_3  + " TEXT," +
+                    SECCION100_P_110_4   + " TEXT," +
+                    SECCION100_P_110_5  + " TEXT," +
+                    SECCION100_P_110_6  + " TEXT," +
+                    SECCION100_P_110_7  + " TEXT," +
+                    SECCION100_P_110_7_O  + " TEXT," +
+                    SECCION100_P_111  + " TEXT," +
+                    SECCION100_P_112  + " TEXT," +
+                    SECCION100_P_112_O  + " TEXT," +
+                    SECCION100_P_113_1  + " TEXT," +
+                    SECCION100_P_113_2  + " TEXT," +
+                    SECCION100_P_113_3  + " TEXT," +
+                    SECCION100_P_113_4  + " TEXT," +
+                    SECCION100_P_113_5  + " TEXT," +
+                    SECCION100_P_113_5_O  + " TEXT," +
+                    SECCION100_P_114_1  + " TEXT," +
+                    SECCION100_P_114_2 + " TEXT," +
+                    SECCION100_P_114_3 + " TEXT," +
+                    SECCION100_P_114_4 + " TEXT," +
+                    SECCION100_P_114_5 + " TEXT" +
+                    SECCION100_P_114_6 + " TEXT," +
+                    SECCION100_P_114_7 + " TEXT," +
+                    SECCION100_P_114_7_O + " TEXT," +
+                    SECCION100_OBS + " TEXT," +");"
+            ;
+
+    //TABLA SECCION200
+    public static final String SQL_CREATE_TABLA_SECCION200 =
+            "CREATE TABLE " + tableModulo2 + "(" +
+                    SECCION200_ID  + " TEXT PRIMARY KEY," +
+                    SECCION200_P_201_1  + " TEXT," +
+                    SECCION200_P_201_2  + " TEXT," +
+                    SECCION200_P_201_3  + " TEXT," +
+                    SECCION200_P_201_4  + " TEXT," +
+                    SECCION200_P_202  + " TEXT," +
+                    SECCION200_P_203  + " TEXT," +
+                    SECCION200_P_203_O + " TEXT," +
+                    SECCION200_P_204  + " TEXT," +
+                    SECCION200_P_205_1  + " TEXT," +
+                    SECCION200_P_205_2 + " TEXT," +
+                    SECCION200_P_205_3  + " TEXT," +
+                    SECCION200_P_205_4  + " TEXT," +
+                    SECCION200_P_205_5  + " TEXT," +
+                    SECCION200_P_205_6 + " TEXT," +
+                    SECCION200_P_205_6_O  + " TEXT," +
+                    SECCION200_OBS + " TEXT," +");"
             ;
 
 
-    //SECCION 400
-     public static final String SQL_CREATE_TABLA_MODULO4 =
-            "CREATE TABLE " + tableModulo4 + "(" +
-                    SECCION400_ID  + " TEXT PRIMARY KEY," +
-                    SECCION400_P_401_1  + " TEXT," +
-                    SECCION400_P_401_2  + " TEXT," +
-                    SECCION400_P_401_3  + " TEXT," +
-                    SECCION400_P_401_4  + " TEXT," +
-                    SECCION400_P_401_5  + " TEXT," +
-                    SECCION400_P_402  + " TEXT," +
-                    SECCION400_P_403_1  + " TEXT," +
-                    SECCION400_P_403_2  + " TEXT," +
-                    SECCION400_P_403_3  + " TEXT," +
-                    SECCION400_P_403_4  + " TEXT," +
-                    SECCION400_P_404  + " TEXT," +
-                    SECCION400_P_405  + " TEXT," +
-                    SECCION400_P_406  + " TEXT," +
-                    SECCION400_P_407_1  + " TEXT," +
-                    SECCION400_P_407_2  + " TEXT," +
-                    SECCION400_P_407_3  + " TEXT," +
-                    SECCION400_P_407_4  + " TEXT," +
-                    SECCION400_P_407_5  + " TEXT," +
-                    SECCION400_P_407_6  + " TEXT," +
-                    SECCION400_P_407_7  + " TEXT," +
-                    SECCION400_P_407_7_O  + " TEXT," +
-                    SECCION400_P_408_1  + " TEXT," +
-                    SECCION400_P_408_2  + " TEXT," +
-                    SECCION400_P_408_3  + " TEXT," +
-                    SECCION400_P_408_4  + " TEXT," +
-                    SECCION400_P_408_5  + " TEXT," +
-                    SECCION400_P_408_6  + " TEXT," +
-                    SECCION400_P_408_6_O  + " TEXT," +
-                    SECCION400_P_409_1  + " TEXT," +
-                    SECCION400_P_409_2  + " TEXT," +
-                    SECCION400_P_409_3  + " TEXT," +
-                    SECCION400_P_409_4  + " TEXT," +
-                    SECCION400_P_409_5  + " TEXT," +
-                    SECCION400_P_409_5_O  + " TEXT," +
-                    SECCION400_P_410  + " TEXT," +
-                    SECCION400_P_410_O  + " TEXT," +
-                    SECCION400_OBS  + " TEXT" + ");"
-            ;
+
+    //WHERE
+    public static final String WHERE_CLAUSE_ID_EMPRESA = "ID=?";
+    public static final String WHERE_CLAUSE_ID_USUARIO = "ID=?";
+    public static final String WHERE_CLAUSE_ID_UBIGEO = "ID_UBI=?";
+    public static final String WHERE_CLAUSE_ID_VISITA = "ID=?";
+    public static final String WHERE_CLAUSE_ID_OPERADOR = "OPERADOR=?";
+    public static final String WHERE_CLAUSE_ID_JEFE = "JEFE=?";
+    public static final String WHERE_CLAUSE_ID_OBSERVADOR = "OBSERVADOR=?";
+    public static final String WHERE_CLAUSE_ID_OCUPACION = "ID=?";
+    public static final String WHERE_CLAUSE_ID_EMPRESA_MOD5_DIN = "IDEMPRESA=?";
+    public static final String WHERE_CLAUSE_ID_EMPRESA_VISITA = "ID_EMPRESA=?";
+
+    //DELETE
+    public static final String SQL_DELETE_USUARIOS = "DROP TABLE " + tableUsuarios;
+    public static final String SQL_DELETE_MARCO = "DROP TABLE " + tableMarco;
+    public static final String SQL_DELETE_UBIGEO = "DROP TABLE " + tableUbigeo;
+    public static final String SQL_DELETE_DATOS_ENTREVISTA = "DROP TABLE " + tableDatosEntrevista;
+    public static final String SQL_DELETE_CARATULAS = "DROP TABLE " + tableCaratulas;
+    public static final String SQL_DELETE_VISITAS = "DROP TABLE " + tableVisitas;
+    public static final String SQL_DELETE_IDENTIFICACIONES = "DROP TABLE " + tableIdentificaciones;
+    public static final String SQL_DELETE_MODULO1 = "DROP TABLE " + tableModulo1;
+    public static final String SQL_DELETE_MODULO2 = "DROP TABLE " + tableModulo2;
+    public static final String SQL_DELETE_MODULO3 = "DROP TABLE " + tableModulo3;
+    public static final String SQL_DELETE_MODULO4 = "DROP TABLE " + tableModulo4;
+
+    //TRAER COLUMNAS EMPRESAS
+
+    public static final String[] ALL_COLUMNS_USUARIOS = {
+            USUARIO_ID, USUARIO_PASSWORD, USUARIO_PERMISO
+    };
+
+    public static final String[] ALL_COLUMNS_UBIGEOS = {
+            UBIGEO_ID, UBIGEO_ID_UBI,UBIGEO_DISTRITO
+    };
+
+
+    public static final String[] ALL_COLUMNS_MARCO = {
+            MARCO_ID, MARCO_RUC, MARCO_RAZON_SOCIAL, MARCO_NOMBRE_COMERCIAL,
+            MARCO_OPERADOR, MARCO_JEFE, MARCO_OBSERVADOR, MARCO_ANIO,
+            MARCO_MES, MARCO_PERIODO, MARCO_CCDD, MARCO_DEPARTAMENTO,
+            MARCO_CCPP, MARCO_PROVINCIA, MARCO_CCDI, MARCO_DISTRITO,
+            MARCO_T_EMPRESA, MARCO_FRENTE, MARCO_ZONA, MARCO_MANZANA,
+            MARCO_CAT_VIA, MARCO_NOM_VIA, MARCO_PUERTA, MARCO_INTERIOR,
+            MARCO_PISO, MARCO_MZ, MARCO_LOTE
+    };
+
+    //TRAER COLUMNAS CARATULAS
+    public static final String[] ALL_COLUMNS_CARATULA = {
+            CARATULA_ID,
+            CARATULA_DEPARTAMENTO,
+            CARATULA_DEPARTAMENTO_COD ,
+            CARATULA_PROVINCIA,
+            CARATULA_PROVINCIA_COD,
+            CARATULA_DISTRITO,
+            CARATULA_DISTRITO_COD,
+            CARATULA_GPSLATITUD,
+            CARATULA_GPSLONGITUD,
+            CARATULA_SECTOR,
+            CARATULA_AREA,
+            CARATULA_ZONA,
+            CARATULA_MANZANA_MUESTRA,
+            CARATULA_FRENTE,
+            CARATULA_TIPVIA,
+            CARATULA_NOMVIA,
+            CARATULA_NPUERTA,
+            CARATULA_BLOCK,
+            CARATULA_INTERIOR,
+            CARATULA_PISO,
+            CARATULA_MANZANA_VIA,
+            CARATULA_LOTE,
+            CARATULA_KM,
+            CARATULA_REFERENCIA
+    };
+
+    //TRAER COLUMNAS VISITAS
+    public static final String[] ALL_COLUMNS_VISITAS = {
+            VISITA_ID, VISITA_ID_EMPRESA, VISITA_DNI_OPERADOR, VISITA_NOMBRE_OPERADOR, VISITA_DNI_JEFE, VISITA_NOMBRE_JEFE, VISITA_DNI_SUPERVISOR,  VISITA_NOMBRE_SUPERVISOR,  VISITA_DIA, VISITA_MES,VISITA_ANIO,
+            VISITA_HORAI, VISITA_MINUTOI, VISITA_HORAF,VISITA_MINUTOF, VISITA_RESULTADO, VISITA_RESULTADO_ESP, VISITA_PROX_DIA, VISITA_PROX_MES, VISITA_PROX_ANIO, VISITA_PROX_HORA,
+            VISITA_PROX_MINUTO,VISITA_N ,VISITA_USUCREACION,VISITA_FECCREACION, VISITA_USUREGISTRO,VISITA_FECREGISTRO
+    };
+
+    //TRAER COLUMNAS IDENTIFICACIONES
+    public static final String[] ALL_COLUMNS_IDENTIFICACIONES = {
+            IDENTIFICACION_ID, IDENTIFICACION_RUC, IDENTIFICACION_RAZON,
+            IDENTIFICACION_NOMBRE, IDENTIFICACION_ANIO_FUNDACION, IDENTIFICACION_WEB,
+            IDENTIFICACION_WEBNO, IDENTIFICACION_CORREO, IDENTIFICACION_CORREONO,IDENTIFICACION_CODFIJO,
+            IDENTIFICACION_FIJO, IDENTIFICACION_FIJONO, IDENTIFICACION_MOVIL,
+            IDENTIFICACION_MOVILNO, IDENTIFICACION_ANIO_FUNCIONAMIENTO, IDENTIFICACION_CONDUCTOR_NOMBRE,
+            IDENTIFICACION_CONDUCTOR_SEXO, IDENTIFICACION_CONDUCTOR_EDAD, IDENTIFICACION_CONDUCTOR_ESTUDIOS,
+            IDENTIFICACION_CONDUCTOR_CARGO,IDENTIFICACION_CONDUCTOR_CARGO_ESP,
+            IDENTIFICACION_USUCREACION,IDENTIFICACION_FECCREACION, IDENTIFICACION_USUREGISTRO,IDENTIFICACION_FECREGISTRO
+    };
+
+    //TRAER COLUMNAS FRAGMENTS
+    public static final String[] ALL_COLUMNS_FRAGMENTS = {
+            FRAGMENT_ID, FRAGMENT_HABILITADO, FRAGMENT_AVANCE
+    };
+
+    //MODULO 1
+    public static final String[] ALL_COLUMNS_MODULO1 = {
+            MODULO1_ID, MODULO1_P0_0, MODULO1_P0_1, MODULO1_P0_2, MODULO1_P0_3, MODULO1_P1_1, MODULO1_P1_2,MODULO1_P1_2_DETALLE,
+            MODULO1_P2_1_1, MODULO1_P2_1_2, MODULO1_P2_1_2_DETALLE, MODULO1_P2_1_NO, MODULO1_P2_2_1, MODULO1_P2_2_2,MODULO1_P2_2_2_DETALLE,
+            MODULO1_P2_2_NO, MODULO1_P3, MODULO1_P3_0, MODULO1_P4_1_1, MODULO1_P4_2_1, MODULO1_P5, MODULO1_P6_0, MODULO1_P6_1, MODULO1_P7_1_1,
+            MODULO1_P7_2_1, MODULO1_P7_1_2, MODULO1_P7_2_2, MODULO1_P8, MODULO1_P9, MODULO1_P10, MODULO1_P11,
+            MODULO1_P11_1, MODULO1_P11_2, MODULO1_P12_NO, MODULO1_P12_TIPVIA, MODULO1_P12_NOMVIA , MODULO1_P12_NROPTA,
+            MODULO1_P12_BLOCK, MODULO1_P12_INT, MODULO1_P12_PISO, MODULO1_P12_MZA, MODULO1_P12_LOTE,
+            MODULO1_P12_KM, MODULO1_P12_DIST, MODULO1_P12_CCDI, MODULO1_P12_PROV, MODULO1_P12_CCPP, MODULO1_P12_DEP, MODULO1_P12_CCDD,
+            MODULO1_OBS_MOD_I, MODULO1_USUCREACION,MODULO1_FECCREACION, MODULO1_USUREGISTRO,MODULO1_FECREGISTRO
+    };
+
 
 }

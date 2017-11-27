@@ -6,31 +6,28 @@ package com.example.administrador.encal.Pojos;
 
 public class IdentificacionPojo {
 
-    public String ID;
     public String NUM_RUC;
     public String RAZON_SOCIAL;
     public String NOM_COMER_MYPE;
     public String ANO_INI;
-    public String PAGWEB_NO;
+    public int PAGWEB_NO;
     public String PAGWEB;
-    public String CORREO_NO;
+    public int CORREO_NO;
     public String CORREO;
-    public String TELFIJO_NO;
+    public int TELFIJO_NO;
     public String TELFIJO;
-    public String TELMOVIL_NO;
+    public int TELMOVIL_NO;
     public String TELMOVIL;
     public String COND_APEL_NOM;
-    public String COND_SEXO;
+    public int COND_SEXO;
     public String COND_EDAD;
-    public String COND_NEST;
+    public int COND_NEST;
     public String INFOR_CARGO;
     public String INFOR_CARGO_O;
     public String INFOR_APEL_NOM;
-    public String CONOCE_INACAL;
-    public String OBS;
+    public int CONOCE_INACAL;
 
-    public IdentificacionPojo(String ID, String NUM_RUC, String RAZON_SOCIAL, String NOM_COMER_MYPE, String ANO_INI, String PAGWEB_NO, String PAGWEB, String CORREO_NO, String CORREO, String TELFIJO_NO, String TELFIJO, String TELMOVIL_NO, String TELMOVIL, String COND_APEL_NOM, String COND_SEXO, String COND_EDAD, String COND_NEST, String INFOR_CARGO, String INFOR_CARGO_O, String INFOR_APEL_NOM, String CONOCE_INACAL, String OBS) {
-        this.ID = ID;
+    public IdentificacionPojo(String NUM_RUC, String RAZON_SOCIAL, String NOM_COMER_MYPE, String ANO_INI, int PAGWEB_NO, String PAGWEB, int CORREO_NO, String CORREO, int TELFIJO_NO, String TELFIJO, int TELMOVIL_NO, String TELMOVIL, String COND_APEL_NOM, int COND_SEXO, String COND_EDAD, int COND_NEST, String INFOR_CARGO, String INFOR_CARGO_O, String INFOR_APEL_NOM, int CONOCE_INACAL) {
         this.NUM_RUC = NUM_RUC;
         this.RAZON_SOCIAL = RAZON_SOCIAL;
         this.NOM_COMER_MYPE = NOM_COMER_MYPE;
@@ -51,15 +48,6 @@ public class IdentificacionPojo {
         this.INFOR_CARGO_O = INFOR_CARGO_O;
         this.INFOR_APEL_NOM = INFOR_APEL_NOM;
         this.CONOCE_INACAL = CONOCE_INACAL;
-        this.OBS = OBS;
-    }
-
-    public String getID() {
-        return ID;
-    }
-
-    public void setID(String ID) {
-        this.ID = ID;
     }
 
     public String getNUM_RUC() {
@@ -94,11 +82,11 @@ public class IdentificacionPojo {
         this.ANO_INI = ANO_INI;
     }
 
-    public String getPAGWEB_NO() {
+    public int getPAGWEB_NO() {
         return PAGWEB_NO;
     }
 
-    public void setPAGWEB_NO(String PAGWEB_NO) {
+    public void setPAGWEB_NO(int PAGWEB_NO) {
         this.PAGWEB_NO = PAGWEB_NO;
     }
 
@@ -110,11 +98,11 @@ public class IdentificacionPojo {
         this.PAGWEB = PAGWEB;
     }
 
-    public String getCORREO_NO() {
+    public int getCORREO_NO() {
         return CORREO_NO;
     }
 
-    public void setCORREO_NO(String CORREO_NO) {
+    public void setCORREO_NO(int CORREO_NO) {
         this.CORREO_NO = CORREO_NO;
     }
 
@@ -126,11 +114,11 @@ public class IdentificacionPojo {
         this.CORREO = CORREO;
     }
 
-    public String getTELFIJO_NO() {
+    public int getTELFIJO_NO() {
         return TELFIJO_NO;
     }
 
-    public void setTELFIJO_NO(String TELFIJO_NO) {
+    public void setTELFIJO_NO(int TELFIJO_NO) {
         this.TELFIJO_NO = TELFIJO_NO;
     }
 
@@ -142,11 +130,11 @@ public class IdentificacionPojo {
         this.TELFIJO = TELFIJO;
     }
 
-    public String getTELMOVIL_NO() {
+    public int getTELMOVIL_NO() {
         return TELMOVIL_NO;
     }
 
-    public void setTELMOVIL_NO(String TELMOVIL_NO) {
+    public void setTELMOVIL_NO(int TELMOVIL_NO) {
         this.TELMOVIL_NO = TELMOVIL_NO;
     }
 
@@ -166,11 +154,11 @@ public class IdentificacionPojo {
         this.COND_APEL_NOM = COND_APEL_NOM;
     }
 
-    public String getCOND_SEXO() {
+    public int getCOND_SEXO() {
         return COND_SEXO;
     }
 
-    public void setCOND_SEXO(String COND_SEXO) {
+    public void setCOND_SEXO(int COND_SEXO) {
         this.COND_SEXO = COND_SEXO;
     }
 
@@ -182,11 +170,11 @@ public class IdentificacionPojo {
         this.COND_EDAD = COND_EDAD;
     }
 
-    public String getCOND_NEST() {
+    public int getCOND_NEST() {
         return COND_NEST;
     }
 
-    public void setCOND_NEST(String COND_NEST) {
+    public void setCOND_NEST(int COND_NEST) {
         this.COND_NEST = COND_NEST;
     }
 
@@ -214,19 +202,11 @@ public class IdentificacionPojo {
         this.INFOR_APEL_NOM = INFOR_APEL_NOM;
     }
 
-    public String getCONOCE_INACAL() {
+    public int getCONOCE_INACAL() {
         return CONOCE_INACAL;
     }
 
-    public void setCONOCE_INACAL(String CONOCE_INACAL) {
+    public void setCONOCE_INACAL(int CONOCE_INACAL) {
         this.CONOCE_INACAL = CONOCE_INACAL;
-    }
-
-    public String getOBS() {
-        return OBS;
-    }
-
-    public void setOBS(String OBS) {
-        this.OBS = OBS;
     }
 }

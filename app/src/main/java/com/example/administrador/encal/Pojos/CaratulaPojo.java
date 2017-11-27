@@ -6,7 +6,6 @@ package com.example.administrador.encal.Pojos;
 
 public class CaratulaPojo {
 
-    private String ID;
     private String NOMBREDD;
     private String CCDD;
     private String NOMBREPV;
@@ -21,7 +20,7 @@ public class CaratulaPojo {
     private String ZONA;
     private String MANZANA_ID;
     private String FRENTE;
-    private String TIPVIA;
+    private int TIPVIA;
     private String TIPVIA_ESPEC;
     private String TIPVIA_D;
     private String NROPTA;
@@ -32,10 +31,8 @@ public class CaratulaPojo {
     private String LOTE;
     private String KM;
     private String REF_DIREC;
-    private String OBS;
 
-    public CaratulaPojo(String ID, String NOMBREDD, String CCDD, String NOMBREPV, String CCPP, String NOMBREDI, String CCDI, String GPSLATITUD, String GPSALTITUD, String GPSLONGITUD, String SECTOR_TR, String ARA_TR, String ZONA, String MANZANA_ID, String FRENTE, String TIPVIA, String TIPVIA_ESPEC, String TIPVIA_D, String NROPTA, String BLOCK, String INTERIOR, String PISO, String MZA, String LOTE, String KM, String REF_DIREC, String OBS) {
-        this.ID = ID;
+    public CaratulaPojo(String NOMBREDD, String CCDD, String NOMBREPV, String CCPP, String NOMBREDI, String CCDI, String GPSLATITUD, String GPSALTITUD, String GPSLONGITUD, String SECTOR_TR, String ARA_TR, String ZONA, String MANZANA_ID, String FRENTE, int TIPVIA, String TIPVIA_ESPEC, String TIPVIA_D, String NROPTA, String BLOCK, String INTERIOR, String PISO, String MZA, String LOTE, String KM, String REF_DIREC) {
         this.NOMBREDD = NOMBREDD;
         this.CCDD = CCDD;
         this.NOMBREPV = NOMBREPV;
@@ -61,15 +58,6 @@ public class CaratulaPojo {
         this.LOTE = LOTE;
         this.KM = KM;
         this.REF_DIREC = REF_DIREC;
-        this.OBS = OBS;
-    }
-
-    public String getID() {
-        return ID;
-    }
-
-    public void setID(String ID) {
-        this.ID = ID;
     }
 
     public String getNOMBREDD() {
@@ -184,11 +172,11 @@ public class CaratulaPojo {
         this.FRENTE = FRENTE;
     }
 
-    public String getTIPVIA() {
+    public int getTIPVIA() {
         return TIPVIA;
     }
 
-    public void setTIPVIA(String TIPVIA) {
+    public void setTIPVIA(int TIPVIA) {
         this.TIPVIA = TIPVIA;
     }
 
@@ -270,13 +258,5 @@ public class CaratulaPojo {
 
     public void setREF_DIREC(String REF_DIREC) {
         this.REF_DIREC = REF_DIREC;
-    }
-
-    public String getOBS() {
-        return OBS;
-    }
-
-    public void setOBS(String OBS) {
-        this.OBS = OBS;
     }
 }

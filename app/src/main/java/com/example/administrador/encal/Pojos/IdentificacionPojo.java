@@ -1,5 +1,9 @@
 package com.example.administrador.encal.Pojos;
 
+import android.content.ContentValues;
+
+import com.example.administrador.encal.Modelo.SQLConstantes;
+
 /**
  * Created by mcarazas on 24/11/2017.
  */
@@ -26,7 +30,30 @@ public class IdentificacionPojo {
     public String INFOR_CARGO_O;
     public String INFOR_APEL_NOM;
     public String CONOCE_INACAL;
-    public String OBS;
+
+    public IdentificacionPojo() {
+        this.ID = "";
+        this.NUM_RUC = "";
+        this.RAZON_SOCIAL = "";
+        this.NOM_COMER_MYPE = "";
+        this.ANO_INI = "";
+        this.PAGWEB_NO = "";
+        this.PAGWEB = "";
+        this.CORREO_NO = "";
+        this.CORREO = "";
+        this.TELFIJO_NO = "";
+        this.TELFIJO = "";
+        this.TELMOVIL_NO = "";
+        this.TELMOVIL = "";
+        this.COND_APEL_NOM = "";
+        this.COND_SEXO = "";
+        this.COND_EDAD = "";
+        this.COND_NEST = "";
+        this.INFOR_CARGO = "";
+        this.INFOR_CARGO_O = "";
+        this.INFOR_APEL_NOM = "";
+        this.CONOCE_INACAL = "";
+    }
 
     public IdentificacionPojo(String ID, String NUM_RUC, String RAZON_SOCIAL, String NOM_COMER_MYPE, String ANO_INI, String PAGWEB_NO, String PAGWEB, String CORREO_NO, String CORREO, String TELFIJO_NO, String TELFIJO, String TELMOVIL_NO, String TELMOVIL, String COND_APEL_NOM, String COND_SEXO, String COND_EDAD, String COND_NEST, String INFOR_CARGO, String INFOR_CARGO_O, String INFOR_APEL_NOM, String CONOCE_INACAL, String OBS) {
         this.ID = ID;
@@ -50,7 +77,6 @@ public class IdentificacionPojo {
         this.INFOR_CARGO_O = INFOR_CARGO_O;
         this.INFOR_APEL_NOM = INFOR_APEL_NOM;
         this.CONOCE_INACAL = CONOCE_INACAL;
-        this.OBS = OBS;
     }
 
     public String getID() {
@@ -221,11 +247,32 @@ public class IdentificacionPojo {
         this.CONOCE_INACAL = CONOCE_INACAL;
     }
 
-    public String getOBS() {
-        return OBS;
+
+    public ContentValues toValues(){
+        ContentValues contentValues = new ContentValues(21);
+        contentValues.put(SQLConstantes.IDENTIFICACION_ID,ID);
+        contentValues.put(SQLConstantes.IDENTIFICACION_RUC,NUM_RUC);
+        contentValues.put(SQLConstantes.IDENTIFICACION_RAZON,RAZON_SOCIAL);
+        contentValues.put(SQLConstantes.IDENTIFICACION_NOMBRE,NOM_COMER_MYPE);
+        contentValues.put(SQLConstantes.IDENTIFICACION_ANIO_FUNCIONAMIENTO,ANO_INI);
+        contentValues.put(SQLConstantes.IDENTIFICACION_WEBNO,PAGWEB_NO);
+        contentValues.put(SQLConstantes.IDENTIFICACION_WEB,PAGWEB);
+        contentValues.put(SQLConstantes.IDENTIFICACION_CORREONO,CORREO_NO);
+        contentValues.put(SQLConstantes.IDENTIFICACION_CORREO,CORREO);
+        contentValues.put(SQLConstantes.IDENTIFICACION_FIJONO,TELFIJO_NO);
+        contentValues.put(SQLConstantes.IDENTIFICACION_FIJO,TELFIJO);
+        contentValues.put(SQLConstantes.IDENTIFICACION_MOVILNO,TELMOVIL_NO);
+        contentValues.put(SQLConstantes.IDENTIFICACION_MOVIL,TELMOVIL);
+        contentValues.put(SQLConstantes.IDENTIFICACION_CONDUCTOR_NOMBRE,COND_APEL_NOM);
+        contentValues.put(SQLConstantes.IDENTIFICACION_CONDUCTOR_SEXO,COND_SEXO);
+        contentValues.put(SQLConstantes.IDENTIFICACION_CONDUCTOR_EDAD,COND_EDAD);
+        contentValues.put(SQLConstantes.IDENTIFICACION_CONDUCTOR_ESTUDIOS,COND_NEST);
+        contentValues.put(SQLConstantes.IDENTIFICACION_CONDUCTOR_CARGO,INFOR_CARGO);
+        contentValues.put(SQLConstantes.IDENTIFICACION_CONDUCTOR_CARGO_ESP,INFOR_CARGO_O);
+        contentValues.put(SQLConstantes.IDENTIFICACION_CONDUCTOR_APEYNOM,INFOR_APEL_NOM);
+        contentValues.put(SQLConstantes.IDENTIFICACION_CONDUCTOR_CONOCE_INACAL,CONOCE_INACAL);
+        return contentValues;
+
     }
 
-    public void setOBS(String OBS) {
-        this.OBS = OBS;
-    }
 }

@@ -1,5 +1,9 @@
 package com.example.administrador.encal.Pojos;
 
+import android.content.ContentValues;
+
+import com.example.administrador.encal.Modelo.SQLConstantes;
+
 /**
  * Created by USUARIO on 16/11/2017.
  */
@@ -55,6 +59,47 @@ public class Sec400PojoF1 {
     private String P_410_O;
 
     private String OBS;
+
+    public Sec400PojoF1() {
+        this.ID = "";
+        P_401_1 = "";
+        P_401_2 = "";
+        P_401_3 = "";
+        P_401_4 = "";
+        P_401_5 = "";
+        P_402 = "";
+        P_403_1 = "";
+        P_403_2 = "";
+        P_403_3 = "";
+        P_403_4 = "";
+        P_404 = "";
+        P_405 = "";
+        P_406 = "";
+        P_407_1 = "";
+        P_407_2 = "";
+        P_407_3 = "";
+        P_407_4 = "";
+        P_407_5 = "";
+        P_407_6 = "";
+        P_407_7 = "";
+        P_407_7_O = "";
+        P_408_1 = "";
+        P_408_2 = "";
+        P_408_3 = "";
+        P_408_4 = "";
+        P_408_5 = "";
+        P_408_6 = "";
+        P_408_6_O = "";
+        P_409_1 = "";
+        P_409_2 = "";
+        P_409_3 = "";
+        P_409_4 = "";
+        P_409_5 = "";
+        P_409_5_O = "";
+        P_410 = "";
+        P_410_O = "";
+        this.OBS = OBS;
+    }
 
     public Sec400PojoF1(String ID, String p_401_1, String p_401_2, String p_401_3, String p_401_4, String p_401_5, String p_402, String p_403_1, String p_403_2, String p_403_3, String p_403_4, String p_404, String p_405, String p_406, String p_407_1, String p_407_2, String p_407_3, String p_407_4, String p_407_5, String p_407_6, String p_407_7, String p_407_7_O, String p_408_1, String p_408_2, String p_408_3, String p_408_4, String p_408_5, String p_408_6, String p_408_6_O, String p_409_1, String p_409_2, String p_409_3, String p_409_4, String p_409_5, String p_409_5_O, String p_410, String p_410_O, String OBS) {
         this.ID = ID;
@@ -399,5 +444,49 @@ public class Sec400PojoF1 {
 
     public void setOBS(String OBS) {
         this.OBS = OBS;
+    }
+
+    public ContentValues toValues(){
+        ContentValues contentValues = new ContentValues(38);
+        contentValues.put(SQLConstantes.SECCION400_ID,ID);
+        contentValues.put(SQLConstantes.SECCION400_P_401_1,P_401_1);
+        contentValues.put(SQLConstantes.SECCION400_P_401_2,P_401_2);
+        contentValues.put(SQLConstantes.SECCION400_P_401_3,P_401_3);
+        contentValues.put(SQLConstantes.SECCION400_P_401_4,P_401_4);
+        contentValues.put(SQLConstantes.SECCION400_P_401_5,P_401_5);
+        contentValues.put(SQLConstantes.SECCION400_P_402,P_402);
+        contentValues.put(SQLConstantes.SECCION400_P_403_1,P_403_1);
+        contentValues.put(SQLConstantes.SECCION400_P_403_2,P_403_2);
+        contentValues.put(SQLConstantes.SECCION400_P_403_3,P_403_3);
+        contentValues.put(SQLConstantes.SECCION400_P_403_4,P_403_4);
+        contentValues.put(SQLConstantes.SECCION400_P_404,P_404);
+        contentValues.put(SQLConstantes.SECCION400_P_405,P_405);
+        contentValues.put(SQLConstantes.SECCION400_P_406,P_406);
+        contentValues.put(SQLConstantes.SECCION400_P_407_1,P_407_1);
+        contentValues.put(SQLConstantes.SECCION400_P_407_2,P_407_2);
+        contentValues.put(SQLConstantes.SECCION400_P_407_3,P_407_3);
+        contentValues.put(SQLConstantes.SECCION400_P_407_4,P_407_4);
+        contentValues.put(SQLConstantes.SECCION400_P_407_5,P_407_5);
+        contentValues.put(SQLConstantes.SECCION400_P_407_6,P_407_6);
+        contentValues.put(SQLConstantes.SECCION400_P_407_7,P_407_7);
+        contentValues.put(SQLConstantes.SECCION400_P_407_7_O,P_407_7_O);
+        contentValues.put(SQLConstantes.SECCION400_P_408_1,P_408_1);
+        contentValues.put(SQLConstantes.SECCION400_P_408_2,P_408_2);
+        contentValues.put(SQLConstantes.SECCION400_P_408_3,P_408_3);
+        contentValues.put(SQLConstantes.SECCION400_P_408_4,P_408_4);
+        contentValues.put(SQLConstantes.SECCION400_P_408_5,P_408_5);
+        contentValues.put(SQLConstantes.SECCION400_P_408_6,P_408_6);
+        contentValues.put(SQLConstantes.SECCION400_P_408_6_O,P_408_6_O);
+        contentValues.put(SQLConstantes.SECCION400_P_409_1,P_409_1);
+        contentValues.put(SQLConstantes.SECCION400_P_409_2,P_409_2);
+        contentValues.put(SQLConstantes.SECCION400_P_409_3,P_409_3);
+        contentValues.put(SQLConstantes.SECCION400_P_409_4,P_409_4);
+        contentValues.put(SQLConstantes.SECCION400_P_409_5,P_409_5);
+        contentValues.put(SQLConstantes.SECCION400_P_409_5_O,P_409_5_O);
+        contentValues.put(SQLConstantes.SECCION400_P_410,P_410);
+        contentValues.put(SQLConstantes.SECCION400_P_410_O,P_410_O);
+        contentValues.put(SQLConstantes.SECCION400_OBS,OBS);
+        return contentValues;
+
     }
 }

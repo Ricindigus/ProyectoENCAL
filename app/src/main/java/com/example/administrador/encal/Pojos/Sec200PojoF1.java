@@ -1,5 +1,9 @@
 package com.example.administrador.encal.Pojos;
 
+import android.content.ContentValues;
+
+import com.example.administrador.encal.Modelo.SQLConstantes;
+
 /**
  * Created by USUARIO on 16/11/2017.
  */
@@ -27,6 +31,26 @@ public class Sec200PojoF1 {
     private String P_205_6;
     private String P_205_6_O;
     private String OBS;
+
+    public Sec200PojoF1() {
+        this.ID = "";
+        P_201_1 = "";
+        P_201_2 = "";
+        P_201_3 = "";
+        P_201_4 = "";
+        P_202 = "";
+        P_203 = "";
+        P_203_O = "";
+        P_204 = "";
+        P_205_1 = "";
+        P_205_2 = "";
+        P_205_3 = "";
+        P_205_4 = "";
+        P_205_5 = "";
+        P_205_6 = "";
+        P_205_6_O = "";
+        this.OBS = "";
+    }
 
     public Sec200PojoF1(String ID, String p_201_1, String p_201_2, String p_201_3, String p_201_4, String p_202, String p_203, String p_203_O, String p_204, String p_205_1, String p_205_2, String p_205_3, String p_205_4, String p_205_5, String p_205_6, String p_205_6_O, String OBS) {
         this.ID = ID;
@@ -182,5 +206,28 @@ public class Sec200PojoF1 {
 
     public void setOBS(String OBS) {
         this.OBS = OBS;
+    }
+
+    public ContentValues toValues(){
+        ContentValues contentValues = new ContentValues(17);
+        contentValues.put(SQLConstantes.SECCION200_ID,ID);
+        contentValues.put(SQLConstantes.SECCION200_P_201_1,P_201_1);
+        contentValues.put(SQLConstantes.SECCION200_P_201_2,P_201_2);
+        contentValues.put(SQLConstantes.SECCION200_P_201_3,P_201_3);
+        contentValues.put(SQLConstantes.SECCION200_P_201_4,P_201_4);
+        contentValues.put(SQLConstantes.SECCION200_P_202,P_202);
+        contentValues.put(SQLConstantes.SECCION200_P_203,P_203);
+        contentValues.put(SQLConstantes.SECCION200_P_203_O,P_203_O);
+        contentValues.put(SQLConstantes.SECCION200_P_204,P_204);
+        contentValues.put(SQLConstantes.SECCION200_P_205_1,P_205_1);
+        contentValues.put(SQLConstantes.SECCION200_P_205_2,P_205_2);
+        contentValues.put(SQLConstantes.SECCION200_P_205_3,P_205_3);
+        contentValues.put(SQLConstantes.SECCION200_P_205_4,P_205_4);
+        contentValues.put(SQLConstantes.SECCION200_P_205_5,P_205_5);
+        contentValues.put(SQLConstantes.SECCION200_P_205_6,P_205_6);
+        contentValues.put(SQLConstantes.SECCION200_P_205_6_O,P_205_6_O);
+        contentValues.put(SQLConstantes.SECCION200_OBS,OBS);
+        return contentValues;
+
     }
 }

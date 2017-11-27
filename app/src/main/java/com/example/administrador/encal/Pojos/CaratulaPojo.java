@@ -1,5 +1,9 @@
 package com.example.administrador.encal.Pojos;
 
+import android.content.ContentValues;
+
+import com.example.administrador.encal.Modelo.SQLConstantes;
+
 /**
  * Created by mcarazas on 24/11/2017.
  */
@@ -14,7 +18,6 @@ public class CaratulaPojo {
     private String NOMBREDI;
     private String CCDI;
     private String GPSLATITUD;
-    private String GPSALTITUD;
     private String GPSLONGITUD;
     private String SECTOR_TR;
     private String ARA_TR;
@@ -32,9 +35,36 @@ public class CaratulaPojo {
     private String LOTE;
     private String KM;
     private String REF_DIREC;
-    private String OBS;
 
-    public CaratulaPojo(String ID, String NOMBREDD, String CCDD, String NOMBREPV, String CCPP, String NOMBREDI, String CCDI, String GPSLATITUD, String GPSALTITUD, String GPSLONGITUD, String SECTOR_TR, String ARA_TR, String ZONA, String MANZANA_ID, String FRENTE, String TIPVIA, String TIPVIA_ESPEC, String TIPVIA_D, String NROPTA, String BLOCK, String INTERIOR, String PISO, String MZA, String LOTE, String KM, String REF_DIREC, String OBS) {
+    public CaratulaPojo( ) {
+        this.ID = "";
+        this.NOMBREDD = "";
+        this.CCDD = "";
+        this.NOMBREPV = "";
+        this.CCPP = "";
+        this.NOMBREDI = "";
+        this.CCDI = "";
+        this.GPSLATITUD = "";
+        this.GPSLONGITUD = "";
+        this.SECTOR_TR = "";
+        this.ARA_TR = "";
+        this.ZONA = "";
+        this.MANZANA_ID = "";
+        this.FRENTE = "";
+        this.TIPVIA = "";
+        this.TIPVIA_ESPEC = "";
+        this.TIPVIA_D = "";
+        this.NROPTA = "";
+        this.BLOCK = "";
+        this.INTERIOR = "";
+        this.PISO = "";
+        this.MZA = "";
+        this.LOTE = "";
+        this.KM = "";
+        this.REF_DIREC = "";
+    }
+
+    public CaratulaPojo(String ID, String NOMBREDD, String CCDD, String NOMBREPV, String CCPP, String NOMBREDI, String CCDI, String GPSLATITUD, String GPSLONGITUD, String SECTOR_TR, String ARA_TR, String ZONA, String MANZANA_ID, String FRENTE, String TIPVIA, String TIPVIA_ESPEC, String TIPVIA_D, String NROPTA, String BLOCK, String INTERIOR, String PISO, String MZA, String LOTE, String KM, String REF_DIREC, String OBS) {
         this.ID = ID;
         this.NOMBREDD = NOMBREDD;
         this.CCDD = CCDD;
@@ -43,7 +73,6 @@ public class CaratulaPojo {
         this.NOMBREDI = NOMBREDI;
         this.CCDI = CCDI;
         this.GPSLATITUD = GPSLATITUD;
-        this.GPSALTITUD = GPSALTITUD;
         this.GPSLONGITUD = GPSLONGITUD;
         this.SECTOR_TR = SECTOR_TR;
         this.ARA_TR = ARA_TR;
@@ -61,7 +90,6 @@ public class CaratulaPojo {
         this.LOTE = LOTE;
         this.KM = KM;
         this.REF_DIREC = REF_DIREC;
-        this.OBS = OBS;
     }
 
     public String getID() {
@@ -126,14 +154,6 @@ public class CaratulaPojo {
 
     public void setGPSLATITUD(String GPSLATITUD) {
         this.GPSLATITUD = GPSLATITUD;
-    }
-
-    public String getGPSALTITUD() {
-        return GPSALTITUD;
-    }
-
-    public void setGPSALTITUD(String GPSALTITUD) {
-        this.GPSALTITUD = GPSALTITUD;
     }
 
     public String getGPSLONGITUD() {
@@ -272,11 +292,36 @@ public class CaratulaPojo {
         this.REF_DIREC = REF_DIREC;
     }
 
-    public String getOBS() {
-        return OBS;
+    public ContentValues toValues(){
+        ContentValues contentValues = new ContentValues(25);
+        contentValues.put(SQLConstantes.CARATULA_ID,ID);
+        contentValues.put(SQLConstantes.CARATULA_DEPARTAMENTO,NOMBREDD);
+        contentValues.put(SQLConstantes.CARATULA_DEPARTAMENTO_COD,CCDD);
+        contentValues.put(SQLConstantes.CARATULA_PROVINCIA,NOMBREPV);
+        contentValues.put(SQLConstantes.CARATULA_PROVINCIA_COD,CCPP);
+        contentValues.put(SQLConstantes.CARATULA_DISTRITO,NOMBREDI);
+        contentValues.put(SQLConstantes.CARATULA_DISTRITO_COD,CCDI);
+        contentValues.put(SQLConstantes.CARATULA_GPSLATITUD,GPSLATITUD);
+        contentValues.put(SQLConstantes.CARATULA_GPSLONGITUD,GPSLONGITUD);
+        contentValues.put(SQLConstantes.CARATULA_SECTOR,SECTOR_TR);
+        contentValues.put(SQLConstantes.CARATULA_AREA,ARA_TR);
+        contentValues.put(SQLConstantes.CARATULA_ZONA,ZONA);
+        contentValues.put(SQLConstantes.CARATULA_MANZANA_MUESTRA,MANZANA_ID);
+        contentValues.put(SQLConstantes.CARATULA_FRENTE,FRENTE);
+        contentValues.put(SQLConstantes.CARATULA_TIPVIA,TIPVIA);
+        contentValues.put(SQLConstantes.CARATULA_TIPVIA_OTRO,TIPVIA_ESPEC);
+        contentValues.put(SQLConstantes.CARATULA_NOMVIA,TIPVIA_D);
+        contentValues.put(SQLConstantes.CARATULA_NPUERTA,NROPTA);
+        contentValues.put(SQLConstantes.CARATULA_BLOCK,BLOCK);
+        contentValues.put(SQLConstantes.CARATULA_INTERIOR,INTERIOR);
+        contentValues.put(SQLConstantes.CARATULA_PISO,PISO);
+        contentValues.put(SQLConstantes.CARATULA_MANZANA_VIA,MZA);
+        contentValues.put(SQLConstantes.CARATULA_LOTE,LOTE);
+        contentValues.put(SQLConstantes.CARATULA_KM,KM);
+        contentValues.put(SQLConstantes.CARATULA_REFERENCIA,REF_DIREC);
+        return contentValues;
+
     }
 
-    public void setOBS(String OBS) {
-        this.OBS = OBS;
-    }
+
 }

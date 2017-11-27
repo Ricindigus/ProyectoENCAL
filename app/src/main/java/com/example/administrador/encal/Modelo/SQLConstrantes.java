@@ -318,5 +318,208 @@ public class SQLConstrantes {
 
     public static final String SECCION400_OBS = "OBS";
 
+    //QUERY
+    //CREATE
+    public static final String SQL_CREATE_TABLA_USUARIOS =
+            "CREATE TABLE " + tableUsuarios + "(" +
+                    USUARIO_ID + " TEXT PRIMARY KEY," +
+                    USUARIO_PASSWORD + " TEXT," +
+                    USUARIO_PERMISO + " TEXT" + ");"
+            ;
+
+
+
+    public static final String SQL_CREATE_TABLA_MARCO =
+            "CREATE TABLE " + tableMarco + "(" +
+                    MARCO_ID + " TEXT PRIMARY KEY," +
+                    MARCO_RUC + " TEXT," +
+                    MARCO_RAZON_SOCIAL + " TEXT," +
+                    MARCO_NOMBRE_COMERCIAL + " TEXT," +
+                    MARCO_OPERADOR + " TEXT," +
+                    MARCO_JEFE + " TEXT," +
+                    MARCO_OBSERVADOR + " TEXT," +
+                    MARCO_ANIO + " TEXT," +
+                    MARCO_MES + " TEXT," +
+                    MARCO_PERIODO + " TEXT," +
+                    MARCO_CCDD + " TEXT," +
+                    MARCO_DEPARTAMENTO + " TEXT," +
+                    MARCO_CCPP + " TEXT," +
+                    MARCO_PROVINCIA + " TEXT," +
+                    MARCO_CCDI + " TEXT," +
+                    MARCO_DISTRITO + " TEXT," +
+                    MARCO_T_EMPRESA + " TEXT," +
+                    MARCO_FRENTE + " TEXT," +
+                    MARCO_ZONA + " TEXT," +
+                    MARCO_MANZANA + " TEXT," +
+                    MARCO_CAT_VIA + " TEXT," +
+                    MARCO_NOM_VIA + " TEXT," +
+                    MARCO_PUERTA + " TEXT," +
+                    MARCO_INTERIOR + " TEXT," +
+                    MARCO_PISO + " TEXT," +
+                    MARCO_MZ + " TEXT," +
+                    MARCO_LOTE + " TEXT" + ");"
+            ;
+
+    public static final String SQL_CREATE_TABLA_CARATULAS =
+            "CREATE TABLE " + tableCaratulas + "(" +
+                    CARATULA_ID + " TEXT PRIMARY KEY," +
+                    CARATULA_DEPARTAMENTO + " TEXT," +
+                    CARATULA_DEPARTAMENTO_COD + " TEXT," +
+                    CARATULA_PROVINCIA + " TEXT," +
+                    CARATULA_PROVINCIA_COD + " TEXT," +
+                    CARATULA_DISTRITO + " TEXT," +
+                    CARATULA_DISTRITO_COD + " TEXT," +
+                    CARATULA_GPSLATITUD + " TEXT," +
+                    CARATULA_GPSLONGITUD + " TEXT," +
+                    CARATULA_SECTOR + " TEXT," +
+                    CARATULA_AREA + " TEXT," +
+                    CARATULA_ZONA + " TEXT," +
+                    CARATULA_MANZANA_MUESTRA + " TEXT," +
+                    CARATULA_FRENTE + " TEXT," +
+                    CARATULA_TIPVIA + " TEXT," +
+                    CARATULA_NOMVIA + " TEXT," +
+                    CARATULA_NPUERTA + " TEXT," +
+                    CARATULA_BLOCK + " TEXT," +
+                    CARATULA_INTERIOR + " TEXT," +
+                    CARATULA_PISO + " TEXT," +
+                    CARATULA_MANZANA_VIA + " TEXT," +
+                    CARATULA_LOTE + " TEXT," +
+                    CARATULA_KM + " TEXT," +");"
+            ;
+
+    public static final String SQL_CREATE_TABLA_VISITAS =
+            "CREATE TABLE " + tableVisitas + "(" +
+                    VISITA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    VISITA_ID_EMPRESA + " TEXT," +
+                    VISITA_DNI_OPERADOR + " TEXT," +
+                    VISITA_NOMBRE_OPERADOR + " TEXT," +
+                    VISITA_DNI_JEFE + " TEXT," +
+                    VISITA_NOMBRE_JEFE + " TEXT," +
+                    VISITA_DNI_SUPERVISOR + " TEXT," +
+                    VISITA_NOMBRE_SUPERVISOR + " TEXT," +
+                    VISITA_N + " TEXT," +
+                    VISITA_DIA + " TEXT," +
+                    VISITA_MES + " TEXT," +
+                    VISITA_ANIO + " TEXT," +
+                    VISITA_HORAI + " TEXT," +
+                    VISITA_MINUTOI + " TEXT," +
+                    VISITA_HORAF + " TEXT," +
+                    VISITA_MINUTOF + " TEXT," +
+                    VISITA_RESULTADO + " TEXT," +
+                    VISITA_RESULTADO_ESP + " TEXT," +
+                    VISITA_PROX_DIA + " TEXT," +
+                    VISITA_PROX_MES + " TEXT," +
+                    VISITA_PROX_ANIO + " TEXT," +
+                    VISITA_PROX_HORA + " TEXT," +
+                    VISITA_PROX_MINUTO + " TEXT," +
+                    VISITA_USUCREACION + " TEXT," +
+                    VISITA_FECCREACION + " TEXT," +
+                    VISITA_USUREGISTRO + " TEXT," +
+                    VISITA_FECREGISTRO + " TEXT" + ");"
+            ;
+
+    public static final String SQL_CREATE_TABLA_IDENTIFICACIONES =
+            "CREATE TABLE " + tableIdentificaciones + "(" +
+                    IDENTIFICACION_ID + " TEXT PRIMARY KEY," +
+                    IDENTIFICACION_RUC + " TEXT," +
+                    IDENTIFICACION_RAZON + " TEXT," +
+                    IDENTIFICACION_NOMBRE + " TEXT," +
+                    IDENTIFICACION_ANIO_FUNDACION + " TEXT," +
+                    IDENTIFICACION_WEB + " TEXT," +
+                    IDENTIFICACION_WEBNO + " TEXT," +
+                    IDENTIFICACION_CORREO + " TEXT," +
+                    IDENTIFICACION_CORREONO + " TEXT," +
+                    IDENTIFICACION_CODFIJO + " TEXT," +
+                    IDENTIFICACION_FIJO + " TEXT," +
+                    IDENTIFICACION_FIJONO + " TEXT," +
+                    IDENTIFICACION_MOVIL + " TEXT," +
+                    IDENTIFICACION_MOVILNO + " TEXT," +
+                    IDENTIFICACION_ANIO_FUNCIONAMIENTO + " TEXT," +
+                    IDENTIFICACION_CONDUCTOR_NOMBRE + " TEXT," +
+                    IDENTIFICACION_CONDUCTOR_SEXO + " TEXT," +
+                    IDENTIFICACION_CONDUCTOR_EDAD + " TEXT," +
+                    IDENTIFICACION_CONDUCTOR_ESTUDIOS + " TEXT," +
+                    IDENTIFICACION_CONDUCTOR_CARGO + " TEXT," +
+                    IDENTIFICACION_CONDUCTOR_CARGO_ESP + " TEXT," +
+                    IDENTIFICACION_USUCREACION + " TEXT," +
+                    IDENTIFICACION_FECCREACION + " TEXT," +
+                    IDENTIFICACION_USUREGISTRO + " TEXT," +
+                    IDENTIFICACION_FECREGISTRO + " TEXT" + ");"
+            ;
+
+    public static final String SQL_CREATE_TABLA_FRAGMENTS =
+            "CREATE TABLE " + tableFragments + "(" +
+                    FRAGMENT_ID + " TEXT PRIMARY KEY," +
+                    FRAGMENT_HABILITADO + " TEXT," +
+                    FRAGMENT_AVANCE + " TEXT" +");"
+            ;
+
+    public static final String SQL_CREATE_TABLA_UBIGEOS =
+            "CREATE TABLE " + tableUbigeo + "(" +
+                    UBIGEO_ID + " TEXT PRIMARY KEY," +
+                    UBIGEO_ID_UBI + " TEXT, " +
+                    UBIGEO_DISTRITO + " TEXT" +");"
+            ;
+
+
+    //TABLA MODULO1
+    /*public static final String SQL_CREATE_TABLA_MODULO1 =
+            "CREATE TABLE " + tableModulo1 + "(" +
+                    MODULO1_ID  + " TEXT PRIMARY KEY," +
+                    MODULO1_P0_0  + " TEXT," +
+                    MODULO1_P0_1  + " TEXT," +
+                    MODULO1_P0_2  + " TEXT," +
+                    MODULO1_P0_3  + " TEXT," +
+                    MODULO1_P1_1  + " TEXT," +
+                    MODULO1_P1_2  + " TEXT," +
+                    MODULO1_P1_2_DETALLE + " TEXT," +
+                    MODULO1_P2_1_1  + " TEXT," +
+                    MODULO1_P2_1_2  + " TEXT," +
+                    MODULO1_P2_1_2_DETALLE + " TEXT," +
+                    MODULO1_P2_1_NO  + " TEXT," +
+                    MODULO1_P2_2_1  + " TEXT," +
+                    MODULO1_P2_2_2  + " TEXT," +
+                    MODULO1_P2_2_2_DETALLE + " TEXT," +
+                    MODULO1_P2_2_NO  + " TEXT," +
+                    MODULO1_P3  + " TEXT," +
+                    MODULO1_P3_0  + " TEXT," +
+                    MODULO1_P4_1_1  + " TEXT," +
+                    MODULO1_P4_2_1  + " TEXT," +
+                    MODULO1_P5  + " TEXT," +
+                    MODULO1_P6_0  + " TEXT," +
+                    MODULO1_P6_1  + " TEXT," +
+                    MODULO1_P7_1_1  + " TEXT," +
+                    MODULO1_P7_2_1  + " TEXT," +
+                    MODULO1_P7_1_2  + " TEXT," +
+                    MODULO1_P7_2_2  + " TEXT," +
+                    MODULO1_P8  + " TEXT," +
+                    MODULO1_P9  + " TEXT," +
+                    MODULO1_P10  + " TEXT," +
+                    MODULO1_P11  + " TEXT," +
+                    MODULO1_P11_1  + " TEXT," +
+                    MODULO1_P11_2  + " TEXT," +
+                    MODULO1_P12_NO  + " TEXT," +
+                    MODULO1_P12_TIPVIA  + " TEXT," +
+                    MODULO1_P12_NOMVIA   + " TEXT," +
+                    MODULO1_P12_NROPTA  + " TEXT," +
+                    MODULO1_P12_BLOCK  + " TEXT," +
+                    MODULO1_P12_INT  + " TEXT," +
+                    MODULO1_P12_PISO  + " TEXT," +
+                    MODULO1_P12_MZA  + " TEXT," +
+                    MODULO1_P12_LOTE  + " TEXT," +
+                    MODULO1_P12_KM  + " TEXT," +
+                    MODULO1_P12_DIST  + " TEXT," +
+                    MODULO1_P12_CCDI  + " TEXT," +
+                    MODULO1_P12_PROV  + " TEXT," +
+                    MODULO1_P12_CCPP  + " TEXT," +
+                    MODULO1_P12_DEP  + " TEXT," +
+                    MODULO1_P12_CCDD  + " TEXT," +
+                    MODULO1_OBS_MOD_I  + " TEXT," +
+                    MODULO1_USUCREACION + " TEXT," +
+                    MODULO1_FECCREACION + " TEXT," +
+                    MODULO1_USUREGISTRO + " TEXT," +
+                    MODULO1_FECREGISTRO + " TEXT" + ");"
+            ;*/
+
 
 }

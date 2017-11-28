@@ -7,7 +7,7 @@ package com.example.administrador.encal.Modelo;
 public class SQLConstantes {
 
     //DB
-    public static final String DB = "bdenhatrape.db";
+    public static final String DB = "bdencal.db";
 
     //TABLAS
     public static final String tableUsuarios = "usuarios";
@@ -413,6 +413,7 @@ public class SQLConstantes {
                     CARATULA_MANZANA_MUESTRA + " TEXT," +
                     CARATULA_FRENTE + " TEXT," +
                     CARATULA_TIPVIA + " TEXT," +
+                    CARATULA_TIPVIA_OTRO + " TEXT," +
                     CARATULA_NOMVIA + " TEXT," +
                     CARATULA_NPUERTA + " TEXT," +
                     CARATULA_BLOCK + " TEXT," +
@@ -420,7 +421,8 @@ public class SQLConstantes {
                     CARATULA_PISO + " TEXT," +
                     CARATULA_MANZANA_VIA + " TEXT," +
                     CARATULA_LOTE + " TEXT," +
-                    CARATULA_KM + " TEXT" +");"
+                    CARATULA_KM + " TEXT," +
+                    CARATULA_REFERENCIA + " TEXT" +");"
             ;
 
     public static final String SQL_CREATE_TABLA_VISITAS =

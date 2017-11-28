@@ -29,6 +29,7 @@ public class EncuestaActivity extends AppCompatActivity {
     private Fragment2_s100 fragment2_s100;
     private Fragment2_s400 fragment2_s400;
     private Fragment3_s100 fragment3_s100;
+    private String idEmpresa;
 
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
@@ -39,9 +40,15 @@ public class EncuestaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_encuesta);
+
+        final Bundle recupera=getIntent().getExtras();
+        if(recupera != null){
+            idEmpresa = recupera.getString("idEmpresa");
+        }
+
         Toolbar toolbar = (Toolbar)findViewById(R.id.encuesta_toolbar);
         setSupportActionBar(toolbar);
-        caratulaFragment = new CaratulaFragment();
+        caratulaFragment = new CaratulaFragment(idEmpresa,this);
         inicioFragment = new InicioFragment();
         fragment1_s100 = new Fragment1_s100();
         fragment1_s200 = new Fragment1_s200();
@@ -94,7 +101,7 @@ public class EncuestaActivity extends AppCompatActivity {
     public void NumeroFragment(int poscicion){
         switch (poscicion){
             case 1:
-                CaratulaFragment caratulaFragment = new CaratulaFragment();
+                CaratulaFragment caratulaFragment = new CaratulaFragment(idEmpresa,EncuestaActivity.this);
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.layout_fragment1,caratulaFragment);
                 fragmentTransaction.commit(); break;

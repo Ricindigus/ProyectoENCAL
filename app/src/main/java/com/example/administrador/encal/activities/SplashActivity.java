@@ -71,31 +71,6 @@ public class SplashActivity extends AppCompatActivity {
                 usuarios = usuarioParser.parseXML(getApplicationContext());
                 ubigeos = ubigeoPullParser.parseXML(getApplicationContext());
 
-//                for(Marco marco: marcos){
-//                    Caratula caratula = new Caratula();
-//                    caratula.setID(marco.getID());
-//                    caratula.setCCDD(marco.getCCDD());
-//                    caratula.setNOMBREDD(marco.getDEPARTAMENTO());
-//                    caratula.setCCPP(marco.getCCPP());
-//                    caratula.setNOMBREPV(marco.getPROVINCIA());
-//                    caratula.setCCDI(marco.getCCDI());
-//                    caratula.setNOMBREDI(marco.getDISTRITO());
-//                    caratula.setCCAT("001");
-//                    caratula.setCCST("001");
-//                    caratula.setFRENTE(marco.getFRENTE());
-//                    caratula.setZON_NUM(marco.getZONA());
-//                    caratula.setMZ_ID(marco.getMANZANA());
-//                    caratulas.add(caratula);
-//                }
-//                for(Marco marco: marcos){
-//                    Identificacion identificacion = new Identificacion();
-//                    identificacion.setID(marco.getID());
-//                    identificacion.setNUM_RUC(marco.getRUC());
-//                    identificacion.setRAZON_SOCIAL(marco.getRAZON_SOCIAL());
-//                    identificacion.setNOM_COMER_COOP(marco.getNOMBRE_COMERCIAL());
-//                    identificaciones.add(identificacion);
-//                }
-
             }
             String mensaje = "";
             String mensaje1 = "";
@@ -131,24 +106,6 @@ public class SplashActivity extends AppCompatActivity {
                     publishProgress(i,(int)Math.floor(i/60.52));
                     i++;
                 }
-//                for (Caratula caratula : caratulas) {
-//                    try {
-//                        data.insertarCaratula(caratula);
-//                    }catch (SQLiteException e){
-//                        e.printStackTrace();
-//                    }
-//                    publishProgress(i,(int)Math.floor(i/101.57));
-//                    i++;
-//                }
-//                for (Identificacion identificacion : identificaciones) {
-//                    try {
-//                        data.insertarIdentificacion(identificacion);
-//                    }catch (SQLiteException e){
-//                        e.printStackTrace();
-//                    }
-//                    publishProgress(i,(int)Math.floor(i/101.57));
-//                    i++;
-//                }
                 mensaje = "LISTO, BIENVENIDO";
             }else{
                 try {
@@ -182,25 +139,4 @@ public class SplashActivity extends AppCompatActivity {
             finish();
         }
     }
-//    long items = getNumeroItemsCaratula();
-//        if(items == 0){
-//        for (Caratula caratula : caratulas) {
-//            try {
-//                insertarCaratula(caratula);
-//            }catch (SQLiteException e){
-//                e.printStackTrace();
-//            }
-//        }
-//    }
-
-//    long items = getNumeroItemsIdentificacion();
-//        if(items == 0){
-//        for (Identificacion identificacion : identificaciones) {
-//            try {
-//                insertarIdentificacion(identificacion);
-//            }catch (SQLiteException e){
-//                e.printStackTrace();
-//            }
-//        }
-//    }
 }

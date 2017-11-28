@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/layout_caratulaFragment"
     tools:context="com.example.administrador.encal.Fragments.Fragment1_s100">
 
     <LinearLayout
@@ -34,43 +35,6 @@
                 android:layout_margin="10dp"
                 android:orientation="vertical"
                 android:padding="15dp">
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="5dp"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textStyle="bold"
-                        android:text="Cambio de Distrito" />
-                    <RadioGroup
-                        android:id="@+id/caratula_rgCambioDistrito"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <RadioButton
-                            android:id="@+id/caratula_rbDistritoSi"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="5dp"
-                            android:text="Si"
-                            android:textStyle="bold"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:buttonTint="@color/colorPrimaryDark"/>
-                        <RadioButton
-                            android:id="@+id/caratula_rbDistritoNo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="No"
-                            android:textStyle="bold"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:buttonTint="@color/colorPrimaryDark"/>
-                    </RadioGroup>
-                </LinearLayout>
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -243,32 +207,6 @@
                                 android:background="@color/colorAccent"
                                 android:gravity="center_vertical"
                                 android:paddingLeft="10dp"
-                                android:text="@string/caratula_loc_coordenadas_gps_altitud"
-                                android:textColor="@color/icons"
-                                />
-
-                            <TextView
-                                android:id="@+id/caratula_txtAltitud"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:paddingLeft="10dp"
-                                android:background="@drawable/fondo_spinner" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="30dp"
-                            android:layout_marginTop="1dp"
-                            android:orientation="horizontal"
-                            android:background="@color/colorAccent">
-
-                            <TextView
-                                android:layout_width="150dp"
-                                android:layout_height="match_parent"
-                                android:background="@color/colorAccent"
-                                android:gravity="center_vertical"
-                                android:paddingLeft="10dp"
                                 android:text="@string/caratula_loc_coordenadas_gps_longitud"
                                 android:textColor="@color/icons" />
 
@@ -421,7 +359,6 @@
                             android:layout_marginTop="1dp"
                             android:orientation="horizontal"
                             android:background="@color/colorAccent">
-
                             <TextView
                                 android:layout_width="150dp"
                                 android:layout_height="match_parent"
@@ -453,37 +390,18 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="1dp"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
                             <TextView
-                                android:layout_width="150dp"
-                                android:layout_height="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
                                 android:layout_marginRight="1dp"
                                 android:gravity="center"
                                 android:text="Tipo Vía"
                                 android:textColor="@color/icons"
                                 android:background="@color/colorAccent"/>
-
-                            <TextView
-                                android:layout_width="450dp"
-                                android:layout_height="20dp"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="Nombre de la Via"
-                                android:textColor="@color/icons"
-                                android:background="@color/colorAccent"/>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="1dp"
-                            android:orientation="horizontal"
-                            android:focusableInTouchMode="true"
-                            android:id="@+id/caratula_lytDireccion">
-
                             <LinearLayout
-                                android:layout_width="150dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="30dp"
                                 android:layout_marginRight="1dp"
                                 android:background="@drawable/fondo_spinner">
@@ -494,7 +412,30 @@
                                     android:entries="@array/array_tipo_via"
                                     android:drawSelectorOnTop="true"/>
                             </LinearLayout>
-
+                            <EditText
+                                android:id="@+id/caratula_edt_especifique"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:paddingLeft="5dp"
+                                android:background="@drawable/fondo_spinner"
+                                android:hint="Especifique"
+                                android:visibility="gone"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Nombre de la Via"
+                                android:textColor="@color/icons"
+                                android:background="@color/colorAccent"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="1dp"
+                            android:orientation="horizontal"
+                            android:focusableInTouchMode="true"
+                            android:id="@+id/caratula_lytDireccion">
                             <EditText
                                 android:id="@+id/caratula_edtNombreVia"
                                 android:layout_width="0dp"

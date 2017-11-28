@@ -25,12 +25,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.administrador.encal.Adapters.AdapterMarco;
 import com.example.administrador.encal.Adapters.MarcoAdapter;
 import com.example.administrador.encal.Modelo.Data;
 import com.example.administrador.encal.Pojos.ItemMarco;
 import com.example.administrador.encal.Pojos.Marco;
-import com.example.administrador.encal.Pojos.PojoMarco;
 import com.example.administrador.encal.R;
 
 import java.util.ArrayList;
@@ -53,7 +51,7 @@ public class MarcoActivity extends AppCompatActivity {
     private Button btnFiltrar;
     private Button btnMostrarTodo;
 
-    Data data;
+    private Data data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

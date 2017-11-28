@@ -12,7 +12,6 @@ import com.example.administrador.encal.Pojos.BDFragment;
 import com.example.administrador.encal.Pojos.CaratulaPojo;
 import com.example.administrador.encal.Pojos.IdentificacionPojo;
 import com.example.administrador.encal.Pojos.Marco;
-import com.example.administrador.encal.Pojos.PojoMarco;
 import com.example.administrador.encal.Pojos.Sec100PojoF1;
 import com.example.administrador.encal.Pojos.Ubigeo;
 import com.example.administrador.encal.Pojos.Usuario;

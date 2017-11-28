@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.administrador.encal.Login_Activity">
+    tools:context="com.example.administrador.encal.activities.LoginActivity">
     <android.support.v7.widget.Toolbar
         android:id="@+id/marco_toolbar"
         android:layout_width="match_parent"

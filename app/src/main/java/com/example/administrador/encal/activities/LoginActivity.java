@@ -1,4 +1,4 @@
-package com.example.administrador.encal;
+package com.example.administrador.encal.activities;
 
 import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class Login_Activity extends AppCompatActivity {
+import com.example.administrador.encal.R;
+
+public class LoginActivity extends AppCompatActivity {
     private TextInputEditText txtUsuario;
     private TextInputEditText txtPassword;
     private Button btnIngresar;
@@ -25,10 +27,10 @@ public class Login_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (txtUsuario.getText().toString().equals("adm")&& txtPassword.getText().toString().equals("123")){
-                    Intent intent = new Intent(Login_Activity.this,MarcoActivity.class);
+                    Intent intent = new Intent(LoginActivity.this,MarcoActivity.class);
                     startActivity(intent);
                 }else{
-                    Toast.makeText(Login_Activity.this,"Usuario o pasword incorrectsos",Toast.LENGTH_SHORT);
+                    Toast.makeText(LoginActivity.this,"Usuario o pasword incorrectsos",Toast.LENGTH_SHORT);
                     txtUsuario.setText("");
                     txtPassword.setText("");
                 }

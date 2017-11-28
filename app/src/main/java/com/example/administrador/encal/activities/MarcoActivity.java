@@ -1,4 +1,4 @@
-package com.example.administrador.encal;
+package com.example.administrador.encal.activities;
 
 
 import android.content.Intent;
@@ -9,10 +9,10 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import com.example.administrador.encal.Adapters.AdapterMarco;
 import com.example.administrador.encal.Pojos.PojoMarco;
+import com.example.administrador.encal.R;
 
 import java.util.ArrayList;
 

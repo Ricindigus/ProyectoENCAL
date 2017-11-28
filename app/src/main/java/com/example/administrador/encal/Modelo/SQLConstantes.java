@@ -63,6 +63,8 @@ public class SQLConstantes {
     public static final String MARCO_MZ = "MZ";
     public static final String MARCO_LOTE = "LOTE";
 
+
+
     //COLUMNAS_CARATULA------------------------------------------
     public static final String CARATULA_ID = "ID";
     public static final String CARATULA_DEPARTAMENTO = "NOMBREDD";
@@ -418,7 +420,7 @@ public class SQLConstantes {
                     CARATULA_PISO + " TEXT," +
                     CARATULA_MANZANA_VIA + " TEXT," +
                     CARATULA_LOTE + " TEXT," +
-                    CARATULA_KM + " TEXT," +");"
+                    CARATULA_KM + " TEXT" +");"
             ;
 
     public static final String SQL_CREATE_TABLA_VISITAS =
@@ -474,7 +476,7 @@ public class SQLConstantes {
                     IDENTIFICACION_CONDUCTOR_CARGO + " TEXT," +
                     IDENTIFICACION_CONDUCTOR_CARGO_ESP + " TEXT,"+
                     IDENTIFICACION_CONDUCTOR_APEYNOM + " TEXT," +
-                    IDENTIFICACION_CONDUCTOR_CONOCE_INACAL + " TEXT," +");"
+                    IDENTIFICACION_CONDUCTOR_CONOCE_INACAL + " TEXT" +");"
             ;
 
 
@@ -554,7 +556,7 @@ public class SQLConstantes {
                     SECCION100_P_114_6 + " TEXT," +
                     SECCION100_P_114_7 + " TEXT," +
                     SECCION100_P_114_7_O + " TEXT," +
-                    SECCION100_OBS + " TEXT," +");"
+                    SECCION100_OBS + " TEXT" +");"
             ;
 
     //TABLA SECCION200
@@ -576,7 +578,7 @@ public class SQLConstantes {
                     SECCION200_P_205_5  + " TEXT," +
                     SECCION200_P_205_6 + " TEXT," +
                     SECCION200_P_205_6_O  + " TEXT," +
-                    SECCION200_OBS + " TEXT," +");"
+                    SECCION200_OBS + " TEXT" +");"
             ;
 
     //TABLA SECCION300

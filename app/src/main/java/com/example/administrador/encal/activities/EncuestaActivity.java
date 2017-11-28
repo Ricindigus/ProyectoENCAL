@@ -1,4 +1,4 @@
-package com.example.administrador.encal;
+package com.example.administrador.encal.activities;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -17,6 +17,7 @@ import com.example.administrador.encal.Fragments.Fragment2_s100;
 import com.example.administrador.encal.Fragments.Fragment2_s400;
 import com.example.administrador.encal.Fragments.Fragment3_s100;
 import com.example.administrador.encal.Fragments.InicioFragment;
+import com.example.administrador.encal.R;
 
 public class EncuestaActivity extends AppCompatActivity {
     private CaratulaFragment caratulaFragment;

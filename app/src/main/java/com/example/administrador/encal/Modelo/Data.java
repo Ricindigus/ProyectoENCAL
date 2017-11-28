@@ -11,7 +11,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.example.administrador.encal.Pojos.BDFragment;
 import com.example.administrador.encal.Pojos.CaratulaPojo;
 import com.example.administrador.encal.Pojos.IdentificacionPojo;
+import com.example.administrador.encal.Pojos.Marco;
 import com.example.administrador.encal.Pojos.PojoMarco;
+import com.example.administrador.encal.Pojos.Sec100PojoF1;
 import com.example.administrador.encal.Pojos.Ubigeo;
 import com.example.administrador.encal.Pojos.Usuario;
 
@@ -74,6 +76,117 @@ public class Data {
         return DatabaseUtils.queryNumEntries(sqLiteDatabase,SQLConstantes.tableModulo4);
     }
 
+    //------------------------------------------MARCO---------------------------------------------------------------------
+    public Marco getMarco(String idEmpresa){
+        Marco marco = new Marco();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = null;
+        try{
+            cursor = sqLiteDatabase.query(SQLConstantes.tableMarco,
+                    SQLConstantes.ALL_COLUMNS_MARCO,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+            if(cursor.getCount() == 1){
+                cursor.moveToFirst();
+                marco.setID(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_ID)));
+                marco.setRUC(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_RUC)));
+                marco.setRAZON_SOCIAL(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_RAZON_SOCIAL)));
+                marco.setNOMBRE_COMERCIAL(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_NOMBRE_COMERCIAL)));
+                marco.setOPERADOR(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_OPERADOR)));
+                marco.setJEFE(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_JEFE)));
+                marco.setOBSERVADOR(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_OBSERVADOR)));
+                marco.setANIO(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_ANIO)));
+                marco.setMES(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_MES)));
+                marco.setPERIODO(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_PERIODO)));
+                marco.setCCDD(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_CCDD)));
+                marco.setDEPARTAMENTO(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_DEPARTAMENTO)));
+                marco.setCCPP(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_CCPP)));
+                marco.setPROVINCIA(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_PROVINCIA)));
+                marco.setCCDI(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_CCDI)));
+                marco.setDISTRITO(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_DISTRITO)));
+                marco.setT_EMPRESA(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_T_EMPRESA)));
+                marco.setFRENTE(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_FRENTE)));
+                marco.setZONA(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_ZONA)));
+                marco.setMANZANA(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_MANZANA)));
+                marco.setCAT_VIA(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_CAT_VIA)));
+                marco.setNOM_VIA(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_NOM_VIA)));
+                marco.setPUERTA(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_PUERTA)));
+                marco.setINTERIOR(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_INTERIOR)));
+                marco.setPISO(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_PISO)));
+                marco.setMZ(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_MZ)));
+                marco.setLOTE(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_LOTE)));
+            }
+        }finally{
+            if(cursor != null) cursor.close();
+        }
+        return marco;
+    }
+    public ArrayList<Marco> getAllMarcos(String idUsuario, int permisoUsuario){
+        ArrayList<Marco> marcos = new ArrayList<Marco>();
+        String[] whereArgs = new String[]{String.valueOf(idUsuario)};
+        Cursor cursor = null;
+        try{
+            switch (permisoUsuario){
+                case 1: cursor = sqLiteDatabase.query(SQLConstantes.tableMarco, SQLConstantes.ALL_COLUMNS_MARCO,
+                        SQLConstantes.WHERE_CLAUSE_ID_OPERADOR,whereArgs,null,null,null);break;
+                case 2: cursor = sqLiteDatabase.query(SQLConstantes.tableMarco, SQLConstantes.ALL_COLUMNS_MARCO,
+                        SQLConstantes.WHERE_CLAUSE_ID_JEFE,whereArgs,null,null,null);break;
+                case 3: cursor = sqLiteDatabase.query(SQLConstantes.tableMarco, SQLConstantes.ALL_COLUMNS_MARCO,
+                        SQLConstantes.WHERE_CLAUSE_ID_OBSERVADOR,whereArgs,null,null,null);break;
+            }
+
+            while(cursor.moveToNext()){
+                Marco marco = new Marco();
+                marco.setID(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_ID)));
+                marco.setRUC(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_RUC)));
+                marco.setRAZON_SOCIAL(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_RAZON_SOCIAL)));
+                marco.setNOMBRE_COMERCIAL(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_NOMBRE_COMERCIAL)));
+                marco.setOPERADOR(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_OPERADOR)));
+                marco.setJEFE(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_JEFE)));
+                marco.setOBSERVADOR(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_OBSERVADOR)));
+                marco.setANIO(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_ANIO)));
+                marco.setMES(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_MES)));
+                marco.setPERIODO(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_PERIODO)));
+                marco.setCCDD(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_CCDD)));
+                marco.setDEPARTAMENTO(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_DEPARTAMENTO)));
+                marco.setCCPP(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_CCPP)));
+                marco.setPROVINCIA(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_PROVINCIA)));
+                marco.setCCDI(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_CCDI)));
+                marco.setDISTRITO(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_DISTRITO)));
+                marco.setT_EMPRESA(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_T_EMPRESA)));
+                marco.setFRENTE(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_FRENTE)));
+                marco.setZONA(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_ZONA)));
+                marco.setMANZANA(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_MANZANA)));
+                marco.setCAT_VIA(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_CAT_VIA)));
+                marco.setNOM_VIA(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_NOM_VIA)));
+                marco.setPUERTA(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_PUERTA)));
+                marco.setINTERIOR(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_INTERIOR)));
+                marco.setPISO(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_PISO)));
+                marco.setMZ(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_MZ)));
+                marco.setLOTE(cursor.getString(cursor.getColumnIndex(SQLConstantes.MARCO_LOTE)));
+                marcos.add(marco);
+            }
+        }finally {
+            if(cursor != null) cursor.close();
+        }
+        return marcos;
+    }
+
+    public void insertarMarco(Marco marco){
+        ContentValues contentValues = marco.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableMarco,null,contentValues);
+    }
+    public void InsertarMarcos(ArrayList<Marco> empresas){
+        long items = getNumeroItemsMarco();
+        if(items == 0){
+            for (Marco empresa : empresas) {
+                try {
+                    insertarMarco(empresa);
+                }catch (SQLiteException e){
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+    //----------------------------------------FIN MARCO--------------------------------------------------
 
     //----------------------USUARIOS-----------------------------------------------------------------------------------------
     public void insertarUsuario(Usuario usuario){
@@ -446,6 +559,199 @@ public class Data {
         sqLiteDatabase.update(SQLConstantes.tableFragments,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
     }
 //------------------------------------------FIN FRAGMENTS--------------------------------------------------------------------------
+
+
+    //--------------------------------------MODULO1------------------------------------------------------------------------------------
+    public Sec100PojoF1 getModulo1(String idEmpresa){
+        Sec100PojoF1 modulo1 = new Sec100PojoF1();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = null;
+        try{
+            cursor = sqLiteDatabase.query(SQLConstantes.tableModulo1,
+                    SQLConstantes.ALL_COLUMNS_SECCION100,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+            if(cursor.getCount() == 1){
+                cursor.moveToFirst();
+                modulo1.setID(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_ID)));
+                modulo1.setP_101(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_101)));
+                modulo1.setP_101_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_101_1)));
+                modulo1.setP_101_1_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_101_1_O)));
+                modulo1.setP_102A(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_102A)));
+                modulo1.setP_102_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_102_1)));
+                modulo1.setP_102B(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_102B)));
+                modulo1.setP_102_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_102_2)));
+                modulo1.setP_102C(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_102C)));
+                modulo1.setP_102_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_102_3)));
+                modulo1.setP_102D(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_102D)));
+                modulo1.setP_102_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_102_4)));
+                modulo1.setP_103(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_103)));
+                modulo1.setP_103_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_103_O)));
+                modulo1.setP_104(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_104)));
+                modulo1.setP_105(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_105)));
+                modulo1.setP_106_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_106_1)));
+                modulo1.setP_106_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_106_2)));
+                modulo1.setP_106_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_106_3)));
+                modulo1.setP_106_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_106_4)));
+                modulo1.setP_106_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_106_5)));
+                modulo1.setP_107_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_107_1)));
+                modulo1.setP_107_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_107_2)));
+                modulo1.setP_107_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_107_3)));
+                modulo1.setP_108(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_108)));
+                modulo1.setP_109_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_109_1)));
+                modulo1.setP_109_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_109_2)));
+                modulo1.setP_109_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_109_3)));
+                modulo1.setP_109_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_109_4)));
+                modulo1.setP_109_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_109_5)));
+                modulo1.setP_109_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_109_6)));
+                modulo1.setP_109_6_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_109_6_O)));
+                modulo1.setP_110_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_110_1)));
+                modulo1.setP_110_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_110_2)));
+                modulo1.setP_110_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_110_3)));
+                modulo1.setP_110_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_110_4)));
+                modulo1.setP_110_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_110_5)));
+                modulo1.setP_110_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_110_6)));
+                modulo1.setP_110_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_110_7)));
+                modulo1.setP_110_7_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_110_7_O)));
+                modulo1.setP_111(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_111)));
+                modulo1.setP_112(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_112)));
+                modulo1.setP_112_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_112_O)));
+                modulo1.setP_113_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_113_1)));
+                modulo1.setP_113_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_113_2)));
+                modulo1.setP_113_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_113_3)));
+                modulo1.setP_113_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_113_4)));
+                modulo1.setP_113_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_113_5)));
+                modulo1.setP_113_5_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_113_5_O)));
+                modulo1.setP_114_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_1)));
+                modulo1.setP_114_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_2)));
+                modulo1.setP_114_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_3)));
+                modulo1.setP_114_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_4)));
+                modulo1.setP_114_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_5)));
+                modulo1.setP_114_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_6)));
+                modulo1.setP_114_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_7)));
+                modulo1.setP_114_7_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_7_O)));
+                modulo1.setOBS(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_OBS)));
+                ;
+            }
+        }finally {
+            if(cursor != null)cursor.close();
+        }
+        return modulo1;
+    };
+
+    public boolean existeModulo1(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = null;
+        try{
+            cursor = sqLiteDatabase.query(SQLConstantes.tableModulo1,
+                    SQLConstantes.ALL_COLUMNS_SECCION100,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+            if(cursor.getCount() == 1) encontrado = true;
+        }finally {
+            if(cursor != null)cursor.close();
+        }
+        return encontrado;
+    }
+
+    public void insertarModulo1(Sec100PojoF1 modulo1){
+        ContentValues contentValues = modulo1.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableModulo1,null,contentValues);
+    }
+
+    public void insertarModulos1(ArrayList<Sec100PojoF1> modulos1){
+        long items = getNumeroItemsModulo1();
+        if(items == 0){
+            for (Sec100PojoF1 modulo1 : modulos1) {
+                try {
+                    insertarModulo1(modulo1);
+                }catch (SQLiteException e){
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+    public void actualizarModulo1(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableModulo1,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+
+    public ArrayList<Sec100PojoF1> getAllModulo1(){
+        ArrayList<Sec100PojoF1> modulos1 = new ArrayList<>();
+        Cursor cursor = null;
+        try{
+            cursor = sqLiteDatabase.query(SQLConstantes.tableModulo1,
+                    SQLConstantes.ALL_COLUMNS_SECCION100,null,null,null,null,null);
+            while(cursor.moveToNext()){
+                Sec100PojoF1 modulo1 = new Sec100PojoF1();
+                modulo1.setID(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_ID)));
+                modulo1.setP_101(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_101)));
+                modulo1.setP_101_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_101_1)));
+                modulo1.setP_101_1_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_101_1_O)));
+                modulo1.setP_102A(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_102A)));
+                modulo1.setP_102_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_102_1)));
+                modulo1.setP_102B(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_102B)));
+                modulo1.setP_102_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_102_2)));
+                modulo1.setP_102C(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_102C)));
+                modulo1.setP_102_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_102_3)));
+                modulo1.setP_102D(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_102D)));
+                modulo1.setP_102_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_102_4)));
+                modulo1.setP_103(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_103)));
+                modulo1.setP_103_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_103_O)));
+                modulo1.setP_104(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_104)));
+                modulo1.setP_105(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_105)));
+                modulo1.setP_106_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_106_1)));
+                modulo1.setP_106_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_106_2)));
+                modulo1.setP_106_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_106_3)));
+                modulo1.setP_106_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_106_4)));
+                modulo1.setP_106_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_106_5)));
+                modulo1.setP_107_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_107_1)));
+                modulo1.setP_107_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_107_2)));
+                modulo1.setP_107_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_107_3)));
+                modulo1.setP_108(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_108)));
+                modulo1.setP_109_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_109_1)));
+                modulo1.setP_109_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_109_2)));
+                modulo1.setP_109_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_109_3)));
+                modulo1.setP_109_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_109_4)));
+                modulo1.setP_109_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_109_5)));
+                modulo1.setP_109_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_109_6)));
+                modulo1.setP_109_6_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_109_6_O)));
+                modulo1.setP_110_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_110_1)));
+                modulo1.setP_110_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_110_2)));
+                modulo1.setP_110_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_110_3)));
+                modulo1.setP_110_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_110_4)));
+                modulo1.setP_110_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_110_5)));
+                modulo1.setP_110_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_110_6)));
+                modulo1.setP_110_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_110_7)));
+                modulo1.setP_110_7_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_110_7_O)));
+                modulo1.setP_111(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_111)));
+                modulo1.setP_112(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_112)));
+                modulo1.setP_112_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_112_O)));
+                modulo1.setP_113_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_113_1)));
+                modulo1.setP_113_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_113_2)));
+                modulo1.setP_113_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_113_3)));
+                modulo1.setP_113_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_113_4)));
+                modulo1.setP_113_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_113_5)));
+                modulo1.setP_113_5_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_113_5_O)));
+                modulo1.setP_114_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_1)));
+                modulo1.setP_114_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_2)));
+                modulo1.setP_114_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_3)));
+                modulo1.setP_114_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_4)));
+                modulo1.setP_114_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_5)));
+                modulo1.setP_114_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_6)));
+                modulo1.setP_114_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_7)));
+                modulo1.setP_114_7_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_7_O)));
+                modulo1.setOBS(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_OBS)));
+                modulos1.add(modulo1);
+            }
+        }finally {
+            if(cursor != null)cursor.close();
+        }
+        return modulos1;
+    }
+    public void deleteModulo1(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableModulo1,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+//----------------------------------------------FIN MODULO 1-----------------------------------------------------------------------
+
 
 
 }

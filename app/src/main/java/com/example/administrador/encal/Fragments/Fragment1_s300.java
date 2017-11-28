@@ -15,9 +15,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
-import com.example.administrador.encal.EncuestaActivity;
 import com.example.administrador.encal.R;
 
 /**

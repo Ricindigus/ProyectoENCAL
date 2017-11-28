@@ -20,6 +20,7 @@
             <include layout="@layout/sec200_p203"></include>
             <include layout="@layout/sec200_p204"></include>
             <include layout="@layout/sec200_p205"></include>
+            <include layout="@layout/observaciones"></include>
 
         </LinearLayout>
 

@@ -18,14 +18,11 @@
             android:orientation="vertical">
 
             <include layout="@layout/sec300_p301"></include>
-
             <include layout="@layout/sec300_p302"></include>
-
             <include layout="@layout/sec300_p303"></include>
-
             <include layout="@layout/sec300_p304"></include>
-
             <include layout="@layout/sec300_p305"></include>
+            <include layout="@layout/observaciones"></include>
 
         </LinearLayout>
 

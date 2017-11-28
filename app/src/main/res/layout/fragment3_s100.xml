@@ -17,6 +17,7 @@
             <include layout="@layout/sec100_p112"></include>
             <include layout="@layout/sec100_p113"></include>
             <include layout="@layout/sec100_p114"></include>
+            <include layout="@layout/observaciones"></include>
 
         </LinearLayout>
 

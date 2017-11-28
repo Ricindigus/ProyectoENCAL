@@ -51,7 +51,7 @@
                     <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        app:cardElevation="10dp">
+                        app:cardElevation="@dimen/cardview_default_elevation">
                         <Spinner
                             android:id="@+id/marco_sp_departamento"
                             android:layout_width="match_parent"
@@ -76,7 +76,7 @@
                     <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        app:cardElevation="10dp">
+                        app:cardElevation="@dimen/cardview_default_elevation">
                         <Spinner
                             android:id="@+id/marco_sp_provincia"
                             android:layout_width="match_parent"
@@ -107,7 +107,7 @@
                     <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        app:cardElevation="10dp">
+                        app:cardElevation="@dimen/cardview_default_elevation">
                         <Spinner
                             android:id="@+id/marco_sp_distrito"
                             android:layout_width="match_parent"
@@ -132,7 +132,7 @@
                     <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        app:cardElevation="10dp">
+                        app:cardElevation="@dimen/cardview_default_elevation">
                         <Spinner
                             android:id="@+id/marco_sp_periodo"
                             android:layout_width="match_parent"

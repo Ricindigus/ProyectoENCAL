@@ -18,7 +18,9 @@
         </activity>
         <activity android:name=".activities.EncuestaActivity" />
         <activity android:name=".activities.MarcoActivity" />
-        <activity android:name=".activities.LoginActivity"></activity>
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.ExportarActivity" />
+        <activity android:name=".activities.ImportarActivity"></activity>
     </application>
 
 </manifest>

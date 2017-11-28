@@ -35,6 +35,7 @@ public class Fragment1_s300 extends Fragment {
     private EditText p302_temotro;
     private EditText p302_volotro;
     private EditText p302_ototro;
+  /*
     private RadioGroup p302_rgM1;
     private RadioGroup p302_rgM2;
     private RadioGroup p302_rgM3;
@@ -77,6 +78,52 @@ public class Fragment1_s300 extends Fragment {
     private RadioGroup p302_rgV6;
     private RadioGroup p302_rgO1;
     private RadioGroup p302_rgO2;
+
+    */
+    private CheckBox p302_ckM1;
+    private CheckBox p302_ckM2;
+    private CheckBox p302_ckM3;
+    private CheckBox p302_ckM4;
+    private CheckBox p302_ckM5;
+    private CheckBox p302_ckM6;
+    private CheckBox p302_ckM7;
+    private CheckBox p302_ckM8;
+    private CheckBox p302_ckL1;
+    private CheckBox p302_ckL2;
+    private CheckBox p302_ckL3;
+    private CheckBox p302_ckL4;
+    private CheckBox p302_ckL5;
+    private CheckBox p302_ckL6;
+    private CheckBox p302_ckL7;
+    private CheckBox p302_ckL8;
+    private CheckBox p302_ckP1;
+    private CheckBox p302_ckP2;
+    private CheckBox p302_ckP3;
+    private CheckBox p302_ckP4;
+    private CheckBox p302_ckP5;
+    private CheckBox p302_ckP6;
+    private CheckBox p302_ckP7;
+    private CheckBox p302_ckP8;
+    private CheckBox p302_ckP9;
+    private CheckBox p302_ckP10;
+    private CheckBox p302_ckT1;
+    private CheckBox p302_ckT2;
+    private CheckBox p302_ckT3;
+    private CheckBox p302_ckT4;
+    private CheckBox p302_ckT5;
+    private CheckBox p302_ckT6;
+    private CheckBox p302_ckT7;
+    private CheckBox p302_ckT8;
+    private CheckBox p302_ckV1;
+    private CheckBox p302_ckV2;
+    private CheckBox p302_ckV3;
+    private CheckBox p302_ckV4;
+    private CheckBox p302_ckV5;
+    private CheckBox p302_ckV6;
+    private CheckBox p302_ckO1;
+    private CheckBox p302_ckO2;
+
+
     private EditText p302_mCant1;
     private EditText p302_mCant2;
     private EditText p302_mCant3;
@@ -98,6 +145,7 @@ public class Fragment1_s300 extends Fragment {
     private EditText p302_vCant2;
     private EditText p302_vCant3;
     private EditText p302_oCant1;
+
     private RadioButton p302_rbM9;
     private RadioButton p302_rbM10;
     private RadioButton p302_rbM11;
@@ -137,54 +185,14 @@ public class Fragment1_s300 extends Fragment {
         p301_rg = (RadioGroup) view.findViewById(R.id.sec300_p301_rg);
 
         p302_rg = (RadioGroup) view.findViewById(R.id.sec300_p302_rg);
+
         p302_masaotro = (EditText) view.findViewById(R.id.sec300_p302_edtotro1);
         p302_longotro = (EditText) view.findViewById(R.id.sec300_p302_edtotro2);
         p302_presotro = (EditText) view.findViewById(R.id.sec300_p302_edtotro3);
         p302_temotro = (EditText) view.findViewById(R.id.sec300_p302_edtotro4);
         p302_volotro = (EditText) view.findViewById(R.id.sec300_p302_edtotro5);
         p302_ototro = (EditText) view.findViewById(R.id.sec300_p302_edtotro6);
-        p302_rgM1 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgM1);
-        p302_rgM2 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgM2);
-        p302_rgM3 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgM3);
-        p302_rgM4 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgM4);
-        p302_rgM5 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgM5);
-        p302_rgM6 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgM6);
-        p302_rgM7 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgM7);
-        p302_rgM8 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgM8);
-        p302_rgL1 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgL1);
-        p302_rgL2 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgL2);
-        p302_rgL3 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgL3);
-        p302_rgL4 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgL4);
-        p302_rgL5 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgL5);
-        p302_rgL6 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgL6);
-        p302_rgL7 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgL7);
-        p302_rgL8 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgL8);
-        p302_rgP1 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgP1);
-        p302_rgP2 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgP2);
-        p302_rgP3 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgP3);
-        p302_rgP4 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgP4);
-        p302_rgP5 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgP5);
-        p302_rgP6 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgP6);
-        p302_rgP7 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgP7);
-        p302_rgP8 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgP8);
-        p302_rgP9 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgP9);
-        p302_rgP10 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgP10);
-        p302_rgT1 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgT1);
-        p302_rgT2 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgT2);
-        p302_rgT3 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgT3);
-        p302_rgT4 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgT4);
-        p302_rgT5 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgT5);
-        p302_rgT6 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgT6);
-        p302_rgT7 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgT7);
-        p302_rgT8 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgT8);
-        p302_rgV1 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgV1);
-        p302_rgV2 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgV2);
-        p302_rgV3 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgV3);
-        p302_rgV4 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgV4);
-        p302_rgV5 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgV5);
-        p302_rgV6 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgV6);
-        p302_rgO1 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgO1);
-        p302_rgO2 = (RadioGroup) view.findViewById(R.id.sec300_p302_rgO2);
+
         p302_mCant1 = (EditText) view.findViewById(R.id.sec300_p302_edtC1);
         p302_mCant2 = (EditText) view.findViewById(R.id.sec300_p302_edtC2);
         p302_mCant3 = (EditText) view.findViewById(R.id.sec300_p302_edtC3);
@@ -208,10 +216,62 @@ public class Fragment1_s300 extends Fragment {
         p302_oCant1 = (EditText) view.findViewById(R.id.sec300_p302_edtC21);
         p302_lyt = (LinearLayout) view.findViewById(R.id.sec100_p302_lyt);
 
+
+        // CHECK
+        p302_ckM1 = (CheckBox) view.findViewById(R.id.sec300_p302_ckM1);
+        p302_ckM2 = (CheckBox) view.findViewById(R.id.sec300_p302_ckM2);
+        p302_ckM3 = (CheckBox) view.findViewById(R.id.sec300_p302_ckM3);
+        p302_ckM4 = (CheckBox) view.findViewById(R.id.sec300_p302_ckM4);
+        p302_ckM5 = (CheckBox) view.findViewById(R.id.sec300_p302_ckM5);
+        p302_ckM6 = (CheckBox) view.findViewById(R.id.sec300_p302_ckM6);
+        p302_ckM7 = (CheckBox) view.findViewById(R.id.sec300_p302_ckM7);
+        p302_ckM8 = (CheckBox) view.findViewById(R.id.sec300_p302_ckM8);
+
+        p302_ckL1 = (CheckBox) view.findViewById(R.id.sec300_p302_ckL1);
+        p302_ckL2 = (CheckBox) view.findViewById(R.id.sec300_p302_ckL2);
+        p302_ckL3 = (CheckBox) view.findViewById(R.id.sec300_p302_ckL3);
+        p302_ckL4 = (CheckBox) view.findViewById(R.id.sec300_p302_ckL4);
+        p302_ckL5 = (CheckBox) view.findViewById(R.id.sec300_p302_ckL5);
+        p302_ckL6 = (CheckBox) view.findViewById(R.id.sec300_p302_ckL6);
+        p302_ckL7 = (CheckBox) view.findViewById(R.id.sec300_p302_ckL7);
+        p302_ckL8 = (CheckBox) view.findViewById(R.id.sec300_p302_ckL8);
+
+        p302_ckP1 = (CheckBox) view.findViewById(R.id.sec300_p302_ckP1);
+        p302_ckP2 = (CheckBox) view.findViewById(R.id.sec300_p302_ckP2);
+        p302_ckP3 = (CheckBox) view.findViewById(R.id.sec300_p302_ckP3);
+        p302_ckP4 = (CheckBox) view.findViewById(R.id.sec300_p302_ckP4);
+        p302_ckP5 = (CheckBox) view.findViewById(R.id.sec300_p302_ckP5);
+        p302_ckP6 = (CheckBox) view.findViewById(R.id.sec300_p302_ckP6);
+        p302_ckP7 = (CheckBox) view.findViewById(R.id.sec300_p302_ckP7);
+        p302_ckP8 = (CheckBox) view.findViewById(R.id.sec300_p302_ckP8);
+        p302_ckP9 = (CheckBox) view.findViewById(R.id.sec300_p302_ckP9);
+        p302_ckP10 = (CheckBox) view.findViewById(R.id.sec300_p302_ckP10);
+
+        p302_ckT1 = (CheckBox) view.findViewById(R.id.sec300_p302_ckT1);
+        p302_ckT2 = (CheckBox) view.findViewById(R.id.sec300_p302_ckT2);
+        p302_ckT3 = (CheckBox) view.findViewById(R.id.sec300_p302_ckT3);
+        p302_ckT4 = (CheckBox) view.findViewById(R.id.sec300_p302_ckT4);
+        p302_ckT5 = (CheckBox) view.findViewById(R.id.sec300_p302_ckT5);
+        p302_ckT6 = (CheckBox) view.findViewById(R.id.sec300_p302_ckT6);
+        p302_ckT7 = (CheckBox) view.findViewById(R.id.sec300_p302_ckT7);
+        p302_ckT8 = (CheckBox) view.findViewById(R.id.sec300_p302_ckT8);
+
+        p302_ckV1 = (CheckBox) view.findViewById(R.id.sec300_p302_ckV1);
+        p302_ckV2 = (CheckBox) view.findViewById(R.id.sec300_p302_ckV2);
+        p302_ckV3 = (CheckBox) view.findViewById(R.id.sec300_p302_ckV3);
+        p302_ckV4 = (CheckBox) view.findViewById(R.id.sec300_p302_ckV4);
+        p302_ckV5 = (CheckBox) view.findViewById(R.id.sec300_p302_ckV5);
+        p302_ckV6 = (CheckBox) view.findViewById(R.id.sec300_p302_ckV6);
+
+        p302_ckO1 = (CheckBox) view.findViewById(R.id.sec300_p302_ckO1);
+        p302_ckO2 = (CheckBox) view.findViewById(R.id.sec300_p302_ckO2);
+
+
         p303_ck1 = (CheckBox) view.findViewById(R.id.sec300_p303_ck1);
         p303_ck2 = (CheckBox) view.findViewById(R.id.sec300_p303_ck2);
         p303_ck3 = (CheckBox) view.findViewById(R.id.sec300_p303_ck3);
         p303_ck4 = (CheckBox) view.findViewById(R.id.sec300_p303_ck4);
+        p303_ck5 = (CheckBox) view.findViewById(R.id.sec300_p303_ck5);
         p303_ck5 = (CheckBox) view.findViewById(R.id.sec300_p303_ck5);
         p303_card = (CardView) view.findViewById(R.id.p303_card);
 
@@ -222,6 +282,7 @@ public class Fragment1_s300 extends Fragment {
         p305_card = (CardView) view.findViewById(R.id.p305_card);
 
 
+
         return view;
     }
 
@@ -230,6 +291,7 @@ public class Fragment1_s300 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         //----pregunta 302
+
         p302_rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -247,47 +309,42 @@ public class Fragment1_s300 extends Fragment {
             }
         });
 
-        p302_rgM1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                switch (i) {
-                    case R.id.sec300_p302_rbM1:  p302_rbM9.setEnabled(true);p302_rbM10.setEnabled(true);break;
-                    case R.id.sec300_p302_rbM2:  p302_rbM9.setEnabled(false);p302_rbM10.setEnabled(false);break;
+
+        final CheckBox[] checkBox_ck_col1 = {p302_ckM1,p302_ckM2, p302_ckM3,p302_ckM4,p302_ckL1,p302_ckL2, p302_ckL3,p302_ckL4,p302_ckP1,p302_ckP2, p302_ckP3,p302_ckP4,p302_ckP5, p302_ckT1,p302_ckT2,p302_ckT3,p302_ckT4,p302_ckV1,p302_ckV2,p302_ckV3,p302_ckO1};
+        final CheckBox[] checkBox_ck_col2 = {p302_ckM5,p302_ckM6,p302_ckM7,p302_ckM8,p302_ckL5,p302_ckL6, p302_ckL7,p302_ckL8,p302_ckP6,p302_ckP7, p302_ckP8,p302_ckP9,p302_ckP10, p302_ckT5,p302_ckT6,p302_ckT7,p302_ckT8,p302_ckV4,p302_ckV5,p302_ckV6,p302_ckO2};
+        final EditText[] editText_edt_col3 = {p302_mCant1,p302_mCant2,p302_mCant3,p302_mCant4,p302_lCant1,p302_lCant2,p302_lCant3,p302_lCant4,p302_pCant1,p302_pCant2,p302_pCant3,p302_pCant4,p302_pCant5,p302_tCant1,p302_tCant2,p302_tCant3,p302_tCant4,p302_vCant1,p302_vCant2,p302_vCant3,p302_oCant1};
+
+        for(int i=0;i<checkBox_ck_col1.length;i++){
+            final int m=i;
+            checkBox_ck_col1[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    if(b){
+                        checkBox_ck_col2[m].setEnabled(true);
+                    }else{
+                        checkBox_ck_col2[m].setEnabled(false);
+                        checkBox_ck_col2[m].setChecked(false);
+                    }
                 }
+            });
+        }
 
-            }
-        });
-        p302_rgM2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                switch (i) {
-                    case R.id.sec300_p302_rbM3:  p302_rbM11.setEnabled(true);p302_rbM12.setEnabled(true);break;
-                    case R.id.sec300_p302_rbM4:  p302_rbM11.setEnabled(false);p302_rbM12.setEnabled(false);break;
+
+        for(int i=0;i<checkBox_ck_col2.length;i++){
+            final int k=i;
+            checkBox_ck_col2[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    if(b){
+                        editText_edt_col3[k].setEnabled(true);
+                    }else{
+                        editText_edt_col3[k].setEnabled(false);
+                        editText_edt_col3[k].setText("");
+                    }
                 }
+            });
+        }
 
-            }
-        });
-
-        p302_rgM3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                switch (i) {
-                    case R.id.sec300_p302_rbM5:  p302_rbM13.setEnabled(true);p302_rbM14.setEnabled(true);break;
-                    case R.id.sec300_p302_rbM6:  p302_rbM13.setEnabled(false);p302_rbM14.setEnabled(false);break;
-                }
-
-            }
-        });
-        p302_rgM4.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                switch (i) {
-                    case R.id.sec300_p302_rbM7:  p302_rbM15.setEnabled(true);p302_rbM15.setEnabled(true);break;
-                    case R.id.sec300_p302_rbM8:  p302_rbM15.setEnabled(false);p302_rbM15.setEnabled(false);break;
-                }
-
-            }
-        });
 
         //----pregunta 303
         final CheckBox[] checkBox = {p303_ck1,p303_ck2,p303_ck3,p303_ck4};

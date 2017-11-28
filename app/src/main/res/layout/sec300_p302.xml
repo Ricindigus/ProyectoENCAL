@@ -94,41 +94,9 @@
                             android:textStyle="bold"
                             android:padding="5dp"
                             android:gravity="center"/>
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="2dp"
-                            android:background="#607d8b"
-                            >
-                        </View>
 
-                        <LinearLayout
-                            android:layout_weight="2"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:orientation="horizontal">
-                            <TextView
-                                android:layout_weight="4"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:text="Si"
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <TextView
-                                android:layout_weight="4"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text="No"
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"/>
-                        </LinearLayout>
+
+
                     </LinearLayout>
                     <View
                         android:layout_width="2dp"
@@ -151,41 +119,9 @@
                             android:textStyle="bold"
                             android:padding="5dp"
                             android:gravity="center"/>
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="2dp"
-                            android:background="#607d8b"
-                            >
-                        </View>
 
-                        <LinearLayout
-                            android:layout_weight="2"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:orientation="horizontal">
-                            <TextView
-                                android:layout_weight="4"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:text="Si"
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <TextView
-                                android:layout_weight="4"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text="No"
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"/>
-                        </LinearLayout>
+
+
                     </LinearLayout>
                     <View
                         android:layout_width="2dp"
@@ -318,40 +254,20 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center">
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgM1"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbM1"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbM2"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckM1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
 
                         <View
                             android:layout_width="match_parent"
@@ -359,120 +275,62 @@
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgM2"
+
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbM3"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbM4"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckM2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgM3"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbM5"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbM6"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckM3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgM4"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbM7"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbM8"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckM4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
 
                     </LinearLayout>
                     <View
@@ -485,42 +343,21 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center">
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgM5"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbM9"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckM5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbM10"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
 
                         <View
                             android:layout_width="match_parent"
@@ -528,126 +365,63 @@
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgM6"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbM11"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckM6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbM12"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgM7"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbM13"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckM7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbM14"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgM8"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbM15"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckM8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbM16"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
 
                     </LinearLayout>
                     <View
@@ -808,40 +582,20 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center">
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgL1"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbL1"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbL2"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckL1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
 
                         <View
                             android:layout_width="match_parent"
@@ -849,120 +603,60 @@
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgL2"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbL3"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbL4"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckL2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgL3"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbL5"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbL6"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckL3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgL4"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbL7"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbL8"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckL4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
 
                     </LinearLayout>
                     <View
@@ -975,42 +669,21 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center">
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgL5"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbL9"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckL5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbL10"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
 
                         <View
                             android:layout_width="match_parent"
@@ -1018,126 +691,63 @@
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgL6"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbL11"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckL6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbL12"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgL7"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbL13"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckL7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbL14"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgL8"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbL15"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckL8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbL16"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
 
                     </LinearLayout>
                     <View
@@ -1312,40 +922,20 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center">
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgP1"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP1"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP2"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckP1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
 
                         <View
                             android:layout_width="match_parent"
@@ -1353,40 +943,20 @@
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgP2"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP3"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP4"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckP2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
 
                         <View
                             android:layout_width="match_parent"
@@ -1394,121 +964,60 @@
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgP3"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP5"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP6"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckP3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgP4"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP7"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP8"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckP4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgP5"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP9"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP10"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckP5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
-
+                        </LinearLayout>
                     </LinearLayout>
                     <View
                         android:layout_width="2dp"
@@ -1520,43 +1029,21 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center">
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgP6"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP11"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckP6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP12"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
 
                         <View
                             android:layout_width="match_parent"
@@ -1564,43 +1051,21 @@
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgP7"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP13"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckP7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP14"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
 
                         <View
                             android:layout_width="match_parent"
@@ -1608,126 +1073,63 @@
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgP8"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP15"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckP8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP16"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgP9"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP17"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckP9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP18"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgP10"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP19"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckP10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbP20"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
 
                     </LinearLayout>
                     <View
@@ -1904,40 +1306,20 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center">
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgT1"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbT1"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbT2"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckT1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
 
                         <View
                             android:layout_width="match_parent"
@@ -1945,120 +1327,63 @@
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgT2"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbT3"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbT4"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckT2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgT3"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbT5"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbT6"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckT3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgT4"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbT7"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbT8"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckT4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
+
 
                     </LinearLayout>
                     <View
@@ -2071,42 +1396,22 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center">
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgT5"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbT9"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckT5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbT10"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
+
 
                         <View
                             android:layout_width="match_parent"
@@ -2114,126 +1419,66 @@
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgT6"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbT11"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckT6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbT12"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgT7"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbT13"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckT7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbT14"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgT8"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbT15"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckT8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbT16"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
+
 
                     </LinearLayout>
                     <View
@@ -2381,123 +1626,61 @@
                         android:orientation="vertical"
                         android:gravity="center">
 
-
-
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgV1"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbV1"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbV2"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckV1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgV2"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbV3"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbV4"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckV2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgV3"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbV5"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbV6"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckV3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
-
+                        </LinearLayout>
                     </LinearLayout>
                     <View
                         android:layout_width="2dp"
@@ -2510,127 +1693,63 @@
                         android:orientation="vertical"
                         android:gravity="center">
 
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgV4"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbV7"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckV4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbV8"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgV5"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbV9"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckV5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbV10"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
                             android:background="#607d8b"
                             >
                         </View>
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgV6"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbV11"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckV6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbV12"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
-
+                        </LinearLayout>
                     </LinearLayout>
                     <View
                         android:layout_width="2dp"
@@ -2735,40 +1854,20 @@
                         android:orientation="vertical"
                         android:gravity="center">
 
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgO1"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbO1"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbO2"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:gravity="center"/>
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckO1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
 
                     </LinearLayout>
                     <View
@@ -2782,44 +1881,21 @@
                         android:orientation="vertical"
                         android:gravity="center">
 
-
-
-                        <RadioGroup
-                            android:id="@+id/sec300_p302_rgO2"
+                        <LinearLayout
                             android:layout_weight="4"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbO3"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textStyle="bold"
-                                android:padding="5dp"
+                            >
+                            <CheckBox
+                                android:id="@+id/sec300_p302_ckO2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:enabled="false"
-                                android:gravity="center"/>
-                            <View
-                                android:layout_width="2dp"
-                                android:layout_height="match_parent"
-                                android:background="#607d8b"
-                                >
-                            </View>
-                            <RadioButton
-                                android:id="@+id/sec300_p302_rbO4"
-                                android:layout_weight="1"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:text=""
-                                android:textAlignment="center"
-                                android:textStyle="bold"
-                                android:padding="5dp"
-                                android:enabled="false"
-                                android:gravity="center"/>
+                                android:layout_marginLeft="44dp"/>
 
-                        </RadioGroup>
+                        </LinearLayout>
 
                     </LinearLayout>
                     <View

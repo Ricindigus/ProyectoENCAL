@@ -14,6 +14,9 @@ import com.example.administrador.encal.Pojos.IdentificacionPojo;
 import com.example.administrador.encal.Pojos.Marco;
 import com.example.administrador.encal.Pojos.PojoMarco;
 import com.example.administrador.encal.Pojos.Sec100PojoF1;
+import com.example.administrador.encal.Pojos.Sec200PojoF1;
+import com.example.administrador.encal.Pojos.Sec300PojoF1;
+import com.example.administrador.encal.Pojos.Sec400PojoF1;
 import com.example.administrador.encal.Pojos.Ubigeo;
 import com.example.administrador.encal.Pojos.Usuario;
 
@@ -459,7 +462,7 @@ public class Data {
     }
 
     public ArrayList<IdentificacionPojo> getAllIdentificaciones(){
-        ArrayList<IdentificacionPojo> identificaciones = new ArrayList<>();
+        ArrayList<IdentificacionPojo> identificaciones = new ArrayList<IdentificacionPojo>();
         Cursor cursor = null;
         try{
             cursor = sqLiteDatabase.query(SQLConstantes.tableIdentificaciones,
@@ -674,7 +677,7 @@ public class Data {
     }
 
     public ArrayList<Sec100PojoF1> getAllModulo1(){
-        ArrayList<Sec100PojoF1> modulos1 = new ArrayList<>();
+        ArrayList<Sec100PojoF1> modulos1 = new ArrayList<Sec100PojoF1>();
         Cursor cursor = null;
         try{
             cursor = sqLiteDatabase.query(SQLConstantes.tableModulo1,
@@ -752,6 +755,469 @@ public class Data {
     }
 //----------------------------------------------FIN MODULO 1-----------------------------------------------------------------------
 
+    //---------------------------------MODULO2-------------------------------------------------------------
+    public Sec200PojoF1 getModulo2(String idEmpresa){
+        Sec200PojoF1 modulo2 = new Sec200PojoF1();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableModulo2,
+                SQLConstantes.ALL_COLUMNS_SECCION200,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+            modulo2.setID(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_ID)));
+            modulo2.setP_201_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_201_1)));
+            modulo2.setP_201_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_201_2)));
+            modulo2.setP_201_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_201_3)));
+            modulo2.setP_201_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_201_4)));
+            modulo2.setP_202(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_202)));
+            modulo2.setP_203(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_203)));
+            modulo2.setP_203_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_203_O)));
+            modulo2.setP_204(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_204)));
+            modulo2.setP_205_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_205_1)));
+            modulo2.setP_205_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_205_2)));
+            modulo2.setP_205_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_205_3)));
+            modulo2.setP_205_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_205_4)));
+            modulo2.setP_205_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_205_5)));
+            modulo2.setP_205_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_205_6)));
+            modulo2.setP_205_6_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_205_6_O)));
+            modulo2.setOBS(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_OBS)));
+        }
+        cursor.close();
+        return modulo2;
+    }
+
+    public ArrayList<Sec200PojoF1> getAllModulo2(){
+        ArrayList<Sec200PojoF1> modulos2 = new ArrayList<Sec200PojoF1>();
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableModulo2,
+                SQLConstantes.ALL_COLUMNS_SECCION200,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            Sec200PojoF1 modulo2 = new Sec200PojoF1();
+            modulo2.setID(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_ID)));
+            modulo2.setP_201_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_201_1)));
+            modulo2.setP_201_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_201_2)));
+            modulo2.setP_201_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_201_3)));
+            modulo2.setP_201_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_201_4)));
+            modulo2.setP_202(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_202)));
+            modulo2.setP_203(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_203)));
+            modulo2.setP_203_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_203_O)));
+            modulo2.setP_204(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_204)));
+            modulo2.setP_205_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_205_1)));
+            modulo2.setP_205_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_205_2)));
+            modulo2.setP_205_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_205_3)));
+            modulo2.setP_205_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_205_4)));
+            modulo2.setP_205_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_205_5)));
+            modulo2.setP_205_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_205_6)));
+            modulo2.setP_205_6_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_P_205_6_O)));
+            modulo2.setOBS(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION200_OBS)));
+            modulos2.add(modulo2);
+        }
+        cursor.close();
+        return modulos2;
+    }
+    public boolean existeModulo2(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableModulo2,
+                SQLConstantes.ALL_COLUMNS_SECCION200,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1) encontrado = true;
+        cursor.close();
+        return encontrado;
+    }
+    public void insertarModulo2(Sec200PojoF1 modulo2){
+        ContentValues contentValues = modulo2.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableModulo2,null,contentValues);
+    }
+    public void insertarModulos2(ArrayList<Sec200PojoF1> modulos2){
+        long items = getNumeroItemsModulo2();
+        if(items == 0){
+            for (Sec200PojoF1 modulo2 : modulos2) {
+                try {
+                    insertarModulo2(modulo2);
+                }catch (SQLiteException e){
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+    public void actualizarModulo2(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableModulo2,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    public void deleteModulo2(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableModulo2,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    //-------------------------------------FIN MODULO2-----------------------------------------------------------------
+
+//-----------------------------------------MODULO 3---------------------------------------------------------------
+
+    public Sec300PojoF1 getModulo3(String idEmpresa){
+        Sec300PojoF1 modulo3 = new Sec300PojoF1();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableModulo3,
+                SQLConstantes.ALL_COLUMNS_SECCION300,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+            modulo3.setID(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_ID)));
+            modulo3.setP_301(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_301)));
+            modulo3.setP_302(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302)));
+            modulo3.setP_302A_M_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_M_1)));
+            modulo3.setP_302A_M_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_M_2)));
+            modulo3.setP_302A_M_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_M_3)));
+            modulo3.setP_302A_M_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_M_4)));
+            modulo3.setP_302A_M_4_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_M_4_O)));
+            modulo3.setP_302A_L_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_L_1)));
+            modulo3.setP_302A_L_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_L_2)));
+            modulo3.setP_302A_L_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_L_3)));
+            modulo3.setP_302A_L_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_L_4)));
+            modulo3.setP_302A_L_4_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_L_4_O)));
+            modulo3.setP_302A_P_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_P_1)));
+            modulo3.setP_302A_P_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_P_2)));
+            modulo3.setP_302A_P_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_P_3)));
+            modulo3.setP_302A_P_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_P_4)));
+            modulo3.setP_302A_P_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_P_5)));
+            modulo3.setP_302A_P_5_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_P_5_O)));
+            modulo3.setP_302A_T_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_T_1)));
+            modulo3.setP_302A_T_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_T_2)));
+            modulo3.setP_302A_T_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_T_3)));
+            modulo3.setP_302A_T_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_T_4)));
+            modulo3.setP_302A_T_4_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_T_4_O)));
+            modulo3.setP_302A_V_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_V_1)));
+            modulo3.setP_302A_V_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_V_2)));
+            modulo3.setP_302A_V_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_V_3)));
+            modulo3.setP_302A_V_3_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_V_3_O)));
+            modulo3.setP_302A_O_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_O_1)));
+            modulo3.setP_302A_O_1_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_O_1_O)));
+            modulo3.setP_302B_M_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_M_1)));
+            modulo3.setP_302B_M_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_M_2)));
+            modulo3.setP_302B_M_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_M_3)));
+            modulo3.setP_302B_M_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_M_4)));
+            modulo3.setP_302B_L_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_L_1)));
+            modulo3.setP_302B_L_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_L_2)));
+            modulo3.setP_302B_L_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_L_3)));
+            modulo3.setP_302B_L_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_L_4)));
+            modulo3.setP_302B_P_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_P_1)));
+            modulo3.setP_302B_P_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_P_2)));
+            modulo3.setP_302B_P_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_P_3)));
+            modulo3.setP_302B_P_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_P_4)));
+            modulo3.setP_302B_P_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_P_5)));
+            modulo3.setP_302B_T_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_T_1)));
+            modulo3.setP_302B_T_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_T_2)));
+            modulo3.setP_302B_T_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_T_3)));
+            modulo3.setP_302B_T_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_T_4)));
+            modulo3.setP_302B_V_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_V_1)));
+            modulo3.setP_302B_V_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_V_2)));
+            modulo3.setP_302B_V_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_V_3)));
+            modulo3.setP_302B_O_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_O_1)));
+            modulo3.setP_302C_M_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_M_1)));
+            modulo3.setP_302C_M_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_M_2)));
+            modulo3.setP_302C_M_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_M_3)));
+            modulo3.setP_302C_M_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_M_4)));
+            modulo3.setP_302C_L_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_L_1)));
+            modulo3.setP_302C_L_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_L_2)));
+            modulo3.setP_302C_L_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_L_3)));
+            modulo3.setP_302C_L_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_L_4)));
+            modulo3.setP_302C_P_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_P_1)));
+            modulo3.setP_302C_P_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_P_2)));
+            modulo3.setP_302C_P_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_P_3)));
+            modulo3.setP_302C_P_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_P_4)));
+            modulo3.setP_302C_P_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_P_5)));
+            modulo3.setP_302C_T_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_T_1)));
+            modulo3.setP_302C_T_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_T_2)));
+            modulo3.setP_302C_T_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_T_3)));
+            modulo3.setP_302C_T_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_T_4)));
+            modulo3.setP_302C_V_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_V_1)));
+            modulo3.setP_302C_V_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_V_2)));
+            modulo3.setP_302C_V_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_V_3)));
+            modulo3.setP_302C_O_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_O_1)));
+            modulo3.setP_303_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_303_1)));
+            modulo3.setP_303_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_303_2)));
+            modulo3.setP_303_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_303_3)));
+            modulo3.setP_303_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_303_4)));
+            modulo3.setP_303_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_303_5)));
+            modulo3.setP_304(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_304)));
+            modulo3.setP_305(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_305)));
+            modulo3.setOBS(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_OBS)));
+        }
+        cursor.close();
+        return modulo3;
+    }
+
+
+    public boolean existeModulo3(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableModulo3,
+                SQLConstantes.ALL_COLUMNS_SECCION300,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1) encontrado = true;
+        cursor.close();
+        return encontrado;
+    }
+
+    public ArrayList<Sec300PojoF1> getAllModulo3(){
+        ArrayList<Sec300PojoF1> modulos3 = new ArrayList<Sec300PojoF1>();
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableModulo3,
+                SQLConstantes.ALL_COLUMNS_SECCION300,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            Sec300PojoF1 modulo3 = new Sec300PojoF1();
+            modulo3.setID(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_ID)));
+            modulo3.setP_301(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_301)));
+            modulo3.setP_302(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302)));
+            modulo3.setP_302A_M_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_M_1)));
+            modulo3.setP_302A_M_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_M_2)));
+            modulo3.setP_302A_M_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_M_3)));
+            modulo3.setP_302A_M_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_M_4)));
+            modulo3.setP_302A_M_4_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_M_4_O)));
+            modulo3.setP_302A_L_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_L_1)));
+            modulo3.setP_302A_L_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_L_2)));
+            modulo3.setP_302A_L_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_L_3)));
+            modulo3.setP_302A_L_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_L_4)));
+            modulo3.setP_302A_L_4_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_L_4_O)));
+            modulo3.setP_302A_P_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_P_1)));
+            modulo3.setP_302A_P_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_P_2)));
+            modulo3.setP_302A_P_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_P_3)));
+            modulo3.setP_302A_P_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_P_4)));
+            modulo3.setP_302A_P_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_P_5)));
+            modulo3.setP_302A_P_5_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_P_5_O)));
+            modulo3.setP_302A_T_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_T_1)));
+            modulo3.setP_302A_T_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_T_2)));
+            modulo3.setP_302A_T_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_T_3)));
+            modulo3.setP_302A_T_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_T_4)));
+            modulo3.setP_302A_T_4_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_T_4_O)));
+            modulo3.setP_302A_V_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_V_1)));
+            modulo3.setP_302A_V_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_V_2)));
+            modulo3.setP_302A_V_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_V_3)));
+            modulo3.setP_302A_V_3_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_V_3_O)));
+            modulo3.setP_302A_O_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_O_1)));
+            modulo3.setP_302A_O_1_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302A_O_1_O)));
+            modulo3.setP_302B_M_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_M_1)));
+            modulo3.setP_302B_M_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_M_2)));
+            modulo3.setP_302B_M_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_M_3)));
+            modulo3.setP_302B_M_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_M_4)));
+            modulo3.setP_302B_L_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_L_1)));
+            modulo3.setP_302B_L_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_L_2)));
+            modulo3.setP_302B_L_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_L_3)));
+            modulo3.setP_302B_L_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_L_4)));
+            modulo3.setP_302B_P_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_P_1)));
+            modulo3.setP_302B_P_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_P_2)));
+            modulo3.setP_302B_P_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_P_3)));
+            modulo3.setP_302B_P_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_P_4)));
+            modulo3.setP_302B_P_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_P_5)));
+            modulo3.setP_302B_T_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_T_1)));
+            modulo3.setP_302B_T_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_T_2)));
+            modulo3.setP_302B_T_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_T_3)));
+            modulo3.setP_302B_T_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_T_4)));
+            modulo3.setP_302B_V_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_V_1)));
+            modulo3.setP_302B_V_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_V_2)));
+            modulo3.setP_302B_V_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_V_3)));
+            modulo3.setP_302B_O_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302B_O_1)));
+            modulo3.setP_302C_M_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_M_1)));
+            modulo3.setP_302C_M_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_M_2)));
+            modulo3.setP_302C_M_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_M_3)));
+            modulo3.setP_302C_M_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_M_4)));
+            modulo3.setP_302C_L_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_L_1)));
+            modulo3.setP_302C_L_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_L_2)));
+            modulo3.setP_302C_L_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_L_3)));
+            modulo3.setP_302C_L_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_L_4)));
+            modulo3.setP_302C_P_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_P_1)));
+            modulo3.setP_302C_P_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_P_2)));
+            modulo3.setP_302C_P_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_P_3)));
+            modulo3.setP_302C_P_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_P_4)));
+            modulo3.setP_302C_P_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_P_5)));
+            modulo3.setP_302C_T_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_T_1)));
+            modulo3.setP_302C_T_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_T_2)));
+            modulo3.setP_302C_T_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_T_3)));
+            modulo3.setP_302C_T_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_T_4)));
+            modulo3.setP_302C_V_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_V_1)));
+            modulo3.setP_302C_V_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_V_2)));
+            modulo3.setP_302C_V_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_V_3)));
+            modulo3.setP_302C_O_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_302C_O_1)));
+            modulo3.setP_303_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_303_1)));
+            modulo3.setP_303_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_303_2)));
+            modulo3.setP_303_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_303_3)));
+            modulo3.setP_303_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_303_4)));
+            modulo3.setP_303_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_303_5)));
+            modulo3.setP_304(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_304)));
+            modulo3.setP_305(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_P_305)));
+            modulo3.setOBS(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION300_OBS)));
+            modulos3.add(modulo3);
+        }
+        cursor.close();
+        return modulos3;
+    }
+
+
+    public void insertarModulo3(Sec300PojoF1 modulo3){
+        ContentValues contentValues = modulo3.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableModulo3,null,contentValues);
+    }
+
+    public void insertarModulos3(ArrayList<Sec300PojoF1> modulos3){
+        long items = getNumeroItemsModulo3();
+        if(items == 0){
+            for (Sec300PojoF1 modulo3 : modulos3) {
+                try {
+                    insertarModulo3(modulo3);
+                }catch (SQLiteException e){
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public void actualizarModulo3(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableModulo3,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    public void deleteModulo3(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableModulo3,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+//----------------------------------------------- FIN MODULO 3 ------------------------------------------------------------------
+
+
+//-------------------------------------------------------MODULO 4------------------------------------------------------------------
+
+
+
+    public Sec400PojoF1 getModulo4(String idEmpresa){
+        Sec400PojoF1 modulo4 = new Sec400PojoF1();
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableModulo4,
+                SQLConstantes.ALL_COLUMNS_SECCION400,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1){
+            cursor.moveToFirst();
+            modulo4.setID(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_ID)));
+            modulo4.setP_401_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_401_1)));
+            modulo4.setP_401_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_401_2)));
+            modulo4.setP_401_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_401_3)));
+            modulo4.setP_401_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_401_4)));
+            modulo4.setP_401_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_401_5)));
+            modulo4.setP_402(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_402)));
+            modulo4.setP_403_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_403_1)));
+            modulo4.setP_403_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_403_2)));
+            modulo4.setP_403_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_403_3)));
+            modulo4.setP_403_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_403_4)));
+            modulo4.setP_404(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_404)));
+            modulo4.setP_405(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_405)));
+            modulo4.setP_406(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_406)));
+            modulo4.setP_407_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_407_1)));
+            modulo4.setP_407_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_407_2)));
+            modulo4.setP_407_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_407_3)));
+            modulo4.setP_407_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_407_4)));
+            modulo4.setP_407_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_407_5)));
+            modulo4.setP_407_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_407_6)));
+            modulo4.setP_407_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_407_7)));
+            modulo4.setP_407_7_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_407_7_O)));
+            modulo4.setP_408_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_408_1)));
+            modulo4.setP_408_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_408_2)));
+            modulo4.setP_408_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_408_3)));
+            modulo4.setP_408_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_408_4)));
+            modulo4.setP_408_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_408_5)));
+            modulo4.setP_408_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_408_6)));
+            modulo4.setP_408_6_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_408_6_O)));
+            modulo4.setP_409_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_409_1)));
+            modulo4.setP_409_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_409_2)));
+            modulo4.setP_409_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_409_3)));
+            modulo4.setP_409_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_409_4)));
+            modulo4.setP_409_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_409_5)));
+            modulo4.setP_409_5_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_409_5_O)));
+            modulo4.setP_410(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_410)));
+            modulo4.setP_410_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_410_O)));
+            modulo4.setOBS(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_OBS)));
+        }
+        cursor.close();
+        return modulo4;
+    }
+
+
+    public boolean existeModulo4(String idEmpresa){
+        boolean encontrado = false;
+        String[] whereArgs = new String[]{idEmpresa};
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableModulo4,
+                SQLConstantes.ALL_COLUMNS_SECCION400,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs,null,null,null);
+        if(cursor.getCount() == 1) encontrado = true;
+        cursor.close();
+        return encontrado;
+    }
+
+    public ArrayList<Sec400PojoF1> getAllModulo4(){
+        ArrayList<Sec400PojoF1> modulos4 = new ArrayList<Sec400PojoF1>();
+        Cursor cursor = sqLiteDatabase.query(SQLConstantes.tableModulo4,
+                SQLConstantes.ALL_COLUMNS_SECCION400,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            Sec400PojoF1 modulo4 = new Sec400PojoF1();
+            modulo4.setID(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_ID)));
+            modulo4.setP_401_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_401_1)));
+            modulo4.setP_401_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_401_2)));
+            modulo4.setP_401_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_401_3)));
+            modulo4.setP_401_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_401_4)));
+            modulo4.setP_401_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_401_5)));
+            modulo4.setP_402(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_402)));
+            modulo4.setP_403_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_403_1)));
+            modulo4.setP_403_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_403_2)));
+            modulo4.setP_403_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_403_3)));
+            modulo4.setP_403_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_403_4)));
+            modulo4.setP_404(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_404)));
+            modulo4.setP_405(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_405)));
+            modulo4.setP_406(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_406)));
+            modulo4.setP_407_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_407_1)));
+            modulo4.setP_407_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_407_2)));
+            modulo4.setP_407_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_407_3)));
+            modulo4.setP_407_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_407_4)));
+            modulo4.setP_407_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_407_5)));
+            modulo4.setP_407_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_407_6)));
+            modulo4.setP_407_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_407_7)));
+            modulo4.setP_407_7_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_407_7_O)));
+            modulo4.setP_408_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_408_1)));
+            modulo4.setP_408_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_408_2)));
+            modulo4.setP_408_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_408_3)));
+            modulo4.setP_408_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_408_4)));
+            modulo4.setP_408_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_408_5)));
+            modulo4.setP_408_6(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_408_6)));
+            modulo4.setP_408_6_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_408_6_O)));
+            modulo4.setP_409_1(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_409_1)));
+            modulo4.setP_409_2(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_409_2)));
+            modulo4.setP_409_3(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_409_3)));
+            modulo4.setP_409_4(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_409_4)));
+            modulo4.setP_409_5(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_409_5)));
+            modulo4.setP_409_5_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_409_5_O)));
+            modulo4.setP_410(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_410)));
+            modulo4.setP_410_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_P_410_O)));
+            modulo4.setOBS(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION400_OBS)));
+            modulos4.add(modulo4);
+        }
+        cursor.close();
+        return modulos4;
+    }
+
+
+    public void insertarModulo4(Sec400PojoF1 modulo4){
+        ContentValues contentValues = modulo4.toValues();
+        sqLiteDatabase.insert(SQLConstantes.tableModulo4,null,contentValues);
+    }
+
+    public void insertarModulos4(ArrayList<Sec400PojoF1> modulos4){
+        long items = getNumeroItemsModulo4();
+        if(items == 0){
+            for (Sec400PojoF1 modulo4 : modulos4) {
+                try {
+                    insertarModulo4(modulo4);
+                }catch (SQLiteException e){
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public void actualizarModulo4(String idempresa, ContentValues contentValues){
+        String[] whereArgs = new String[]{idempresa};
+        sqLiteDatabase.update(SQLConstantes.tableModulo4,contentValues,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+    public void deleteModulo4(String idEmpresa){
+        String[] whereArgs = new String[]{idEmpresa};
+        sqLiteDatabase.delete(SQLConstantes.tableModulo4,SQLConstantes.WHERE_CLAUSE_ID_EMPRESA,whereArgs);
+    }
+//-------------------------------------------- FIN MODULO 4-----------------------------------------------------------------------
 
 
 }

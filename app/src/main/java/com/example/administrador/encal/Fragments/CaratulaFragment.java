@@ -3,6 +3,7 @@ package com.example.administrador.encal.Fragments;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -17,7 +18,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.text.InputFilter;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -29,17 +29,17 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.administrador.encal.Modelo.Data;
+import com.example.administrador.encal.Modelo.SQLConstantes;
 import com.example.administrador.encal.Pojos.CaratulaPojo;
 import com.example.administrador.encal.Pojos.Marco;
 import com.example.administrador.encal.R;
 
 import java.util.ArrayList;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -72,6 +72,7 @@ public class CaratulaFragment extends Fragment {
     private EditText edtLote;
     private EditText edtKm;
     private EditText edtReferencia;
+    private EditText edtEspecifiqueVia;
 
     private Button btnGPS;
     LocationManager locationManager;
@@ -94,26 +95,26 @@ public class CaratulaFragment extends Fragment {
     };
 
     //mapa de variables
-    private int CAMBIO;
-    private String CCDD;
-    private String CCPP;
-    private String CCDI;
+    private String ID;
     private String NOMBREDD;
+    private String CCDD;
     private String NOMBREPV;
+    private String CCPP;
     private String NOMBREDI;
+    private String CCDI;
     private String GPSLATITUD;
-    private String GPSALTITUD;
     private String GPSLONGITUD;
-    private String CCST;
-    private String CCAT;
-    private String ZON_NUM;
-    private String MZ_ID;
+    private String SECTOR_TR;
+    private String AREA_TR;
+    private String ZONA;
+    private String MANZANA_ID;
     private String FRENTE;
     private int TIPVIA;
-    private String NOMVIA;
+    private String TIPVIA_ESPEC;
+    private String TIPVIA_D;
     private String NROPTA;
     private String BLOCK;
-    private String INT;
+    private String INTERIOR;
     private String PISO;
     private String MZA;
     private String LOTE;
@@ -161,6 +162,7 @@ public class CaratulaFragment extends Fragment {
         edtKm = (EditText) rootView.findViewById(R.id.caratula_edtKm);
         edtReferencia = (EditText) rootView.findViewById(R.id.caratula_edtReferencia);
         spTipoVia = (Spinner) rootView.findViewById(R.id.caratula_spTipoVia);
+        edtEspecifiqueVia = (EditText) rootView.findViewById(R.id.caratula_edt_especifique);
         btnGPS = (Button) rootView.findViewById(R.id.caratula_btnGPS);
         return rootView;
     }
@@ -277,6 +279,22 @@ public class CaratulaFragment extends Fragment {
             }
         });
 
+        spTipoVia.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(position == 7) edtEspecifiqueVia.setVisibility(View.VISIBLE);
+                else {
+                    edtEspecifiqueVia.setText("");
+                    edtEspecifiqueVia.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
 
         EditText[] editTexts = {edtSector,edtArea,edtZona,
                 edtManzana,edtFrente,edtNombreVia,edtNPuerta,edtBlock,edtInterior,edtPiso,
@@ -351,7 +369,12 @@ public class CaratulaFragment extends Fragment {
         edtZona.setText(caratula.getZONA());
         edtManzana.setText(caratula.getMANZANA_ID());
         edtFrente.setText(caratula.getFRENTE());
-        if(!caratula.getTIPVIA().equals("")) spTipoVia.setSelection(Integer.parseInt(caratula.getTIPVIA()));
+        if(!caratula.getTIPVIA().equals("")){
+            spTipoVia.setSelection(Integer.parseInt(caratula.getTIPVIA()));
+            if(Integer.parseInt(caratula.getTIPVIA()) == 7){
+                edtEspecifiqueVia.setText(caratula.getTIPVIA_ESPEC());
+            }
+        }
         edtNombreVia.setText(caratula.getTIPVIA_D());
         edtNPuerta.setText(caratula.getNROPTA());
         edtBlock.setText(caratula.getBLOCK());
@@ -362,33 +385,33 @@ public class CaratulaFragment extends Fragment {
         edtKm.setText(caratula.getKM());
         edtReferencia.setText(caratula.getREF_DIREC());
     }
-    public void cargarUbigeoInicial(){
-        Thread thread = new Thread(){
-            @Override
-            public void run() {
-                final String[] departamentos = context.getResources().getStringArray(R.array.DEPARTAMENTOS);
-                data = new Data(context);
-                data.open();
-                final Marco marco = data.getMarco(idCaratula);
-                final String[] provincias = context.getResources().getStringArray(arreglosDepartamentos[Integer.parseInt(marco.getCCDD())-1]);
-                final String idUbi = checkDigito(Integer.parseInt(marco.getCCDD())) + checkDigito(Integer.parseInt(marco.getCCPP()));
-                final ArrayList<String> distritos = data.getUbigeos(idUbi);
-                data.close();
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        cargarSpinerDepartamentos(departamentos);
-                        cargarSpinerProvincias(provincias);
-                        cargarSpinerDistritos(distritos);
-                        spDepartamento.setSelection(Integer.parseInt(marco.getCCDD()));
-                        spProvincia.setSelection(Integer.parseInt(marco.getCCPP()));
-                        spDistrito.setSelection(obtenerPosDistrito(idUbi,Integer.parseInt(marco.getCCDI())));
-                    }
-                });
-            }
-        };
-        thread.start();
-    }
+//    public void cargarUbigeoInicial(){
+//        Thread thread = new Thread(){
+//            @Override
+//            public void run() {
+//                final String[] departamentos = context.getResources().getStringArray(R.array.DEPARTAMENTOS);
+//                data = new Data(context);
+//                data.open();
+//                final Marco marco = data.getMarco(idCaratula);
+//                final String[] provincias = context.getResources().getStringArray(arreglosDepartamentos[Integer.parseInt(marco.getCCDD())-1]);
+//                final String idUbi = checkDigito(Integer.parseInt(marco.getCCDD())) + checkDigito(Integer.parseInt(marco.getCCPP()));
+//                final ArrayList<String> distritos = data.getUbigeos(idUbi);
+//                data.close();
+//                getActivity().runOnUiThread(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        cargarSpinerDepartamentos(departamentos);
+//                        cargarSpinerProvincias(provincias);
+//                        cargarSpinerDistritos(distritos);
+//                        spDepartamento.setSelection(Integer.parseInt(marco.getCCDD()));
+//                        spProvincia.setSelection(Integer.parseInt(marco.getCCPP()));
+//                        spDistrito.setSelection(obtenerPosDistrito(idUbi,Integer.parseInt(marco.getCCDI())));
+//                    }
+//                });
+//            }
+//        };
+//        thread.start();
+//    }
     public void cargarSpinerDepartamentos(String[] datos){
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(context, android.R.layout.simple_spinner_item,datos);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -551,4 +574,96 @@ public class CaratulaFragment extends Fragment {
         public void onProviderDisabled(String s) {
         }
     };
+
+
+    public void llenarMapaVariables(){
+        CCDD = String.valueOf(spDepartamento.getSelectedItemPosition());
+        CCPP = String.valueOf(spProvincia.getSelectedItemPosition());
+        String idUbica = checkDigito(spDepartamento.getSelectedItemPosition()) + checkDigito(spProvincia.getSelectedItemPosition());
+        CCDI = obtenerCCDI(spDistrito.getSelectedItemPosition(),idUbica);
+        NOMBREDD = spDepartamento.getSelectedItem().toString();
+        NOMBREPV = spProvincia.getSelectedItem().toString();
+        NOMBREDI = spDistrito.getSelectedItem().toString();
+        GPSLATITUD=txtLatitud.getText().toString();
+        GPSLONGITUD=txtLongitud.getText().toString();
+        SECTOR_TR=edtSector.getText().toString();
+        AREA_TR=edtArea.getText().toString();
+        ZONA=edtZona.getText().toString();
+        MANZANA_ID=edtManzana.getText().toString();
+        FRENTE=edtFrente.getText().toString();
+        TIPVIA = spTipoVia.getSelectedItemPosition();
+        TIPVIA_D=edtNombreVia.getText().toString();
+        TIPVIA_ESPEC = edtEspecifiqueVia.getText().toString();
+        NROPTA=edtNPuerta.getText().toString();
+        BLOCK=edtBlock.getText().toString();
+        INTERIOR=edtInterior.getText().toString();
+        PISO=edtPiso.getText().toString();
+        MZA=edtManzanaVia.getText().toString();
+        LOTE=edtLote.getText().toString();
+        KM=edtKm.getText().toString();
+        REF_DIREC=edtReferencia.getText().toString();
+    }
+
+    public void guardarDatos(){
+        llenarMapaVariables();
+        data = new Data(context);
+        data.open();
+        if(data.existeCaratula(idCaratula)){
+            ContentValues contentValues = new ContentValues(26);
+            contentValues.put(SQLConstantes.CARATULA_DEPARTAMENTO,NOMBREDD);
+            contentValues.put(SQLConstantes.CARATULA_DEPARTAMENTO_COD,CCDD);
+            contentValues.put(SQLConstantes.CARATULA_PROVINCIA,NOMBREPV);
+            contentValues.put(SQLConstantes.CARATULA_PROVINCIA_COD,CCPP);
+            contentValues.put(SQLConstantes.CARATULA_DISTRITO,NOMBREDI);
+            contentValues.put(SQLConstantes.CARATULA_DISTRITO_COD,CCDI);
+            contentValues.put(SQLConstantes.CARATULA_GPSLATITUD,GPSLATITUD);
+            contentValues.put(SQLConstantes.CARATULA_GPSLONGITUD,GPSLONGITUD);
+            contentValues.put(SQLConstantes.CARATULA_SECTOR,SECTOR_TR);
+            contentValues.put(SQLConstantes.CARATULA_AREA,AREA_TR);
+            contentValues.put(SQLConstantes.CARATULA_ZONA,ZONA);
+            contentValues.put(SQLConstantes.CARATULA_MANZANA_MUESTRA,MANZANA_ID);
+            contentValues.put(SQLConstantes.CARATULA_FRENTE,FRENTE);
+            contentValues.put(SQLConstantes.CARATULA_TIPVIA,String.valueOf(TIPVIA));
+            contentValues.put(SQLConstantes.CARATULA_TIPVIA_OTRO,TIPVIA_ESPEC);
+            contentValues.put(SQLConstantes.CARATULA_NOMVIA,TIPVIA_D);
+            contentValues.put(SQLConstantes.CARATULA_NPUERTA,NROPTA);
+            contentValues.put(SQLConstantes.CARATULA_BLOCK,BLOCK);
+            contentValues.put(SQLConstantes.CARATULA_INTERIOR,INTERIOR);
+            contentValues.put(SQLConstantes.CARATULA_PISO,PISO);
+            contentValues.put(SQLConstantes.CARATULA_MANZANA_VIA,MZA);
+            contentValues.put(SQLConstantes.CARATULA_LOTE,LOTE);
+            contentValues.put(SQLConstantes.CARATULA_KM,KM);
+            contentValues.put(SQLConstantes.CARATULA_REFERENCIA,REF_DIREC);
+            data.actualizarCaratula(idCaratula,contentValues);
+        }else{
+            caratula = new CaratulaPojo();
+            caratula.setID(idCaratula);
+            caratula.setNOMBREDD(NOMBREDD);
+            caratula.setCCDD(CCDD);
+            caratula.setNOMBREPV(NOMBREPV);
+            caratula.setCCPP(CCPP);
+            caratula.setNOMBREDI(NOMBREDI);
+            caratula.setCCDI(CCDI);
+            caratula.setGPSLATITUD(GPSLATITUD);
+            caratula.setGPSLONGITUD(GPSLONGITUD);
+            caratula.setSECTOR_TR(SECTOR_TR);
+            caratula.setARA_TR(AREA_TR);
+            caratula.setZONA(ZONA);
+            caratula.setMANZANA_ID(MANZANA_ID);
+            caratula.setFRENTE(FRENTE);
+            caratula.setTIPVIA(String.valueOf(TIPVIA));
+            caratula.setTIPVIA_D(TIPVIA_D);
+            caratula.setTIPVIA_ESPEC(TIPVIA_ESPEC);
+            caratula.setNROPTA(NROPTA);
+            caratula.setBLOCK(BLOCK);
+            caratula.setINTERIOR(INTERIOR);
+            caratula.setPISO(PISO);
+            caratula.setMZA(MZA);
+            caratula.setLOTE(LOTE);
+            caratula.setKM(KM);
+            caratula.setREF_DIREC(REF_DIREC);
+            data.insertarCaratula(caratula);
+        }
+        data.close();
+    }
 }

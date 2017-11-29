@@ -127,17 +127,6 @@
         <item>item5</item>
     </string-array>
 
-    <string-array name="array_tipo_via">
-        <item>Seleccione tipo</item>
-        <item>1.Avenida</item>
-        <item>2.Jirón</item>
-        <item>3.Calle</item>
-        <item>4.Pasaje</item>
-        <item>5.Carretera</item>
-        <item>6.Prolongación</item>
-        <item>7.Otro</item>
-    </string-array>
-
     <string-array name="array_resultado_visita">
         <item>Seleccione</item>
         <item>1.Completa</item>

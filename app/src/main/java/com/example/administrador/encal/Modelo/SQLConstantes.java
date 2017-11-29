@@ -93,33 +93,27 @@ public class SQLConstantes {
     public static final String CARATULA_REFERENCIA = "REF_DIREC";
 
     //COLUMNAS_VISITA
-    public static final String VISITA_ID = "ID";
-    public static final String VISITA_ID_EMPRESA = "ID_EMPRESA";
-    public static final String VISITA_DNI_OPERADOR = "DNI_OPERADOR_E";
-    public static final String VISITA_NOMBRE_OPERADOR = "V_OPERADOR_E";
-    public static final String VISITA_DNI_JEFE = "DNI_JEFE_EQUIPO";
-    public static final String VISITA_NOMBRE_JEFE = "V_JEFE_EQUIPO";
-    public static final String VISITA_DNI_SUPERVISOR = "DNI_SUPERVISOR";
-    public static final String VISITA_NOMBRE_SUPERVISOR = "V_SUPERVISOR";
-    public static final String VISITA_N = "N_VISITA";
+    public static final String VISITA_ID = "ID_EMPRESA";
+    public static final String VISITA_N = "V_NRO";
     public static final String VISITA_DIA = "V_DIA";
     public static final String VISITA_MES = "V_MES";
     public static final String VISITA_ANIO = "V_ANIO";
-    public static final String VISITA_HORAI = "V_HORA_I";
-    public static final String VISITA_MINUTOI = "V_MINUTO_I";
-    public static final String VISITA_HORAF = "V_HORA_F";
-    public static final String VISITA_MINUTOF = "V_MINUTO_F";
-    public static final String VISITA_RESULTADO = "R_VISITA";
-    public static final String VISITA_RESULTADO_ESP = "R_VISITA_ESP";
-    public static final String VISITA_PROX_DIA = "V_PROX_FECHA_DIA";
-    public static final String VISITA_PROX_MES = "V_PROX_FECHA_MES";
-    public static final String VISITA_PROX_ANIO = "V_PROX_FECHA_ANIO";
-    public static final String VISITA_PROX_HORA = "V_PROX_HORA";
-    public static final String VISITA_PROX_MINUTO = "V_PROX_MIN";
-    public static final String VISITA_USUCREACION = "USU_CREACION";
-    public static final String VISITA_FECCREACION = "FEC_CREACION";
-    public static final String VISITA_USUREGISTRO = "USU_REGISTRO";
-    public static final String VISITA_FECREGISTRO = "FEC_REGISTRO";
+    //public static final String VISITA_HORAI = "V_HORA_I";
+    //public static final String VISITA_MINUTOI = "V_MINUTO_I";
+    //public static final String VISITA_HORAF = "V_HORA_F";
+    //public static final String VISITA_MINUTOF = "V_MINUTO_F";
+    public static final String VISITA_RESULTADO = "V_RESULTADO";
+    public static final String VISITA_RESULTADO_ESP = "V_RESULTADO_O";
+    public static final String VISITA_PROX_DIA = "V_PROX_VIS_DIA";
+    public static final String VISITA_PROX_MES = "V_PROX_VIS_MES";
+    public static final String VISITA_PROX_ANIO = "V_PROX_VIS_ANIO";
+    public static final String VISITA_PROX_HORA = "V_PROX_VIS_HORA";
+    public static final String VISITA_PROX_MINUTO = "V_PROX_VIS_MINUTO";
+    public static final String ENCUESTA_DIA = "RESFIN_DIA";
+    public static final String ENCUESTA_MES = "RESFIN_MES";
+    public static final String ENCUESTA_ANIO= "RESFIN_ANIO";
+    public static final String ENCUESTA_RESULTADO = "RESFIN";
+    public static final String ENCUESTA_RESULTADO_ESP = "RESFIN_O";
 
 
     //COLUMNAS_IDENTIFICACION
@@ -428,21 +422,10 @@ public class SQLConstantes {
     public static final String SQL_CREATE_TABLA_VISITAS =
             "CREATE TABLE " + tableVisitas + "(" +
                     VISITA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-                    VISITA_ID_EMPRESA + " TEXT," +
-                    VISITA_DNI_OPERADOR + " TEXT," +
-                    VISITA_NOMBRE_OPERADOR + " TEXT," +
-                    VISITA_DNI_JEFE + " TEXT," +
-                    VISITA_NOMBRE_JEFE + " TEXT," +
-                    VISITA_DNI_SUPERVISOR + " TEXT," +
-                    VISITA_NOMBRE_SUPERVISOR + " TEXT," +
                     VISITA_N + " TEXT," +
                     VISITA_DIA + " TEXT," +
                     VISITA_MES + " TEXT," +
                     VISITA_ANIO + " TEXT," +
-                    VISITA_HORAI + " TEXT," +
-                    VISITA_MINUTOI + " TEXT," +
-                    VISITA_HORAF + " TEXT," +
-                    VISITA_MINUTOF + " TEXT," +
                     VISITA_RESULTADO + " TEXT," +
                     VISITA_RESULTADO_ESP + " TEXT," +
                     VISITA_PROX_DIA + " TEXT," +
@@ -450,10 +433,11 @@ public class SQLConstantes {
                     VISITA_PROX_ANIO + " TEXT," +
                     VISITA_PROX_HORA + " TEXT," +
                     VISITA_PROX_MINUTO + " TEXT," +
-                    VISITA_USUCREACION + " TEXT," +
-                    VISITA_FECCREACION + " TEXT," +
-                    VISITA_USUREGISTRO + " TEXT," +
-                    VISITA_FECREGISTRO + " TEXT" + ");"
+                    ENCUESTA_DIA + " TEXT," +
+                    ENCUESTA_MES + " TEXT," +
+                    ENCUESTA_ANIO + " TEXT," +
+                    ENCUESTA_RESULTADO + " TEXT," +
+                    ENCUESTA_RESULTADO_ESP + " TEXT" + ");"
             ;
 
     public static final String SQL_CREATE_TABLA_IDENTIFICACIONES =
@@ -794,9 +778,9 @@ public class SQLConstantes {
 
     //TRAER COLUMNAS VISITAS
     public static final String[] ALL_COLUMNS_VISITAS = {
-            VISITA_ID, VISITA_ID_EMPRESA, VISITA_DNI_OPERADOR, VISITA_NOMBRE_OPERADOR, VISITA_DNI_JEFE, VISITA_NOMBRE_JEFE, VISITA_DNI_SUPERVISOR,  VISITA_NOMBRE_SUPERVISOR,  VISITA_DIA, VISITA_MES,VISITA_ANIO,
-            VISITA_HORAI, VISITA_MINUTOI, VISITA_HORAF,VISITA_MINUTOF, VISITA_RESULTADO, VISITA_RESULTADO_ESP, VISITA_PROX_DIA, VISITA_PROX_MES, VISITA_PROX_ANIO, VISITA_PROX_HORA,
-            VISITA_PROX_MINUTO,VISITA_N ,VISITA_USUCREACION,VISITA_FECCREACION, VISITA_USUREGISTRO,VISITA_FECREGISTRO
+            VISITA_ID, VISITA_N, VISITA_DIA, VISITA_MES, VISITA_ANIO, VISITA_RESULTADO, VISITA_RESULTADO_ESP,  VISITA_PROX_DIA,
+            VISITA_PROX_MES, VISITA_PROX_ANIO, VISITA_PROX_HORA,VISITA_PROX_MINUTO, ENCUESTA_DIA, ENCUESTA_MES, ENCUESTA_ANIO,
+            ENCUESTA_RESULTADO,ENCUESTA_RESULTADO_ESP
     };
 
     //TRAER COLUMNAS IDENTIFICACIONES

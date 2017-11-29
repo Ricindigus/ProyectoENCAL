@@ -1,5 +1,7 @@
 package com.example.administrador.encal.Fragments;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,6 +14,9 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 
+import com.example.administrador.encal.Modelo.Data;
+import com.example.administrador.encal.Pojos.IdentificacionPojo;
+import com.example.administrador.encal.Pojos.Sec200PojoF1;
 import com.example.administrador.encal.R;
 
 /**
@@ -42,10 +47,28 @@ public class Fragment1_s200 extends Fragment {
     private EditText p205_edt;
     private CardView p205_card;
 
+
+    private String idempresa;
+    private Sec200PojoF1 sec200PojoF1;
+    private Context context;
+    private Data data;
+
+    //mapeo de variables
+    int P_201_1;int P_201_2;int P_201_3;int P_201_4;int P_202;
+    int P_203;String P_203_O;String P_204;int P_205_1;int P_205_2;
+    int P_205_3;int P_205_4;int P_205_5;int P_205_6;String P_205_6_O;
+
     public Fragment1_s200() {
         // Required empty public constructor
     }
 
+    @SuppressLint("ValidFragment")
+    public Fragment1_s200(String idempresa, Context context) {
+        this.idempresa = idempresa;
+        this.context = context;
+        data = new Data(context);
+        data.open();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -631,7 +631,7 @@ public class Data {
                 modulo1.setP_114_7(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_7)));
                 modulo1.setP_114_7_O(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_P_114_7_O)));
                 modulo1.setOBS(cursor.getString(cursor.getColumnIndex(SQLConstantes.SECCION100_OBS)));
-                ;
+
             }
         }finally {
             if(cursor != null)cursor.close();

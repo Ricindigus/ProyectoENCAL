@@ -246,7 +246,7 @@ public class EncuestaActivity extends AppCompatActivity {
 
 
     public void SetFragment(int poscicion){
-        observaciones = "";
+        /*observaciones = "";
         data = new Data(this);
         data.open();
         if(cont >= 3 && cont <= 4){
@@ -269,7 +269,7 @@ public class EncuestaActivity extends AppCompatActivity {
         //    fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left);
         //}else{
         //    fragmentTransaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right);
-        //}
+        //}*/
         switch (poscicion){
             case 0:
                 CaratulaFragment caratulaFragment = new CaratulaFragment(idEmpresa,EncuestaActivity.this);

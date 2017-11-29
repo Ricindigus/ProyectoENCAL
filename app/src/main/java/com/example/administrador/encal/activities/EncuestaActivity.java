@@ -34,36 +34,22 @@ import com.example.administrador.encal.R;
 import java.util.ArrayList;
 
 public class EncuestaActivity extends AppCompatActivity {
-    private CaratulaFragment caratulaFragment;
     private Fragment fragmentActual = new Fragment();
-    private InicioFragment inicioFragment;
-    private Fragment1_s100 fragment1_s100;
-    private Fragment1_s200 fragment1_s200;
-    private Fragment1_s300 fragment1_s300;
-    private Fragment1_s400 fragment1_s400;
-    private Fragment2_s100 fragment2_s100;
-    private Fragment2_s400 fragment2_s400;
-    private Fragment3_s100 fragment3_s100;
-
-    private FragmentManager fragmentManager;
-    private FragmentTransaction fragmentTransaction;
+    private Toolbar toolbar;
     private String idEmpresa = "";
     private Data data;
     private String observaciones = "";
-
     private int cont=0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_encuesta);
-
-
-
+        toolbar = (Toolbar)findViewById(R.id.encuesta_toolbar);
+        setSupportActionBar(toolbar);
         final Bundle recupera=getIntent().getExtras();
-        if(recupera != null){
-            idEmpresa = recupera.getString("idEmpresa");
-        }
+        if(recupera != null) idEmpresa = recupera.getString("idEmpresa");
 
         data = new Data(this);
         data.open();
@@ -78,25 +64,7 @@ public class EncuestaActivity extends AppCompatActivity {
             data.insertarFragments(bdFragments);
         }
         data.close();
-
-        Toolbar toolbar = (Toolbar)findViewById(R.id.encuesta_toolbar);
-        setSupportActionBar(toolbar);
-        caratulaFragment = new CaratulaFragment(idEmpresa,this);
-        inicioFragment = new InicioFragment();
-        fragment1_s100 = new Fragment1_s100();
-        fragment1_s200 = new Fragment1_s200();
-        fragment1_s300 = new Fragment1_s300();
-        fragment1_s400 = new Fragment1_s400();
-        fragment2_s100 = new Fragment2_s100();
-        fragment2_s400 = new Fragment2_s400();
-        fragment3_s100 = new Fragment3_s100();
-
-        fragmentManager = getSupportFragmentManager();
-
-        fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.layout_fragment1,caratulaFragment);
-        fragmentTransaction.commit();
-
+        setFragment(0,1);
     }
 
     @Override
@@ -110,24 +78,20 @@ public class EncuestaActivity extends AppCompatActivity {
 
         switch (item.getItemId() ){
             case R.id.adelante:
-
                 if(cont<8){
+                    guardarFragment(cont);
                     cont++;
-                    SetFragment(cont);
+                    setFragment(cont, 1);
                 }
-
                 return true;
             case R.id.atras:
-
                 if(cont>0){
                     cont = cont-1;
-                    SetFragment(cont);
+                    setFragment(cont,-1);
                 }
-
                 return true;
             default:return super.onOptionsItemSelected(item);
         }
-
     }
     public void ocultarTeclado(View view){
         InputMethodManager mgr = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -215,7 +179,7 @@ public class EncuestaActivity extends AppCompatActivity {
         switch (tipo){
             case 0:
                 CaratulaFragment caratulaFragment = (CaratulaFragment) fragmentActual;
-                //caratulaFragment.guardarDatos();break;
+                caratulaFragment.guardarDatos();break;
             case 1:
                 InicioFragment inicioFragment1 = (InicioFragment) fragmentActual;
                 //inicioFragment1.guardarDatos();break;
@@ -245,8 +209,8 @@ public class EncuestaActivity extends AppCompatActivity {
     }
 
 
-    public void SetFragment(int poscicion){
-        observaciones = "";
+    public void setFragment(int poscicion, int direccion){
+       /* observaciones = "";
         data = new Data(this);
         data.open();
         if(cont >= 3 && cont <= 4){
@@ -263,24 +227,23 @@ public class EncuestaActivity extends AppCompatActivity {
         }
 
         data.close();
+        */
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        //if(direccion > 0){
-        //    fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left);
-        //}else{
-        //    fragmentTransaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right);
-        //}
+        if(direccion > 0){
+            fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left);
+        }else{
+            fragmentTransaction.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right);
+        }
         switch (poscicion){
             case 0:
-                CaratulaFragment caratulaFragment = new CaratulaFragment(idEmpresa,EncuestaActivity.this);
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.layout_fragment1,caratulaFragment);
-                fragmentTransaction.commit(); break;
+                fragmentActual = new CaratulaFragment(idEmpresa,this);
+                fragmentTransaction.replace(R.id.layout_fragment1, fragmentActual);
+                break;
             case 1:
-                InicioFragment inicioFragment = new InicioFragment();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.layout_fragment1,inicioFragment);
-                fragmentTransaction.commit(); break;
+                fragmentActual = new InicioFragment();
+                fragmentTransaction.replace(R.id.layout_fragment1,fragmentActual);
+                break;
             case 2:
                 Fragment1_s100 fragment1_s100 = new Fragment1_s100();
                 fragmentTransaction = fragmentManager.beginTransaction();
@@ -318,6 +281,8 @@ public class EncuestaActivity extends AppCompatActivity {
                 fragmentTransaction.replace(R.id.layout_fragment1,fragment2_s400);
                 fragmentTransaction.commit(); break;
         }
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
     @SuppressLint("NewApi")

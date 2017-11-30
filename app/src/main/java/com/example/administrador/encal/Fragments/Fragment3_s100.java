@@ -1,5 +1,8 @@
 package com.example.administrador.encal.Fragments;
 
+import android.annotation.SuppressLint;
+import android.content.ContentValues;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,8 +13,12 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.example.administrador.encal.Modelo.Data;
+import com.example.administrador.encal.Modelo.SQLConstantes;
+import com.example.administrador.encal.Pojos.Sec100PojoF1;
 import com.example.administrador.encal.R;
 
 /**
@@ -44,11 +51,29 @@ public class Fragment3_s100 extends Fragment {
     private EditText p114_edt;
     private CardView p114_card;
 
+    private String idempresa;
+    private Sec100PojoF1 sec100PojoF1;
+    private Context context;
+    private Data data;
+
+    //mapeo de variables
+    int P_111;int P_112;String P_112_O;int P_113_1;int P_113_2;
+    int P_113_3;int P_113_4;int P_113_5;String P_113_5_O;int P_114_1;
+    int P_114_2;int P_114_3;int P_114_4;int P_114_5;int P_114_6;int P_114_7;String P_114_7_O;;
+
 
 
 
     public Fragment3_s100() {
         // Required empty public constructor
+    }
+
+    @SuppressLint("ValidFragment")
+    public Fragment3_s100(String idempresa, Context context) {
+        this.idempresa = idempresa;
+        this.context = context;
+        //data = new Data(context);
+        //data.open();
     }
 
 
@@ -136,6 +161,159 @@ public class Fragment3_s100 extends Fragment {
                 else p114_edt.setVisibility(View.GONE);
             }
         });
+        cargarDatos();
+
+    }
+    public void cargarDatos(){
+        data = new Data(context);
+        data.open();
+        //verifico si ya existe un objeto con datos llenados previamente
+        if(data.existeModulo1(idempresa)){
+            //si existe traigo el objeto
+            sec100PojoF1 = data.getModulo1(idempresa);
+            //saco los datos del objeto para llenarlos en los elementos del fragment
+            //111
+            if(!sec100PojoF1.getP_111().equals("") && !sec100PojoF1.getP_111().equals("-1")){
+                ((RadioButton)p111_rg.getChildAt(Integer.parseInt(sec100PojoF1.getP_111()))).setChecked(true);
+            }
+            //112
+            if(!sec100PojoF1.getP_112().equals("") && !sec100PojoF1.getP_112().equals("-1")){
+                ((RadioButton)p112_rg.getChildAt(Integer.parseInt(sec100PojoF1.getP_112()))).setChecked(true);
+            }
+            p112_edt.setText(sec100PojoF1.getP_112_O());
+            //113
+            if(sec100PojoF1.getP_113_1().equals("1")) p113_ck1.setChecked(true);
+            if(sec100PojoF1.getP_113_1().equals("0")) p113_ck1.setChecked(false);
+            if(sec100PojoF1.getP_113_2().equals("1")) p113_ck2.setChecked(true);
+            if(sec100PojoF1.getP_113_2().equals("0")) p113_ck2.setChecked(false);
+            if(sec100PojoF1.getP_113_3().equals("1")) p113_ck3.setChecked(true);
+            if(sec100PojoF1.getP_113_3().equals("0")) p113_ck3.setChecked(false);
+            if(sec100PojoF1.getP_113_4().equals("1")) p113_ck4.setChecked(true);
+            if(sec100PojoF1.getP_113_4().equals("0")) p113_ck4.setChecked(false);
+            if(sec100PojoF1.getP_113_5().equals("1")) p113_ck5.setChecked(true);
+            if(sec100PojoF1.getP_113_5().equals("0")) p113_ck5.setChecked(false);
+            p113_edt.setText(sec100PojoF1.getP_113_5_O());
+            //114
+            if(sec100PojoF1.getP_114_1().equals("1")) p114_ck1.setChecked(true);
+            if(sec100PojoF1.getP_114_1().equals("0")) p114_ck1.setChecked(false);
+            if(sec100PojoF1.getP_114_2().equals("1")) p114_ck2.setChecked(true);
+            if(sec100PojoF1.getP_114_2().equals("0")) p114_ck2.setChecked(false);
+            if(sec100PojoF1.getP_114_3().equals("1")) p114_ck3.setChecked(true);
+            if(sec100PojoF1.getP_114_3().equals("0")) p114_ck3.setChecked(false);
+            if(sec100PojoF1.getP_114_4().equals("1")) p114_ck4.setChecked(true);
+            if(sec100PojoF1.getP_114_4().equals("0")) p114_ck4.setChecked(false);
+            if(sec100PojoF1.getP_114_5().equals("1")) p114_ck5.setChecked(true);
+            if(sec100PojoF1.getP_114_5().equals("0")) p114_ck5.setChecked(false);
+            if(sec100PojoF1.getP_114_6().equals("1")) p114_ck6.setChecked(true);
+            if(sec100PojoF1.getP_114_6().equals("0")) p114_ck6.setChecked(false);
+            if(sec100PojoF1.getP_114_7().equals("1")) p114_ck7.setChecked(true);
+            if(sec100PojoF1.getP_114_7().equals("0")) p114_ck7.setChecked(false);
+            p114_edt.setText(sec100PojoF1.getP_114_7_O());
+        }
+        data.close();
+    }
+    public void llenarMapaVariables(){
+        //111
+        int childPosP1 = p111_rg.indexOfChild(p111_rg.findViewById(p111_rg.getCheckedRadioButtonId()));
+        P_111 = childPosP1;
+        //112
+        int childPosP2 = p112_rg.indexOfChild(p112_rg.findViewById(p112_rg.getCheckedRadioButtonId()));
+        P_112 = childPosP2;
+        if(!p112_edt.getText().toString().equals("")){
+            P_112_O =  p112_edt.getText().toString();
+        }
+        //113
+        if(p113_ck1.isChecked())P_113_1 = 1;
+        else P_113_1 = 0;
+        if(p113_ck2.isChecked())P_113_2 = 1;
+        else P_113_2 = 0;
+        if(p113_ck3.isChecked())P_113_3 = 1;
+        else P_113_3 = 0;
+        if(p113_ck4.isChecked())P_113_4 = 1;
+        else P_113_4 = 0;
+        if(p113_ck5.isChecked())P_113_5 = 1;
+        else P_113_5 = 0;
+        if(!p113_edt.getText().toString().equals("")){
+            P_113_5_O =  p113_edt.getText().toString();
+        }
+        //114
+        if(p114_ck1.isChecked())P_114_1 = 1;
+        else P_114_1 = 0;
+        if(p114_ck2.isChecked())P_114_2 = 1;
+        else P_114_2 = 0;
+        if(p114_ck3.isChecked())P_114_3 = 1;
+        else P_114_3 = 0;
+        if(p114_ck4.isChecked())P_114_4 = 1;
+        else P_114_4 = 0;
+        if(p114_ck5.isChecked())P_114_5 = 1;
+        else P_114_5 = 0;
+        if(p114_ck6.isChecked())P_114_6 = 1;
+        else P_114_6 = 0;
+        if(p114_ck7.isChecked())P_114_7 = 1;
+        else P_114_7 = 0;
+        if(!p114_edt.getText().toString().equals("")){
+            P_114_7_O =  p114_edt.getText().toString();
+        }
+
+    }
+
+    public void guardarDatos(){
+        llenarMapaVariables();
+        data = new Data(context);
+        data.open();
+        if(data.existeModulo1(idempresa)){
+            ContentValues contentValues = new ContentValues(58);
+            contentValues.put(SQLConstantes.SECCION100_P_111,P_111+"");
+            contentValues.put(SQLConstantes.SECCION100_P_112,P_112+"");
+            contentValues.put(SQLConstantes.SECCION100_P_112_O,P_112_O);
+            contentValues.put(SQLConstantes.SECCION100_P_113_1,P_113_1+"");
+            contentValues.put(SQLConstantes.SECCION100_P_113_2,P_113_2+"");
+            contentValues.put(SQLConstantes.SECCION100_P_113_3,P_113_3+"");
+            contentValues.put(SQLConstantes.SECCION100_P_113_4,P_113_4+"");
+            contentValues.put(SQLConstantes.SECCION100_P_113_5,P_113_5+"");
+            contentValues.put(SQLConstantes.SECCION100_P_113_5_O,P_113_5_O);
+            contentValues.put(SQLConstantes.SECCION100_P_114_1,P_114_1+"");
+            contentValues.put(SQLConstantes.SECCION100_P_114_2,P_114_2+"");
+            contentValues.put(SQLConstantes.SECCION100_P_114_3,P_114_3+"");
+            contentValues.put(SQLConstantes.SECCION100_P_114_4,P_114_4+"");
+            contentValues.put(SQLConstantes.SECCION100_P_114_5,P_114_5+"");
+            contentValues.put(SQLConstantes.SECCION100_P_114_6,P_114_6+"");
+            contentValues.put(SQLConstantes.SECCION100_P_114_7,P_114_7+"");
+            contentValues.put(SQLConstantes.SECCION100_P_114_7_O,P_114_7_O);
+            data.actualizarModulo1(idempresa,contentValues);
+        }else{
+            //si no existe el elemento, lo construye para insertarlo
+            sec100PojoF1 = new Sec100PojoF1();
+            //llena el objeto a insertar
+            sec100PojoF1.setID(idempresa);
+            sec100PojoF1.setP_111(P_111+"");
+            sec100PojoF1.setP_112(P_112+"");
+            sec100PojoF1.setP_112_O(P_112_O);
+            sec100PojoF1.setP_113_1(P_113_1+"");
+            sec100PojoF1.setP_113_2(P_113_2+"");
+            sec100PojoF1.setP_113_3(P_113_3+"");
+            sec100PojoF1.setP_113_4(P_113_4+"");
+            sec100PojoF1.setP_113_5(P_113_5+"");
+            sec100PojoF1.setP_113_5_O(P_113_5_O);
+            sec100PojoF1.setP_114_1(P_114_1+"");
+            sec100PojoF1.setP_114_2(P_114_2+"");
+            sec100PojoF1.setP_114_3(P_114_3+"");
+            sec100PojoF1.setP_114_4(P_114_4+"");
+            sec100PojoF1.setP_114_5(P_114_5+"");
+            sec100PojoF1.setP_114_6(P_114_6+"");
+            sec100PojoF1.setP_114_7(P_114_7+"");
+            sec100PojoF1.setP_114_7_O(P_114_7_O);
+            data.insertarModulo1(sec100PojoF1);
+        }
+        data.close();
+    }
+    public boolean validar(){
+        //revisarcampos
+        boolean valido = true;
+        //llenarMapaVariables();
+
+
+        return valido;
 
     }
 }

@@ -79,9 +79,16 @@ public class EncuestaActivity extends AppCompatActivity {
         switch (item.getItemId() ){
             case R.id.adelante:
                 if(cont<8){
-                    guardarFragment(cont);
+                    if (cont<6 || cont==7){
+                        guardarFragment(cont);
+                    }
                     cont++;
                     setFragment(cont, 1);
+                }else{
+                    guardarFragment(cont);
+                    cont=0;
+                    setFragment(cont, 1);
+
                 }
                 return true;
             case R.id.atras:
@@ -182,28 +189,28 @@ public class EncuestaActivity extends AppCompatActivity {
                 caratulaFragment.guardarDatos();break;
             case 1:
                 InicioFragment inicioFragment1 = (InicioFragment) fragmentActual;
-                //inicioFragment1.guardarDatos();break;
+                inicioFragment1.guardarDatos();break;
             case 2:
                 Fragment1_s100 fragment1_s100 = (Fragment1_s100) fragmentActual;
-                //fragment1_s100.guardarDatos();break;
+                fragment1_s100.guardarDatos();break;
             case 3:
                 Fragment2_s100 fragment2_s100 = (Fragment2_s100) fragmentActual;
-                //fragment2_s100.guardarDatos();break;
+                fragment2_s100.guardarDatos();break;
             case 4:
                 Fragment3_s100 fragment3_s100= (Fragment3_s100) fragmentActual;
-                //fragment3_s100.guardarDatos();break;
+                fragment3_s100.guardarDatos();break;
             case 5:
                 Fragment1_s200 fragment1_s200= (Fragment1_s200) fragmentActual;
-                //fragment1_s200.guardarDatos();break;
+                fragment1_s200.guardarDatos();break;
             case 6:
                 Fragment1_s300 fragment1_s300= (Fragment1_s300) fragmentActual;
                 //fragment1_s300.guardarDatos();break;
             case 7:
                 Fragment1_s400 fragment1_s400 = (Fragment1_s400) fragmentActual;
-                //fragment1_s400.guardarDatos();break;
+                fragment1_s400.guardarDatos();break;
             case 8:
                 Fragment2_s400 fragment2_s400 = (Fragment2_s400) fragmentActual;
-                //fragment2_s400.guardarDatos();break;
+                fragment2_s400.guardarDatos();break;
 
         }
     }
@@ -241,45 +248,38 @@ public class EncuestaActivity extends AppCompatActivity {
                 fragmentTransaction.replace(R.id.layout_fragment1, fragmentActual);
                 break;
             case 1:
-                fragmentActual = new InicioFragment();
+                fragmentActual = new InicioFragment(idEmpresa,this);
                 fragmentTransaction.replace(R.id.layout_fragment1,fragmentActual);
                 break;
             case 2:
-                Fragment1_s100 fragment1_s100 = new Fragment1_s100();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.layout_fragment1,fragment1_s100);
-                fragmentTransaction.commit(); break;
+                fragmentActual = new Fragment1_s100(idEmpresa,this);
+                fragmentTransaction.replace(R.id.layout_fragment1,fragmentActual);
+                break;
             case 3:
-                Fragment2_s100 fragment2_s100 = new Fragment2_s100();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.layout_fragment1,fragment2_s100);
-                fragmentTransaction.commit(); break;
+                fragmentActual = new Fragment2_s100(idEmpresa,this);
+                fragmentTransaction.replace(R.id.layout_fragment1,fragmentActual);
+                break;
             case 4:
-                Fragment3_s100 fragment3_s100 = new Fragment3_s100();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.layout_fragment1,fragment3_s100);
-                fragmentTransaction.commit(); break;
+                fragmentActual = new Fragment3_s100(idEmpresa,this);
+                fragmentTransaction.replace(R.id.layout_fragment1,fragmentActual);
+                break;
             case 5:
-                Fragment1_s200 fragment1_s200 = new Fragment1_s200();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.layout_fragment1,fragment1_s200);
-                fragmentTransaction.commit(); break;
+                fragmentActual = new Fragment1_s200(idEmpresa,this);
+                fragmentTransaction.replace(R.id.layout_fragment1, fragmentActual);
+                break;
             case 6:
-                Fragment1_s300 fragment1_s300 = new Fragment1_s300();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.layout_fragment1,fragment1_s300);
-                fragmentTransaction.commit(); break;
+                fragmentActual = new Fragment1_s300();
+                fragmentTransaction.replace(R.id.layout_fragment1,fragmentActual);
+                break;
 
             case 7:
-                Fragment1_s400 fragment1_s400 = new Fragment1_s400();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.layout_fragment1,fragment1_s400);
-                fragmentTransaction.commit(); break;
+                fragmentActual = new Fragment1_s400(idEmpresa,this);
+                fragmentTransaction.replace(R.id.layout_fragment1,fragmentActual);
+                break;
             case 8:
-                Fragment2_s400 fragment2_s400 = new Fragment2_s400();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.layout_fragment1,fragment2_s400);
-                fragmentTransaction.commit(); break;
+                fragmentActual = new Fragment2_s400(idEmpresa,this);
+                fragmentTransaction.replace(R.id.layout_fragment1,fragmentActual);
+                break;
         }
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();

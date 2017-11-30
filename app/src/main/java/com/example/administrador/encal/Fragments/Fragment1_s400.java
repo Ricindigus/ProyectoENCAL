@@ -1,6 +1,9 @@
 package com.example.administrador.encal.Fragments;
 
 
+import android.annotation.SuppressLint;
+import android.content.ContentValues;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,8 +14,13 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.example.administrador.encal.Modelo.Data;
+import com.example.administrador.encal.Modelo.SQLConstantes;
+import com.example.administrador.encal.Pojos.Sec200PojoF1;
+import com.example.administrador.encal.Pojos.Sec400PojoF1;
 import com.example.administrador.encal.R;
 
 /**
@@ -62,9 +70,28 @@ public class Fragment1_s400 extends Fragment {
     private EditText p408_edt;
     private CardView p408_card;
 
+    private String idempresa;
+    private Sec400PojoF1 sec400PojoF1;
+    private Context context;
+    private Data data;
+
+    //mapeo de variables
+    int P_401_1;int P_401_2;int P_401_3;int P_401_4;int P_401_5;
+    int P_402;int P_403_1;int P_403_2;int P_403_3;int P_403_4;
+    int P_404; int P_405;String P_406;int P_407_1;int P_407_2;int P_407_3;int P_407_4;int P_407_5;
+    int P_407_6;int P_407_7;String P_407_7_O;int P_408_1;int P_408_2;int P_408_3;int P_408_4;int P_408_5;
+    int P_408_6;String P_408_6_O;
+
 
     public Fragment1_s400() {
         // Required empty public constructor
+    }
+    @SuppressLint("ValidFragment")
+    public Fragment1_s400(String idempresa, Context context) {
+        this.idempresa = idempresa;
+        this.context = context;
+        //data = new Data(context);
+        //data.open();
     }
 
 
@@ -190,6 +217,236 @@ public class Fragment1_s400 extends Fragment {
             }
         });
 
+        cargarDatos();
+
+    }
+
+    public void cargarDatos(){
+        data = new Data(context);
+        data.open();
+        //verifico si ya existe un objeto con datos llenados previamente
+        if(data.existeModulo4(idempresa)){
+            //si existe traigo el objeto
+            sec400PojoF1 = data.getModulo4(idempresa);
+            //saco los datos del objeto para llenarlos en los elementos del fragment
+            //datos cabecera
+            //401
+            if(sec400PojoF1.getP_401_1().equals("1")) p401_ck1.setChecked(true);
+            if(sec400PojoF1.getP_401_1().equals("0")) p401_ck1.setChecked(false);
+            if(sec400PojoF1.getP_401_2().equals("1")) p401_ck2.setChecked(true);
+            if(sec400PojoF1.getP_401_2().equals("0")) p401_ck2.setChecked(false);
+            if(sec400PojoF1.getP_401_3().equals("1")) p401_ck3.setChecked(true);
+            if(sec400PojoF1.getP_401_3().equals("0")) p401_ck3.setChecked(false);
+            if(sec400PojoF1.getP_401_4().equals("1")) p401_ck4.setChecked(true);
+            if(sec400PojoF1.getP_401_4().equals("0")) p401_ck4.setChecked(false);
+            if(sec400PojoF1.getP_401_5().equals("1")) p401_ck5.setChecked(true);
+            if(sec400PojoF1.getP_401_5().equals("0")) p401_ck5.setChecked(false);
+            //402
+            if(!sec400PojoF1.getP_402().equals("") && !sec400PojoF1.getP_402().equals("-1")){
+                ((RadioButton)p402_rg.getChildAt(Integer.parseInt(sec400PojoF1.getP_402()))).setChecked(true);
+            }
+            //405
+            if(sec400PojoF1.getP_403_1().equals("1")) p403_ck1.setChecked(true);
+            if(sec400PojoF1.getP_403_1().equals("0")) p403_ck1.setChecked(false);
+            if(sec400PojoF1.getP_403_2().equals("1")) p403_ck2.setChecked(true);
+            if(sec400PojoF1.getP_403_2().equals("0")) p403_ck2.setChecked(false);
+            if(sec400PojoF1.getP_403_3().equals("1")) p403_ck3.setChecked(true);
+            if(sec400PojoF1.getP_403_3().equals("0")) p403_ck3.setChecked(false);
+            if(sec400PojoF1.getP_403_4().equals("1")) p403_ck4.setChecked(true);
+            if(sec400PojoF1.getP_403_4().equals("0")) p403_ck4.setChecked(false);
+            //404
+            if(!sec400PojoF1.getP_404().equals("") && !sec400PojoF1.getP_404().equals("-1")){
+                ((RadioButton)p404_rg.getChildAt(Integer.parseInt(sec400PojoF1.getP_404()))).setChecked(true);
+            }
+            //405
+            if(!sec400PojoF1.getP_405().equals("") && !sec400PojoF1.getP_405().equals("-1")){
+                ((RadioButton)p405_rg.getChildAt(Integer.parseInt(sec400PojoF1.getP_405()))).setChecked(true);
+            }
+            //406
+            p406_edt1.setText(sec400PojoF1.getP_406());
+            //407
+            if(sec400PojoF1.getP_407_1().equals("1")) p407_ck1.setChecked(true);
+            if(sec400PojoF1.getP_407_1().equals("0")) p407_ck1.setChecked(false);
+            if(sec400PojoF1.getP_407_2().equals("1")) p407_ck2.setChecked(true);
+            if(sec400PojoF1.getP_407_2().equals("0")) p407_ck2.setChecked(false);
+            if(sec400PojoF1.getP_407_3().equals("1")) p407_ck3.setChecked(true);
+            if(sec400PojoF1.getP_407_3().equals("0")) p407_ck3.setChecked(false);
+            if(sec400PojoF1.getP_407_4().equals("1")) p407_ck4.setChecked(true);
+            if(sec400PojoF1.getP_407_4().equals("0")) p407_ck4.setChecked(false);
+            if(sec400PojoF1.getP_407_5().equals("1")) p407_ck5.setChecked(true);
+            if(sec400PojoF1.getP_407_5().equals("0")) p407_ck5.setChecked(false);
+            if(sec400PojoF1.getP_407_6().equals("1")) p407_ck6.setChecked(true);
+            if(sec400PojoF1.getP_407_6().equals("0")) p407_ck6.setChecked(false);
+            if(sec400PojoF1.getP_407_7().equals("1")) p407_ck7.setChecked(true);
+            if(sec400PojoF1.getP_407_7().equals("0")) p407_ck7.setChecked(false);
+            p407_edt.setText(sec400PojoF1.getP_407_7_O());
+
+            if(sec400PojoF1.getP_408_1().equals("1")) p408_ck1.setChecked(true);
+            if(sec400PojoF1.getP_408_1().equals("0")) p408_ck1.setChecked(false);
+            if(sec400PojoF1.getP_408_2().equals("1")) p408_ck2.setChecked(true);
+            if(sec400PojoF1.getP_408_2().equals("0")) p408_ck2.setChecked(false);
+            if(sec400PojoF1.getP_408_3().equals("1")) p408_ck3.setChecked(true);
+            if(sec400PojoF1.getP_408_3().equals("0")) p408_ck3.setChecked(false);
+            if(sec400PojoF1.getP_408_4().equals("1")) p408_ck4.setChecked(true);
+            if(sec400PojoF1.getP_408_4().equals("0")) p408_ck4.setChecked(false);
+            if(sec400PojoF1.getP_408_5().equals("1")) p408_ck5.setChecked(true);
+            if(sec400PojoF1.getP_408_5().equals("0")) p408_ck5.setChecked(false);
+            if(sec400PojoF1.getP_408_6().equals("1")) p408_ck6.setChecked(true);
+            if(sec400PojoF1.getP_408_6().equals("0")) p408_ck6.setChecked(false);
+            p408_edt.setText(sec400PojoF1.getP_408_6_O());
+        }
+        data.close();
+    }
+    public void llenarMapaVariables(){
+        //401
+        if(p401_ck1.isChecked())P_401_1 = 1;
+        else P_401_1 = 0;
+        if(p401_ck2.isChecked())P_401_2 = 1;
+        else P_401_2 = 0;
+        if(p401_ck3.isChecked())P_401_3 = 1;
+        else P_401_3 = 0;
+        if(p401_ck4.isChecked())P_401_4 = 1;
+        else P_401_4 = 0;
+        if(p401_ck4.isChecked())P_401_5 = 1;
+        else P_401_5 = 0;
+        //402
+        int childPosP1 = p402_rg.indexOfChild(p402_rg.findViewById(p402_rg.getCheckedRadioButtonId()));
+        P_402 = childPosP1;
+        //403
+        if(p403_ck1.isChecked())P_403_1 = 1;
+        else P_403_1 = 0;
+        if(p403_ck2.isChecked())P_403_2 = 1;
+        else P_403_2 = 0;
+        if(p403_ck3.isChecked())P_403_3 = 1;
+        else P_403_3 = 0;
+        if(p403_ck4.isChecked())P_403_4 = 1;
+        else P_403_4 = 0;
+        //404
+        int childPosP2 = p404_rg.indexOfChild(p404_rg.findViewById(p404_rg.getCheckedRadioButtonId()));
+        P_404 = childPosP2;
+        //405
+        int childPosP3 = p405_rg.indexOfChild(p405_rg.findViewById(p405_rg.getCheckedRadioButtonId()));
+        P_405 = childPosP3;
+        //406
+        if(!p406_edt1.getText().toString().equals("")){
+            P_406=  p406_edt1.getText().toString();
+        }
+        //407
+        if(p407_ck1.isChecked())P_407_1 = 1;
+        else P_407_1 = 0;
+        if(p407_ck2.isChecked())P_407_2 = 1;
+        else P_407_2 = 0;
+        if(p407_ck3.isChecked())P_407_3 = 1;
+        else P_407_3 = 0;
+        if(p407_ck4.isChecked())P_407_4 = 1;
+        else P_407_4 = 0;
+        if(p407_ck5.isChecked())P_407_5 = 1;
+        else P_407_5 = 0;
+        if(p407_ck6.isChecked())P_407_6 = 1;
+        else P_407_6 = 0;
+        if(p407_ck7.isChecked())P_407_7 = 1;
+        else P_407_7 = 0;
+        if(!p407_edt.getText().toString().equals("")){
+            P_407_7_O =  p407_edt.getText().toString();
+        }
+        //408
+        if(p408_ck1.isChecked())P_408_1 = 1;
+        else P_408_1 = 0;
+        if(p408_ck2.isChecked())P_408_2 = 1;
+        else P_408_2 = 0;
+        if(p408_ck3.isChecked())P_408_3 = 1;
+        else P_408_3 = 0;
+        if(p408_ck4.isChecked())P_408_4 = 1;
+        else P_408_4 = 0;
+        if(p408_ck5.isChecked())P_408_5 = 1;
+        else P_408_5 = 0;
+        if(p408_ck6.isChecked())P_408_6 = 1;
+        else P_408_6 = 0;
+        if(!p408_edt.getText().toString().equals("")){
+            P_408_6_O =  p408_edt.getText().toString();
+        }
+    }
+
+    public void guardarDatos(){
+        llenarMapaVariables();
+        data = new Data(context);
+        data.open();
+        if(data.existeModulo4(idempresa)){
+            ContentValues contentValues = new ContentValues(38);
+            contentValues.put(SQLConstantes.SECCION400_P_401_1,P_401_1+"");
+            contentValues.put(SQLConstantes.SECCION400_P_401_2,P_401_2+"");
+            contentValues.put(SQLConstantes.SECCION400_P_401_3,P_401_3+"");
+            contentValues.put(SQLConstantes.SECCION400_P_401_4,P_401_4+"");
+            contentValues.put(SQLConstantes.SECCION400_P_401_5,P_401_5+"");
+            contentValues.put(SQLConstantes.SECCION400_P_402,P_402+"");
+            contentValues.put(SQLConstantes.SECCION400_P_403_1,P_403_1+"");
+            contentValues.put(SQLConstantes.SECCION400_P_403_2,P_403_2+"");
+            contentValues.put(SQLConstantes.SECCION400_P_403_3,P_403_3+"");
+            contentValues.put(SQLConstantes.SECCION400_P_403_4,P_403_4+"");
+            contentValues.put(SQLConstantes.SECCION400_P_404,P_404+"");
+            contentValues.put(SQLConstantes.SECCION400_P_405,P_405+"");
+            contentValues.put(SQLConstantes.SECCION400_P_406,P_406);
+            contentValues.put(SQLConstantes.SECCION400_P_407_1,P_407_1+"");
+            contentValues.put(SQLConstantes.SECCION400_P_407_2,P_407_2+"");
+            contentValues.put(SQLConstantes.SECCION400_P_407_3,P_407_3+"");
+            contentValues.put(SQLConstantes.SECCION400_P_407_4,P_407_4+"");
+            contentValues.put(SQLConstantes.SECCION400_P_407_5,P_407_5+"");
+            contentValues.put(SQLConstantes.SECCION400_P_407_6,P_407_6+"");
+            contentValues.put(SQLConstantes.SECCION400_P_407_7,P_407_7+"");
+            contentValues.put(SQLConstantes.SECCION400_P_407_7_O,P_407_7_O);
+            contentValues.put(SQLConstantes.SECCION400_P_408_1,P_408_1+"");
+            contentValues.put(SQLConstantes.SECCION400_P_408_2,P_408_2+"");
+            contentValues.put(SQLConstantes.SECCION400_P_408_3,P_408_3+"");
+            contentValues.put(SQLConstantes.SECCION400_P_408_4,P_408_4+"");
+            contentValues.put(SQLConstantes.SECCION400_P_408_5,P_408_5+"");
+            contentValues.put(SQLConstantes.SECCION400_P_408_6,P_408_6+"");
+            contentValues.put(SQLConstantes.SECCION400_P_408_6_O,P_408_6_O);
+            data.actualizarModulo4(idempresa,contentValues);
+        }else{
+            //si no existe el elemento, lo construye para insertarlo
+            sec400PojoF1 = new Sec400PojoF1();
+            //llena el objeto a insertar
+            sec400PojoF1.setID(idempresa);
+            sec400PojoF1.setP_401_1(P_401_1+"");
+            sec400PojoF1.setP_401_2(P_401_2+"");
+            sec400PojoF1.setP_401_3(P_401_3+"");
+            sec400PojoF1.setP_401_4(P_401_4+"");
+            sec400PojoF1.setP_401_5(P_401_5+"");
+            sec400PojoF1.setP_402(P_402+"");
+            sec400PojoF1.setP_403_1(P_403_1+"");
+            sec400PojoF1.setP_403_2(P_403_2+"");
+            sec400PojoF1.setP_403_3(P_403_3+"");
+            sec400PojoF1.setP_403_4(P_403_4+"");
+            sec400PojoF1.setP_404(P_404+"");
+            sec400PojoF1.setP_405(P_405+"");
+            sec400PojoF1.setP_406(P_406);
+            sec400PojoF1.setP_407_1(P_407_1+"");
+            sec400PojoF1.setP_407_2(P_407_2+"");
+            sec400PojoF1.setP_407_3(P_407_3+"");
+            sec400PojoF1.setP_407_4(P_407_4+"");
+            sec400PojoF1.setP_407_5(P_407_5+"");
+            sec400PojoF1.setP_407_6(P_407_6+"");
+            sec400PojoF1.setP_407_7(P_407_7+"");
+            sec400PojoF1.setP_407_7_O(P_407_7_O+"");
+            sec400PojoF1.setP_408_1(P_408_1+"");
+            sec400PojoF1.setP_408_2(P_408_2+"");
+            sec400PojoF1.setP_408_3(P_408_3+"");
+            sec400PojoF1.setP_408_4(P_408_4+"");
+            sec400PojoF1.setP_408_5(P_408_5+"");
+            sec400PojoF1.setP_408_6(P_408_6+"");
+            sec400PojoF1.setP_408_6_O(P_408_6_O+"");
+            data.insertarModulo4(sec400PojoF1);
+        }
+        data.close();
+    }
+
+    public boolean validar(){
+        //revisarcampos
+        boolean valido = true;
+        //llenarMapaVariables();
+
+
+        return valido;
 
     }
 }

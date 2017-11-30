@@ -1,6 +1,9 @@
 package com.example.administrador.encal.Fragments;
 
 
+import android.annotation.SuppressLint;
+import android.content.ContentValues;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -15,6 +18,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.example.administrador.encal.Modelo.Data;
+import com.example.administrador.encal.Modelo.SQLConstantes;
+import com.example.administrador.encal.Pojos.Sec100PojoF1;
 import com.example.administrador.encal.R;
 
 /**
@@ -53,11 +59,28 @@ public class Fragment1_s100 extends Fragment {
 
     private  EditText p105_edt1;
 
+    private String idempresa;
+    private Sec100PojoF1 sec100;
+    private Context context;
+    private Data data;
 
+    String P101_1;String P101_2;String P101_3;
+    int P102_1_1;String P102_1_2;String P102_1_3;
+    int P102_2_1;String P102_2_2;String P102_2_3;
+    int P102_3_1;String P102_3_2;String P102_3_3;
+    int P102_4_1;String P102_4_2;String P102_4_3;
+    int P103;String P103_0;
+    int P104;String P105;
 
 
     public Fragment1_s100() {
         // Required empty public constructor
+    }
+
+    @SuppressLint("ValidFragment")
+    public Fragment1_s100(String idempresa, Context context) {
+        this.idempresa = idempresa;
+        this.context = context;
     }
 
 
@@ -70,10 +93,10 @@ public class Fragment1_s100 extends Fragment {
         p101_act1 = (AutoCompleteTextView) view.findViewById(R.id.sec100_p101_atc1);
         p101_edt1 = (EditText) view.findViewById(R.id.sec100_p101_edt1);
 
-        p102_ck1 = (CheckBox) view.findViewById(R.id.sec100_p102_ck1);
-        p102_ck2 = (CheckBox) view.findViewById(R.id.sec100_p102_ck2);
-        p102_ck3 = (CheckBox) view.findViewById(R.id.sec100_p102_ck3);
-        p102_ck4 = (CheckBox) view.findViewById(R.id.sec100_p102_ck4);
+//        p102_ck1 = (CheckBox) view.findViewById(R.id.sec100_p102_ck1);
+//        p102_ck2 = (CheckBox) view.findViewById(R.id.sec100_p102_ck2);
+//        p102_ck3 = (CheckBox) view.findViewById(R.id.sec100_p102_ck3);
+//        p102_ck4 = (CheckBox) view.findViewById(R.id.sec100_p102_ck4);
         p102_txt1 = (TextView) view.findViewById(R.id.sec100_p102_txt1);
         p102_txt2 = (TextView) view.findViewById(R.id.sec100_p102_txt2);
         p102_txt3 = (TextView) view.findViewById(R.id.sec100_p102_txt3);
@@ -102,44 +125,44 @@ public class Fragment1_s100 extends Fragment {
 
         //-----Pregunta2
 
-        p102_ck1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b){
-                    p102_act1.setEnabled(true);
-                }
-                else p102_act1.setEnabled(false);
-            }
-        });
-
-        p102_ck2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b){
-                    p102_act2.setEnabled(true);
-                }
-                else p102_act2.setEnabled(false);
-            }
-        });
-        p102_ck3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b){
-                    p102_act3.setEnabled(true);
-                }
-                else p102_act3.setEnabled(false);
-            }
-        });
-
-        p102_ck4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b){
-                    p102_act4.setEnabled(true);
-                }
-                else p102_act4.setEnabled(false);
-            }
-        });
+//        p102_ck1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+//                if (b){
+//                    p102_act1.setEnabled(true);
+//                }
+//                else p102_act1.setEnabled(false);
+//            }
+//        });
+//
+//        p102_ck2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+//                if (b){
+//                    p102_act2.setEnabled(true);
+//                }
+//                else p102_act2.setEnabled(false);
+//            }
+//        });
+//        p102_ck3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+//                if (b){
+//                    p102_act3.setEnabled(true);
+//                }
+//                else p102_act3.setEnabled(false);
+//            }
+//        });
+//
+//        p102_ck4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+//                if (b){
+//                    p102_act4.setEnabled(true);
+//                }
+//                else p102_act4.setEnabled(false);
+//            }
+//        });
 
 
         //----pregunta3
@@ -148,12 +171,15 @@ public class Fragment1_s100 extends Fragment {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
                 switch (i) {
-                    case R.id.sec100_p103_rb1:   p103_edt1.setVisibility(View.GONE);break;
-                    case R.id.sec100_p103_rb2:   p103_edt1.setVisibility(View.GONE);break;
-                    case R.id.sec100_p103_rb3:   p103_edt1.setVisibility(View.GONE);break;
-                    case R.id.sec100_p103_rb4:   p103_edt1.setVisibility(View.GONE);break;
-                    case R.id.sec100_p103_rb5:   p103_edt1.setVisibility(View.GONE);break;
-                    case R.id.sec100_p103_rb6:   p103_edt1.setVisibility(View.VISIBLE);break;
+                    case R.id.sec100_p103_rb1:   p103_edt1.setVisibility(View.GONE);p103_edt1.setText("");break;
+                    case R.id.sec100_p103_rb2:   p103_edt1.setVisibility(View.GONE);p103_edt1.setText("");break;
+                    case R.id.sec100_p103_rb3:   p103_edt1.setVisibility(View.GONE);p103_edt1.setText("");break;
+                    case R.id.sec100_p103_rb4:   p103_edt1.setVisibility(View.GONE);p103_edt1.setText("");break;
+                    case R.id.sec100_p103_rb5:   p103_edt1.setVisibility(View.GONE);p103_edt1.setText("");break;
+                    case R.id.sec100_p103_rb6:   p103_edt1.setVisibility(View.VISIBLE);
+                        p103_edt1.setBackgroundResource(R.drawable.fondo_edit_text);
+                        p103_edt1.requestFocus();
+                        break;
                 }
             }
         });
@@ -171,8 +197,165 @@ public class Fragment1_s100 extends Fragment {
             }
         });
 
-
+        cargarDatos();
 
 
     }
+
+    ///////////////GUARDADO///////////////////////
+
+    public void cargarDatos(){
+        data = new Data(context);
+        data.open();
+        //verifico si ya existe un objeto con datos llenados previamente
+        if(data.existeModulo1(idempresa)){
+            //si existe traigo el objeto
+            sec100 = data.getModulo1(idempresa);
+            //saco los datos del objeto para llenarlos en los elementos del fragment
+            //PREGUNTA 101
+            p101_txt1.setText(sec100.getP_101());
+            p101_edt1.setText(sec100.getP_101_1());
+            p101_act1.setText(sec100.getP_101_1_O());
+            //PREGUNTA 102
+//            if(sec100.get().equals("1")) p102_ck1.setChecked(true);
+//            if(sec100.get().equals("0")) p102_ck1.setChecked(false);
+//            if(sec100.get().equals("1")) p102_ck2.setChecked(true);
+//            if(sec100.get().equals("0")) p102_ck2.setChecked(false);
+//            if(sec100.get().equals("1")) p102_ck3.setChecked(true);
+//            if(sec100.get().equals("0")) p102_ck3.setChecked(false);
+//            if(sec100.get().equals("1")) p102_ck4.setChecked(true);
+//            if(sec100.get().equals("0")) p102_ck4.setChecked(false);
+
+            p102_txt1.setText(sec100.getP_102_1());
+            p102_txt2.setText(sec100.getP_102_2());
+            p102_txt3.setText(sec100.getP_102_3());
+            p102_txt4.setText(sec100.getP_102_4());
+
+            p102_act1.setText(sec100.getP_102A());
+            p102_act2.setText(sec100.getP_102B());
+            p102_act3.setText(sec100.getP_102C());
+            p102_act4.setText(sec100.getP_102D());
+
+            //PREGUNTA 103
+            int childPos3 = Integer.parseInt(sec100.getP_103());
+            ((RadioButton)p103_rg1.getChildAt(childPos3)).setChecked(true);
+            p103_edt1.setText(sec100.getP_103_O());
+            //PREGUNTA 104
+            int childPos4 = Integer.parseInt(sec100.getP_104());
+            ((RadioButton)p104_rg1.getChildAt(childPos4)).setChecked(true);
+            //PREGUNTA 105
+            p105_edt1.setText(sec100.getP_105());
+
+        }
+        data.close();
+    }
+    public void llenarMapaVariables(){
+
+        //PREGUNTA 101
+        P101_1 = p101_txt1.getText().toString();
+        P101_2 = p101_edt1.getText().toString();
+        P101_3 = p101_act1.getText().toString();
+        //P101_3 = "";
+
+
+        //PREGUNTA 102-1
+        //if(p102_ck1.isChecked())P102_1_1 = 1;
+        // else P102_1_1 = 0;
+        P102_1_2 = p102_txt1.getText().toString();
+//        P102_1_3 = p102_act1.getText().toString();
+        P102_1_3 = "";
+
+        //PREGUNTA 102_2
+        // if(p102_ck2.isChecked())P102_2_1 = 1;
+        // else P102_2_1 = 0;
+        P102_2_2 = p102_txt1.getText().toString();
+        P102_2_3 = p102_act1.getText().toString();
+        P102_2_3 = "";
+
+        //PREGUNTA 102_3
+        //if(p102_ck3.isChecked())P102_3_1 = 1;
+        //else P102_3_1 = 0;
+        P102_3_2 = p102_txt1.getText().toString();
+//        P102_3_3 = p102_act1.getText().toString();
+        P102_3_3 = "";
+
+        //PREGUNTA 102_4
+        //if(p102_ck4.isChecked())P102_4_1 = 1;
+        //else P102_4_1 = 0;
+        P102_4_2 = p102_txt1.getText().toString();
+//        P102_4_3 = p102_act1.getText().toString();
+        P102_4_3 = "";
+
+
+
+        //PREGUNTA 103
+        int childPosP103 = p103_rg1.indexOfChild(p103_rg1.findViewById(p103_rg1.getCheckedRadioButtonId()));
+        P103 = childPosP103;
+        P103_0 = p103_edt1.getText().toString();
+        //PREGUNTA 104
+        int childPosP104 = p104_rg1.indexOfChild(p104_rg1.findViewById(p104_rg1.getCheckedRadioButtonId()));
+        P104 = childPosP104;
+        //PREGUNTA 105
+        P105 = p105_edt1.getText().toString();
+    }
+    public void guardarDatos(){
+        llenarMapaVariables();
+        data = new Data(context);
+        data.open();
+        if(data.existeModulo1(idempresa)){
+            ContentValues contentValues = new ContentValues(58);
+            contentValues.put(SQLConstantes.SECCION100_P_101,P101_1);
+            contentValues.put(SQLConstantes.SECCION100_P_101_1,P101_2);
+            contentValues.put(SQLConstantes.SECCION100_P_101_1_O,P101_3);
+            contentValues.put(SQLConstantes.SECCION100_P_102_1,P102_1_2);
+            contentValues.put(SQLConstantes.SECCION100_P_102_2,P102_2_2);
+            contentValues.put(SQLConstantes.SECCION100_P_102_3,P102_3_2);
+            contentValues.put(SQLConstantes.SECCION100_P_102_4,P102_4_2);
+            contentValues.put(SQLConstantes.SECCION100_P_102A,P102_1_3);
+            contentValues.put(SQLConstantes.SECCION100_P_102B,P102_2_3);
+            contentValues.put(SQLConstantes.SECCION100_P_102C,P102_3_3);
+            contentValues.put(SQLConstantes.SECCION100_P_102D,P102_4_3);
+            contentValues.put(SQLConstantes.SECCION100_P_103,P103+"");
+            contentValues.put(SQLConstantes.SECCION100_P_103_O,P103_0);
+            contentValues.put(SQLConstantes.SECCION100_P_104,P104+"");
+            contentValues.put(SQLConstantes.SECCION100_P_105,P105);
+            data.actualizarModulo1(idempresa,contentValues);
+        }else{
+            //si no existe el elemento, lo construye para insertarlo
+            sec100 = new Sec100PojoF1();
+            //llena el objeto a insertar
+            sec100.setID(idempresa);
+            sec100.setP_101(P101_1);
+            sec100.setP_101_1(P101_2);
+            sec100.setP_101_1_O(P101_3);
+            sec100.setP_102_1(P102_1_2);
+            sec100.setP_102_2(P102_2_2);
+            sec100.setP_102_3(P102_3_2);
+            sec100.setP_102_4(P102_4_2);
+            sec100.setP_102A(P102_1_3);
+            sec100.setP_102B(P102_2_3);
+            sec100.setP_102C(P102_3_3);
+            sec100.setP_102D(P102_4_3);
+            sec100.setP_103(P103+"");
+            sec100.setP_103_O(P103_0);
+            sec100.setP_104(P104+"");
+            sec100.setP_105(P105);
+            data.insertarModulo1(sec100);
+        }
+        data.close();
+    }
+    public boolean validar(){
+        //revisarcampos
+        boolean valido = true;
+        llenarMapaVariables();
+
+
+        return valido;
+
+    }
+
+
+
+
+
 }

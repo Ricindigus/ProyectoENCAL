@@ -538,7 +538,7 @@ public class SQLConstantes {
                     SECCION100_P_114_2 + " TEXT," +
                     SECCION100_P_114_3 + " TEXT," +
                     SECCION100_P_114_4 + " TEXT," +
-                    SECCION100_P_114_5 + " TEXT" +
+                    SECCION100_P_114_5 + " TEXT," +
                     SECCION100_P_114_6 + " TEXT," +
                     SECCION100_P_114_7 + " TEXT," +
                     SECCION100_P_114_7_O + " TEXT," +

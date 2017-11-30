@@ -332,7 +332,7 @@
                         android:padding="5dp"
                         android:text="@string/caratula_identificacion_conductor_informante_apellidos"/>
                     <EditText
-                        android:id="@+id/inicio_edt10"
+                        android:id="@+id/inicio_edt9"
                         android:focusableInTouchMode="true"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
@@ -396,7 +396,7 @@
                             android:layout_marginRight="1dp"
                             android:background="@drawable/fondo_spinner">
                             <Spinner
-                                android:id="@+id/inicio_sp2"
+                                android:id="@+id/inicio_sp1"
                                 android:focusableInTouchMode="true"
                                 android:layout_width="0dp"
                                 android:layout_height="30dp"
@@ -404,7 +404,7 @@
                                 android:layout_weight="1"/>
                         </LinearLayout>
                         <EditText
-                            android:id="@+id/inicio_edt12"
+                            android:id="@+id/inicio_edt11"
                             android:focusableInTouchMode="true"
                             android:inputType="numberPassword"
                             android:layout_weight="1"
@@ -426,7 +426,7 @@
                             android:layout_marginRight="5dp"
                             android:background="@drawable/fondo_spinner">
                             <Spinner
-                                android:id="@+id/inicio_sp3"
+                                android:id="@+id/inicio_sp2"
                                 android:focusableInTouchMode="true"
                                 android:entries="@array/nivel_estudios"
                                 android:layout_width="match_parent"
@@ -476,7 +476,7 @@
                         android:layout_margin="5dp"
                         android:background="@drawable/fondo_spinner">
                         <Spinner
-                            android:id="@+id/inicio_sp4"
+                            android:id="@+id/inicio_sp3"
                             android:focusableInTouchMode="true"
                             android:entries="@array/cargos"
                             android:layout_width="match_parent"
@@ -559,18 +559,18 @@
                         android:text="@string/caratula_identificacion_conocimiento_instituto"
                         android:layout_marginBottom="5dp"/>
                     <RadioGroup
-                        android:id="@+id/sec300_p302_rg"
+                        android:id="@+id/inicio_rg"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
                         <RadioButton
-                            android:id="@+id/sec100_p302_rbSi"
+                            android:id="@+id/inicio_rbSi"
                             android:layout_weight="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Si"/>
                         <RadioButton
-                            android:id="@+id/sec100_p302_rbNo"
+                            android:id="@+id/inicio_rbNo"
                             android:layout_weight="1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
